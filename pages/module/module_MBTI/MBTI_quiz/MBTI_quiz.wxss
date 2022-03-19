@@ -1,1 +1,7 @@
 /* pages/module/MBTI/MBTI_quiz/MBTI_quiz.wxss */
+page{
+  width:100%;
+  height:100%;
+}
+
+

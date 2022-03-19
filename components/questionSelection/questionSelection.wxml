@@ -1,0 +1,8 @@
+<!--components/questionSelection/questionSelection.wxml-->
+<view class="grid text-center justify-center col-6 bg-white">
+  <block wx:for="{{questionNum}}" wx:if="{{item!=0}}">
+    <view class="padding-sm">
+      <view class="flex align-center justify-center circle-item text-blue">{{item}}</view>
+    </view>
+  </block>
+</view>

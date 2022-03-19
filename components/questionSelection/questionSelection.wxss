@@ -1,0 +1,12 @@
+/* components/questionSelection/questionSelection.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+
+.circle-item {
+  border-style:solid;
+  border-radius: 50%;
+  width: 70rpx;
+  height: 70rpx;
+  border-width: 2rpx;
+  border-color: #0081ff;
+}

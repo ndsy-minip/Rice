@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "questionSelection":"/components/questionSelection/questionSelection"
+  }
 }
