@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

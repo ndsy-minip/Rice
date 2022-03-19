@@ -14,6 +14,13 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+
+const test = [1,2,3,4]
+
 module.exports = {
-  formatTime
+  formatTime,
+  test
 }
+
+
+
