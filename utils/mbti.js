@@ -127,7 +127,7 @@ module.exports =
 		'answerb_zh': '人际关系和谐'
 	}, {
 		'quiz_en': 'Are you more comfortable in making',
-		'quiz_zh': '以下哪个让你更舒适',
+		'quiz_zh': '以下哪个（词）让你更舒适',
 		'answera_en': 'Logical judgements',
 		'answera_zh': '逻辑判断',
 		'answerb_en': 'Value judgements',

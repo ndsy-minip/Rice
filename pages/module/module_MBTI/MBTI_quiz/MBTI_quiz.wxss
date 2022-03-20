@@ -3,5 +3,9 @@ page{
   width:100%;
   height:100%;
 }
+.select-answer{
+  opacity: 0.8;
+}
+
 
 

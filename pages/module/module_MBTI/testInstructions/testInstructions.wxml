@@ -1,0 +1,50 @@
+<!--pages/module/module_MBTI/testInstructions/testInstructions.wxml-->
+
+<view class="cu-card case" style="height:auto">
+  <view class="cu-item shadow">
+    <view class="margin-top text-center text-bold instructionsTitle" style="letter-spacing:10rpx;font-size:48rpx;line-height:65rpx;">
+      测前须知
+    </view>
+    <view class="font-en text-center margin-top-sm text-lg">Notice</view>
+    <view class="flex justify-center margin">
+      <view class="circle-item bg-blue light flex justify-center align-center">1</view>
+    </view>
+    <view class="text-center text-bold">
+      <text>测试一共70题，大约用时15分钟，请耐心作答</text>
+    </view>
+    <view class="text-center font-en text-grey margin">
+      <text>The test consists of 70 questions and takes about 15min or so, please be patient</text>
+    </view>
+    <view class="flex justify-center margin">
+      <view class="circle-item bg-blue light flex justify-center align-center">2</view>
+    </view>
+    <view class="flex justify-center text-bold">
+      <text>答案没有对错之分，如实作答即可</text>
+    </view>
+    <view class="text-center font-en text-grey margin">
+      <text>There are no right answers to any of these questions</text>
+    </view>
+    <view class="flex justify-center margin">
+      <view class="circle-item bg-blue light flex justify-center align-center">3</view>
+    </view>
+    <view class="text-bold text-center">
+      <text>快速回答问题，不要过度分析，若遇到难以抉择的问题，请根据第一感觉作答</text>
+    </view>
+    <view class="text-center font-en text-grey margin">
+      <text>Answer the questions quickly, do not over-analyze them. Some seem worded poorly. Go with what feels best</text>
+    </view>
+    <view class="flex justify-center margin">
+      <view class="circle-item bg-blue light flex justify-center align-center">4</view>
+    </view>
+    <view class="text-center text-bold">
+      <text>用你的内心想法回答，不是你希望别人看到的</text>
+    </view>
+    <view class="text-center font-en text-grey margin">
+      <text>Answer the questions as "the way you are", not "the way you'd like to be seen by others"</text>
+    </view>
+    <view class="flex justify-center margin-top-xl">
+      <button class="cu-btn bg-green light" bindtap="navToMbti">GO!</button>
+    </view>
+    <view class="bg-white padding"></view>
+  </view>
+</view>

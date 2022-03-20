@@ -8,8 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    now_index: 0,
-    showSelection: false
+    now_index: 1,
   },
 
   /**
@@ -18,7 +17,7 @@ Page({
   onLoad: function (options) {
     var customResult = {}
     for (let i in mbti) {
-      customResult[i] = 2
+      customResult[++i] = 2
     }
     this.setData({
       mbti,
@@ -97,10 +96,49 @@ Page({
    * 显示答题卡
    */
   showSelection: function (e) {
-    var showSelection = this.data.showSelection
+    var questionSelection = this.selectComponent("#questionSelection")
+    questionSelection.showModal()
+  },
+
+  /**
+   * 切换题目
+   */
+  changeQuestionIndex: function (e) {
     this.setData({
-      showSelection: !showSelection
+      now_index: e.detail.now_index
     })
+  },
+
+  /**
+   * 记录回答
+   */
+  answer: function (e) {
+    var customResult = this.data.customResult
+    var now_index = this.data.now_index
+    customResult[now_index] = parseInt(e.currentTarget.dataset.result)
+    var arr = Object.keys(customResult);
+    if(now_index!=arr.length){
+      now_index = now_index+1
+    }
+    var competition = this.calCompetition()
+    this.setData({
+      customResult,
+      now_index,
+      competition
+    })
+  },
+
+  /**
+   * 计算完成度
+   */
+  calCompetition: function () {
+    var unfinished = 0
+    for (let i in this.data.customResult) { 
+      if(this.data.customResult[i]==2){
+        unfinished = unfinished + 1
+      }
+    }
+    return ((100 - (unfinished / this.data.mbti.length * 100)).toFixed(1))
   }
 
 })

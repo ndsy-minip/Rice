@@ -1,8 +1,19 @@
 <!--components/questionSelection/questionSelection.wxml-->
-<view class="grid text-center justify-center col-6 bg-white">
-  <block wx:for="{{questionNum}}" wx:if="{{item!=0}}">
-    <view class="padding-sm">
-      <view class="flex align-center justify-center circle-item text-blue">{{item}}</view>
-    </view>
-  </block>
+<view class="modals-bottom-dialog" hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <!-- 弹框内容 start -->
+    <scroll-view style="height:600rpx" scroll-y>
+      <view class="padding bg-blue text-xl text-center text-bold light margin-bottom" bindtap="hideModal">收起</view>
+      <view class="grid text-center justify-center col-6 bg-white">
+        <block wx:for="{{customResult}}">
+          <view class="padding-sm">
+            <view class="flex align-center justify-center circle-item text-blue" wx:if="{{item==2}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
+            <view class="flex align-center justify-center circle-item text-white bg-blue" wx:if="{{item!=2}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <!-- 弹框内容 end -->
+  </view>
 </view>

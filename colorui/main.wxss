@@ -2012,11 +2012,10 @@ button.icon.lg {
 
 .cu-timeline {
 	display: block;
-	background-color: var(--white);
 }
 
 .cu-timeline .cu-time {
-	width: 120rpx;
+	width: 300rpx;
 	text-align: center;
 	padding: 20rpx 0;
 	font-size: 26rpx;
@@ -2053,7 +2052,6 @@ button.icon.lg {
 	position: absolute;
 	top: 36rpx;
 	z-index: 9;
-	background-color: var(--white);
 	width: 50rpx;
 	height: 50rpx;
 	text-align: center;
@@ -2067,7 +2065,6 @@ button.icon.lg {
 }
 
 .cu-timeline>.cu-item[class*="cuIcon-"]::before {
-	background-color: var(--white);
 	width: 50rpx;
 	height: 50rpx;
 	text-align: center;

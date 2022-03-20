@@ -11,3 +11,18 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+/* 统一英语字体 */
+.font-en {
+  font-family:'Times New Roman'
+}
+
+/* 圆圈样式 */
+.circle-item {
+  border-style: solid;
+  border-radius: 50%;
+  width: 70rpx;
+  height: 70rpx;
+  border-width: 2rpx;
+  border-color: #0081ff;
+}
