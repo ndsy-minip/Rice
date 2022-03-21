@@ -3,9 +3,7 @@
     "pages/module/module_MBTI/testInstructions/testInstructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/index/index",
-    
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,5 +13,6 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "cloud": true
 }

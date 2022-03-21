@@ -12,7 +12,6 @@
     <view class="cu-progress round sm striped active margin-bottom-xl margin-top-xs">
       <view class="bg-green" style="width:{{competition}}%">{{competition}}%</view>
     </view>
-
     <!-- <text class="cuIcon-titles text-blue margin-right-xs" style="font-size: 50rpx;"></text> -->
     <text class="text-bold"
       style="letter-spacing:10rpx;font-size:48rpx;line-height:65rpx;">{{mbti[now_index-1].quiz_zh}}</text>
