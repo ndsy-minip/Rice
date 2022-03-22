@@ -8,7 +8,7 @@
       <image src="/static/img/logo.png" mode="aspectFit" style="height: 60rpx; position: relative; left: 20vw"></image>
     </view>
     <view class="cu-progress round sm striped active margin-bottom-xl margin-top-xs">
-      <view class="bg-green" style="width:{{competition}}%">{{competition}}%</view>
+      <view class="bg-green" style="width:{{competition}}vw">{{competition}}%</view>
     </view>
     <!-- <text class="cuIcon-titles text-blue margin-right-xs" style="font-size: 50rpx;"></text> -->
     <text class="text-bold"
@@ -45,10 +45,10 @@
       <view>{{now_index}} / {{mbti.length}}</view>
       答题卡
     </view>
-    <view bindtap="changeQuiz" id="next" wx:if="{{now_index!=mbti.length}}" class="flex-sub text-right margin-right">
+    <view bindtap="changeQuiz" id="next" wx:if="{{competition!=100.0}}" class="flex-sub text-right margin-right">
       下一题 <text class="cuIcon-right"></text>
     </view>
-    <view bindtap="submit" wx:if="{{now_index==mbti.length}}" class="flex-sub text-right margin-right">
+    <view bindtap="submit" wx:if="{{competition==100.0}}" class="flex-sub text-right margin-right">
       提交 <text class="cuIcon-roundrightfill"></text>
     </view>
   </view>

@@ -1,2 +1,3 @@
-<!--Waking-the-Tiger-minip/pages/module/module_MBTI/MBTI_result/MBTI_result.wxml-->
-<text>Waking-the-Tiger-minip/pages/module/module_MBTI/MBTI_result/MBTI_result.wxml</text>
+<view class="container">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>

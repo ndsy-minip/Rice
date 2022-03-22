@@ -146,9 +146,15 @@ Page({
    * 用户点击提交
    */
   submit: function (e) {
+    var that = this
     if (this.data.competition == 100.0) {
       wx.showModal({
         content: "是否确认提交",
+        success(res) {
+          if (res.confirm) {
+            that.calPersonalityScore()
+          }
+        }
 
       })
     } else {
@@ -161,7 +167,7 @@ Page({
     }
 
 
-  }
+  },
 
 
   /**
@@ -238,7 +244,7 @@ Page({
   navToResultPage() {
     var that = this
     wx.navigateTo({
-      url: '../MBTI_result/MBTI_result?personalityScore=' + that.data.personalityScore,
+      url: '../MBTI_result/MBTI_result?personalityScore='+JSON.stringify(that.data.personalityScore),
     })
   }
 

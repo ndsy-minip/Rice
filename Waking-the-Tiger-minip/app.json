@@ -1,9 +1,10 @@
 {
   "pages": [
-
+    "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
-    "pages/index/index", 
+
+    "pages/index/index",
     "pages/logs/logs"
 
   ],
