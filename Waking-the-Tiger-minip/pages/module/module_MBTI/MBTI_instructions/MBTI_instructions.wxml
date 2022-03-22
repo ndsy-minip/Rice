@@ -1,4 +1,4 @@
-<!--pages/module/module_MBTI/testInstructions/testInstructions.wxml-->
+<!--pages/module/module_MBTI/MBTI_instructions/MBTI_instructions.wxml-->
 
 <view class="cu-card case" style="height:auto">
   <view class="cu-item shadow">
@@ -43,7 +43,7 @@
       <text>Answer the questions as "the way you are", not "the way you'd like to be seen by others"</text>
     </view>
     <view class="flex justify-center margin-top-xl">
-      <button class="cu-btn bg-green light" bindtap="navToMbti">GO!</button>
+      <button class="cu-btn bg-green light" bindtap="navToMbtiQuizPage">GO!</button>
     </view>
     <view class="bg-white padding"></view>
   </view>

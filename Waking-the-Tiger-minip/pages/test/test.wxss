@@ -1,0 +1,5 @@
+/* Waking-the-Tiger-minip/pages/test/test.wxss */
+.charts {
+  width: 750rpx;
+  height: 500rpx;
+}

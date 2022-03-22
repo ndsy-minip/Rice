@@ -1,4 +1,0 @@
-/* pages/module/module_MBTI/testInstructions/testInstructions.wxss */
-.instructionsTitle{
-  color: rgb(185, 137, 3);
-}

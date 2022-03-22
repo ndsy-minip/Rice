@@ -1,4 +1,4 @@
-// pages/module/module_MBTI/testInstructions/testInstructions.js
+// pages/module/module_MBTI/MBTI_instructions/MBTI_instructions.js
 Page({
 
   /**
@@ -67,7 +67,7 @@ Page({
   /**
    * 跳转到mbti测试界面
    */
-  navToMbti: function() {
+  navToMbtiQuizPage: function() {
     wx.navigateTo({
       url: '../MBTI_quiz/MBTI_quiz',
     })

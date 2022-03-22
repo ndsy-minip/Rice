@@ -1,0 +1,4 @@
+/* pages/module/module_MBTI/MBTI_instructions/MBTI_instructions.wxss */
+.instructionsTitle{
+  color: rgb(185, 137, 3);
+}

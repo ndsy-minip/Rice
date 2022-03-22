@@ -9,6 +9,7 @@ Page({
    */
   data: {
     now_index: 1,
+    personalityScore: { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
   },
 
   /**
@@ -117,8 +118,8 @@ Page({
     var now_index = this.data.now_index
     customResult[now_index] = parseInt(e.currentTarget.dataset.result)
     var arr = Object.keys(customResult);
-    if(now_index!=arr.length){
-      now_index = now_index+1
+    if (now_index != arr.length) {
+      now_index = now_index + 1
     }
     var competition = this.calCompetition()
     this.setData({
@@ -133,12 +134,112 @@ Page({
    */
   calCompetition: function () {
     var unfinished = 0
-    for (let i in this.data.customResult) { 
-      if(this.data.customResult[i]==2){
+    for (let i in this.data.customResult) {
+      if (this.data.customResult[i] == 2) {
         unfinished = unfinished + 1
       }
     }
     return ((100 - (unfinished / this.data.mbti.length * 100)).toFixed(1))
+  },
+
+  /**
+   * 用户点击提交
+   */
+  submit: function (e) {
+    if (this.data.competition == 100.0) {
+      wx.showModal({
+        content: "是否确认提交",
+
+      })
+    } else {
+      wx.showModal({
+        title: "请完成所有题目",
+        content: "点击答题卡查看未作答题目",
+        cancelColor: 'cancelColor',
+        showCancel: "false"
+      })
+    }
+
+
+  }
+
+
+  /**
+   * 计分
+   */
+  calPersonalityScore: function () {
+    var customResult = this.data.customResult
+    var personalityScore = this.data.personalityScore
+    for (var i in customResult) {
+      console.log(i)
+      switch (i % 7) {
+        case 1:
+          if (customResult[i] == 0) {
+            personalityScore['E'] = personalityScore['E'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['I'] = personalityScore['I'] + 1
+          }
+          break;
+        case 2:
+          if (customResult[i] == 0) {
+            personalityScore['S'] = personalityScore['S'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['N'] = personalityScore['N'] + 1
+          }
+          break;
+        case 3:
+          if (customResult[i] == 0) {
+            personalityScore['S'] = personalityScore['S'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['N'] = personalityScore['N'] + 1
+          }
+          break;
+        case 4:
+          if (customResult[i] == 0) {
+            personalityScore['T'] = personalityScore['T'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['F'] = personalityScore['F'] + 1
+          }
+          break;
+        case 5:
+          if (customResult[i] == 0) {
+            personalityScore['T'] = personalityScore['T'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['F'] = personalityScore['F'] + 1
+          }
+          break;
+        case 6:
+          if (customResult[i] == 0) {
+            personalityScore['J'] = personalityScore['J'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['P'] = personalityScore['P'] + 1
+          }
+          break;
+        case 0:
+          if (customResult[i] == 0) {
+            personalityScore['J'] = personalityScore['J'] + 1
+          } if (customResult[i] == 1) {
+            personalityScore['P'] = personalityScore['P'] + 1
+          }
+          break;
+        default:
+          console.log("error")
+      }
+    }
+    this.setData({
+      personalityScore
+    })
+    this.navToResultPage()
+  },
+
+  /**
+   * 跳转结果页并传值
+   */
+  navToResultPage() {
+    var that = this
+    wx.navigateTo({
+      url: '../MBTI_result/MBTI_result?personalityScore=' + that.data.personalityScore,
+    })
   }
 
 })

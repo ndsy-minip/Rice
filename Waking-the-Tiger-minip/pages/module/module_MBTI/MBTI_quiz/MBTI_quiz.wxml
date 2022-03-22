@@ -1,6 +1,4 @@
 <!--pages/module/MBTI/MBTI_quiz/MBTI_quiz.wxml-->
-<!-- <view
-  style="background-image: url(https://images.unsplash.com/photo-1647599708318-1b267bf44fd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);height:100%"> -->
 <questionSelection id="questionSelection" customResult="{{customResult}}"
   bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
 <view style="height:100%">
@@ -50,7 +48,7 @@
     <view bindtap="changeQuiz" id="next" wx:if="{{now_index!=mbti.length}}" class="flex-sub text-right margin-right">
       下一题 <text class="cuIcon-right"></text>
     </view>
-    <view bindtap="changeQuiz" wx:if="{{now_index==mbti.length}}" class="flex-sub text-right margin-right">
+    <view bindtap="submit" wx:if="{{now_index==mbti.length}}" class="flex-sub text-right margin-right">
       提交 <text class="cuIcon-roundrightfill"></text>
     </view>
   </view>
