@@ -1,0 +1,20 @@
+<!--pages/tool/tool.wxml-->
+
+
+<view style="height:300rpx"></view>
+<view class="text-bold text-xl padding">Discover Spaces</view>
+<!-- <swiper class="card-swiper" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" 	display-multiple-items="3"> -->
+<swiper class="card-swiper" bindchange="cardSwiper" interval="5000" duration="500">
+  <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <swiper-item>
+      <view class="swiper-item">
+        <block wx:if="{{item.type=='image'}}">
+          <view class="bg-white" style="height: 100%;width: 100%;">
+            <image src="{{item.url}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
+            <view class="text-white text-xl" style="z-index: 999;">123123</view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

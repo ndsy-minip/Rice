@@ -1,0 +1,73 @@
+<!--pages/module/module_myPage/profile/profile.wxml-->
+<image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-profile.png" style="width:100vw;position: absolute;top:0;height:35vh;z-index: -1;" mode="aspectFill"></image>
+
+<view class="cu-list menu-avatar margin-top">
+  <view class="cu-item padding" style="margin-top: 12vh;">
+    <view class="cu-avatar round xl" style="background-image: url({{userInfo.avatarUrl}});border-style:solid;border-color:white;border-width: 5rpx;"></view>
+    <view class="margin-left-lg content text-white text-xl text-bold">
+      {{userInfo.nickName}}
+    </view>
+    <text class="text-white text-lg text-bold margin-right-sm">编辑</text>
+    <text class="cuIcon-right text-white text-bold margin-right"></text>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu" style="margin-top:5vh">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-discover text-blue"></text>暂未开放
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-explore text-blue"></text>还没想好
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-btn text-blue"></text>我的测评
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-countdown text-green"></text>我的冥想
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-like text-red"></text>我的收藏
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-friend text-cyan"></text>关于我们
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <button open-type="contact" class="flex justify-start" style="border: none;background-color: transparent;outline: none;font-weight: normal; font-size: 15px;padding:0;margin: 0;margin-left:10rpx;width: 80vw;">
+        <view>
+          <text class="cuIcon-message text-blue margin-right-xs"></text> 联系我们
+        </view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu">
+  <view class="cu-item arrow">
+    <view class="content">
+      <button open-type="share" class="flex justify-start" style="border: none;background-color: transparent;outline: none;font-weight: normal; font-size: 15px;padding:0;margin: 0;margin-left:10rpx;width: 80vw;">
+        <view>
+          <text class="cuIcon-share text-blue margin-right-xs"></text> 分享给好友
+        </view>
+      </button>
+    </view>
+  </view>
+</view>

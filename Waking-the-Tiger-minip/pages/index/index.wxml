@@ -1,23 +1,16 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
+<!--pages/index.wxml-->
+<view class="bg-white" style="height:100vh">
+  <swiper class="screen-swiper square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" style="height:75vh" indicator-active-color="black" 	indicator-color="#808080">
+    <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <block wx:if="{{item.type=='image'}}">
+          <image src="{{item.url}}" mode="aspectFill"></image>
+        </block>
+        <block wx:if="{{item.type=='video'}}"><video src="{{item.url}}" autoplay="{{true}}" loop="{{true}}" show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" muted="{{true}}"></video></block>
+      </swiper-item>
     </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  </swiper>
+
+  <button bindtap="getUserProfile" style="margin-top:5vh;width: 90vw;height:6vh;padding:1.5vh" class="bg-blue">登录</button>
+  <view class="padding flex justify-center text-blue text-bold">未注册用户将自动注册，一起来唤醒你的内心猛虎吧！</view>
 </view>

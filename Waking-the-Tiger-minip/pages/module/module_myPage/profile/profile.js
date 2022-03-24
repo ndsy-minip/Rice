@@ -1,27 +1,22 @@
-// pages/index.js
+// pages/module/module_myPage/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperList: [{
-      id: 0,
-      type: 'image',
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-test.png'
-    },
-    {
-      id: 1,
-      type: 'image',
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-test.png'
-    }]
+    userInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var userInfo = wx.getStorageSync("userInfo")
+    this.setData({
+      userInfo 
+    })
+    
   },
 
   /**
@@ -74,18 +69,4 @@ Page({
   },
 
 
-  /**
-   * 获取用户信息
-   */
-  getUserProfile(e) {
-    wx.getUserProfile({
-      desc: '用于在个人页展示头像、昵称', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        wx.setStorageSync('userInfo', res.userInfo)
-        wx.switchTab({
-          url: '../module/module_myPage/profile/profile',
-        })
-      }
-    })
-  },
 })

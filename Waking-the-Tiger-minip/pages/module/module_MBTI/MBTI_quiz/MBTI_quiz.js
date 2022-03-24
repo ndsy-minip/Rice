@@ -232,6 +232,8 @@ Page({
           console.log("error")
       }
     }
+    personalityScore['E'] = personalityScore['E'] * 2
+    personalityScore['I'] = personalityScore['I'] * 2
     this.setData({
       personalityScore
     })
