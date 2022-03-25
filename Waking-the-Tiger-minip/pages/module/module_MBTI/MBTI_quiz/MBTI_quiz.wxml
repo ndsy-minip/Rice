@@ -6,7 +6,7 @@
 
 <questionSelection id="questionSelection" customResult="{{customResult}}"
   bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
-<view style="height:100%">
+<view style="height:80%">
   <!-- 题目 -->
   <view class="padding-xl bg-white" style="height:auto">
     <view class="flex justify-end">
@@ -22,16 +22,16 @@
       {{mbti[now_index-1].quiz_en}}</view>
   </view>
   <!-- 答案 -->
-  <view class="cu-timeline" style="position:absolute;top:32vh;width:100%">
+  <view class="cu-timeline" style="position:absolute;top:42vh;width:100%">
     <view class="cu-time">选出最符合你的选项</view>
     <view class="cu-item {{customResult[now_index]==0?'cuIcon-roundcheckfill text-green':''}}">
-      <view class="content bg-grey shadow-blur" hover-class="select-answer" data-result="0" bindtap="answer">
+      <view class="content {{customResult[now_index]==0?'bg-green':'bg-grey'}} shadow-blur" hover-class="select-answer" data-result="0" bindtap="answer">
         <view class="text-lg" style="letter-spacing:5rpx">{{mbti[now_index-1].answera_zh}}</view>
         <view class="font-en">{{mbti[now_index-1].answera_en}}</view>
       </view>
     </view>
     <view class="cu-item {{customResult[now_index]==1?'cuIcon-roundcheckfill text-green':''}}">
-      <view class="content bg-cyan shadow-blur" hover-class="select-answer" data-result="1" bindtap="answer">
+      <view class="content {{customResult[now_index]==1?'bg-green':'bg-grey'}} shadow-blur " hover-class="select-answer" data-result="1" bindtap="answer">
         <view class="text-lg" style="letter-spacing:5rpx">{{mbti[now_index-1].answerb_zh}}</view>
         <view class="font-en">{{mbti[now_index-1].answerb_en}}</view>
       </view>
@@ -50,8 +50,10 @@
       <view>{{now_index}} / {{mbti.length}}</view>
       答题卡
     </view>
-    <view bindtap="changeQuiz" id="next" wx:if="{{competition!=100.0}}" class="flex-sub text-right margin-right">
+    <view bindtap="changeQuiz" id="next" wx:if="{{now_index!=mbti.length}}" class="flex-sub text-right margin-right">
       下一题 <text class="cuIcon-right"></text>
+    </view>
+    <view id="next" wx:if="{{now_index==mbti.length&&competition!=100.0}}" class="flex-sub text-right margin-right">
     </view>
     <view bindtap="submit" wx:if="{{competition==100.0}}" class="flex-sub text-right margin-right">
       提交 <text class="cuIcon-roundrightfill"></text>

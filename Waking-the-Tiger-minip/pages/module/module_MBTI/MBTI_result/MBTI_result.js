@@ -21,15 +21,20 @@ Page({
   data: {
     ec: {
       onInit: initChart
-    }
+    },
+    personalityScore: { "E": 12, "I": 8, "S": 3, "N": 17, "T": 3, "F": 17, "J": 3, "P": 17 }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // this.setData({
+    //   personalityScore : JSON.parse(options.personalityScore)
+    // })
+    var userInfo = wx.getStorageSync('userInfo')
     this.setData({
-      personalityScore : JSON.parse(options.personalityScore)
+      userInfo
     })
     this.caltype()
     var personalityScore = this.data.personalityScore
@@ -88,12 +93,18 @@ Page({
       }
     ];
     var option = {
+      title: {
+        left: 'left',
+        text: '你的测评指标',
+        subtext: '长按圆环查看数值'
+      },
       visualMap: {
         type: 'continuous',
         min: 0,
         max: 20,
         inRange: {
-          color: ['#2F93C8', '#AEC48F', '#FFDB5C', '#F98862']
+          // color: ['#fff1e6', '#ffe286', '#ecc290', '#d4a372', '#d18a54']
+          color: ['#fdfffc', '#c0dce7', '#98b9c8', '#8ba6c1', '#788ea6']
         }
       },
       series: {
@@ -173,6 +184,8 @@ Page({
     if (personalityScore['S'] >= personalityScore['N']) { personalityType = personalityType + "S" } else { personalityType = personalityType + "N" }
     if (personalityScore['T'] >= personalityScore['F']) { personalityType = personalityType + "T" } else { personalityType = personalityType + "F" }
     if (personalityScore['J'] >= personalityScore['P']) { personalityType = personalityType + "J" } else { personalityType = personalityType + "P" }
-    console.log(personalityType)
+    this.setData({
+      personalityType
+    })
   }
 })

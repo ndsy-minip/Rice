@@ -114,6 +114,7 @@ Page({
    * 记录回答
    */
   answer: function (e) {
+    var that = this
     var customResult = this.data.customResult
     var now_index = this.data.now_index
     customResult[now_index] = parseInt(e.currentTarget.dataset.result)
@@ -124,9 +125,24 @@ Page({
     var competition = this.calCompetition()
     this.setData({
       customResult,
-      now_index,
       competition
     })
+    setTimeout(function(){
+      that.setData({
+         now_index,
+      })
+    }, 1000);
+    if(competition==100.0){
+      wx.showModal({
+        title: "所有题目已作答完成",
+        content: "是否提交",
+        success(res){
+          if(res.confirm){
+            that.submit()
+          }
+        }
+      })
+    }
   },
 
   /**
@@ -139,7 +155,8 @@ Page({
         unfinished = unfinished + 1
       }
     }
-    return ((100 - (unfinished / this.data.mbti.length * 100)).toFixed(1))
+    var competition = (100 - (unfinished / this.data.mbti.length * 100)).toFixed(1)
+    return competition
   },
 
   /**
@@ -246,7 +263,7 @@ Page({
   navToResultPage() {
     var that = this
     wx.navigateTo({
-      url: '../MBTI_result/MBTI_result?personalityScore='+JSON.stringify(that.data.personalityScore),
+      url: '../MBTI_result/MBTI_result?personalityScore=' + JSON.stringify(that.data.personalityScore),
     })
   }
 
