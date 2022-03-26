@@ -1,0 +1,18 @@
+<!--pages/timer/timer.wxml-->
+<view class="timer-page">
+  <view class="padding margin-xl timer-card" hover-class="timer-card-hover">
+    <view class="flex justify-center text-white">
+      开始冥想
+    </view>
+    <view class="padding flex justify-center text-white" style="font-size: 10vh;font-family: BebasNeue-Regular;font-weight: bold;">
+      <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindchange="bindMultiPickerChange">
+        <view class="picker">{{multiArray[0][multiIndex[0]].length==1?'0'+multiArray[0][multiIndex[0]]:multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]].length==1?'0'+multiArray[1][multiIndex[1]]:multiArray[1][multiIndex[1]]}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="padding flex justify-center" style="margin-top: 30vh;">
+    <view class="start-btn bg-white flex justify-center align-center" hover-class="start-btn-hover">
+      <text class="cuIcon-playfill" style="font-size:30px"></text>
+    </view>
+  </view>
+</view>

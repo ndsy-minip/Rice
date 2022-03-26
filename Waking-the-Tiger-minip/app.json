@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/test/test",
+    "pages/timer/timer",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/module/module_myPage/profile/profile",
-"pages/tool/tool",
+    "pages/tool/tool", 
     
+    "pages/test/test",
+    "pages/index/index",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs",
-    "pages/index/index",
+
     "pages/news/news"
   ],
   "window": {
@@ -42,6 +44,5 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents",
   "cloud": true
 }
