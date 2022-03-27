@@ -1,0 +1,18 @@
+<!--components/notebook/notebook.wxml-->
+<!--components/questionSelection/questionSelection.wxml-->
+<view class="modals-bottom-dialog" hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <view class="padding flex align-center justify-between">
+      <view class="flex align-center">
+        <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
+        <view class="margin-left-sm">{{userInfo.nickName}}</view>
+      </view>
+      <view class="cu-btn bg-green round" style="width: 150rpx;" bindtap="submitNote">记录</view>
+    </view>
+    <view class="padding" style="height:25vh">
+      <textarea placeholder="写下你的思考..." style="height:100%;width:100%" bindinput="bindNoteInput" value="{{note}}"></textarea>
+    </view>
+    <view class="padding text-center text-grey">记录后的内容将被保存，供您随时查阅</view>
+  </view>
+</view>

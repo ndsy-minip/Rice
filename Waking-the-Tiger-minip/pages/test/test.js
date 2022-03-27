@@ -4,7 +4,7 @@ Page({
    */
   data: {
     timer: '',//定时器名字
-    countDownNum: '1440',//倒计时初始值
+    countDownNum: 1440,//倒计时初始值
     timer_M: '24',//m
     timer_S: '00',//s
     suspendButton: '暂停',//暂停按钮标题

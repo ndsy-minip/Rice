@@ -1,18 +1,42 @@
 <!--pages/timer/timer.wxml-->
-<view class="timer-page">
+<view class="timer-page" animation="gradientBG">\
   <view class="padding margin-xl timer-card" hover-class="timer-card-hover">
     <view class="flex justify-center text-white">
       开始冥想
     </view>
     <view class="padding flex justify-center text-white" style="font-size: 10vh;font-family: BebasNeue-Regular;font-weight: bold;">
-      <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindchange="bindMultiPickerChange">
+      <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindchange="setCountdown" wx:if="{{!isStart}}">
         <view class="picker">{{multiArray[0][multiIndex[0]].length==1?'0'+multiArray[0][multiIndex[0]]:multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]].length==1?'0'+multiArray[1][multiIndex[1]]:multiArray[1][multiIndex[1]]}}</view>
       </picker>
+      <view wx:if="{{isStart}}" bindtap="showMotto">
+        {{multiArray[0][multiIndex[0]].length==1?'0'+multiArray[0][multiIndex[0]]:multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]].length==1?'0'+multiArray[1][multiIndex[1]]:multiArray[1][multiIndex[1]]}}
+      </view>
     </view>
   </view>
-  <view class="padding flex justify-center" style="margin-top: 30vh;">
-    <view class="start-btn bg-white flex justify-center align-center" hover-class="start-btn-hover">
-      <text class="cuIcon-playfill" style="font-size:30px"></text>
+  <block wx:for="{{motto}}">
+    <view class="padding flex justify-center text-white animation-fade" wx:if="{{mottoIndex==index}}">{{item}}</view>
+  </block>
+
+  <view class="padding flex justify-center" style="position: absolute;bottom:150rpx;width: 100vw;">
+    <view class="flex-twice justify-center flex">
+      <view class="btn bg-white flex justify-center align-center animation-shake margin-right" hover-class="btn-hover" bindtap="{{isStart==1?'setSuspend':'setStart'}}" wx:if="{{isStart == isSuspend}}">
+        <text class="cuIcon-playfill text-white" style="font-size:30px"></text>
+      </view>
+      <view class="btn bg-white flex justify-center align-center animation-shake margin-right" hover-class="btn-hover" bindtap="setSuspend" wx:if="{{isStart != isSuspend}}">
+        <text class="cuIcon-stop text-bold text-white" style="font-size:30px"></text>
+      </view>
+      <view class="btn bg-white flex justify-center align-center animation-shake" hover-class="btn-hover" wx:if="{{isStart}}" bindtap="setStop">
+        <text class="cuIcon-ellipse text-bold text-white" style="font-size:20px"></text>
+      </view>
+    </view>
+    <view class="flex-sub justify-center flex margin-right">
+      <view class="btn bg-white flex justify-center align-center flex-sub margin-right" hover-class="btn-hover" bindtap="showNotebook">
+        <text class="cuIcon-edit text-white" style="font-size:30px"></text>
+      </view>
+      <view class="btn bg-white flex justify-center align-center flex-sub" hover-class="btn-hover" bindtap="showWhyMeditation">
+        <text class="cuIcon-question text-white" style="font-size:30px"></text>
+      </view>
     </view>
   </view>
+  <notebook id="notebook"></notebook>
 </view>

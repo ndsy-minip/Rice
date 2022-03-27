@@ -1,0 +1,31 @@
+/* components/notebook/notebook.wxss */
+@import "../../components/colorui/main.wxss";
+@import "../../components/colorui/icon.wxss";
+
+/*模态框*/
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
