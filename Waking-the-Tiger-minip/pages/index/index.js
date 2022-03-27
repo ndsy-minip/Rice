@@ -82,12 +82,12 @@ Page({
       desc: '用于在个人页展示头像、昵称', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
         wx.setStorageSync('userInfo', res.userInfo)
-        // wx.switchTab({
-        //   url: '../module/module_myPage/profile/profile',
-        // })
-        wx.navigateTo({
-          url: '../test/test',
+        wx.switchTab({
+          url: '../news/news',
         })
+        // wx.navigateTo({
+        //   url: '../news/news',
+        // })
       }
     })
   },

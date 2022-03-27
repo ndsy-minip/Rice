@@ -1,4 +1,5 @@
 // pages/timer/timer.js
+const innerAudioContext = wx.createInnerAudioContext()
 Page({
 
   /**
@@ -119,8 +120,6 @@ Page({
     var min, sec
     let countDownSec = this.data.countDownSec
     var multiIndex = this.data.multiIndex
-    var mottoIndex = this.data.mottoIndex
-    var show = this.data.show
     this.setData({
       timer: setInterval(function () {
         let isSuspend = that.data.isSuspend;
@@ -135,7 +134,23 @@ Page({
             multiIndex
           })
           if (countDownSec == 0) {
-            clearInterval(that.data.timer);
+            that.setData({
+              isStart: 0,
+              isSuspend: 0
+            })
+            clearInterval(that.data.timer)
+
+            const innerAudioContext = wx.createInnerAudioContext()
+            innerAudioContext.autoplay = true
+            innerAudioContext.src = 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/timerEnd.mp3'
+            innerAudioContext.onPlay(() => {
+              console.log('开始播放')
+            })
+            innerAudioContext.onError((res) => {
+              console.log(res.errMsg)
+              console.log(res.errCode)
+            })
+
           }
         }
       }, 1000)
@@ -212,7 +227,7 @@ Page({
       content: "开始冥想，时常练习，你就能渐渐走出情绪困境，成为一个凡事心气平和、稳若泰山的人"
     })
   },
-  
+
   /**
   * 打开笔记本
   */

@@ -21,7 +21,8 @@
   right: 0;
   height: 40vh;
   background-color: #fff;
-  border-radius: 50rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
 }
 
 /*动画前初始位置*/
