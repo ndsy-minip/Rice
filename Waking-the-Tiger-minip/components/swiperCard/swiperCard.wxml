@@ -1,0 +1,17 @@
+<!--components/swiperCard/swiperCard.wxml-->
+<swiper class="card-swiper" bindchange="cardSwiper" interval="5000" duration="500">
+  <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <swiper-item style="padding:0">
+      <view class="swiper-item">
+        <view class="bg-white" style="height: 100%;width: 100%;">
+          <image src="{{item.bgUrl}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
+          <view style="height:20%;padding-top:30%" class="flex justify-center" >
+            <view class="cu-avatar round lg solid" style="background-image: url({{swiperList[index+1].bgUrl}});"></view>
+          </view>
+          <view class="text-center text-bold" style="padding-top: 35%;">Skilled English Writing</view>
+          <view class="padding">Sharing content on improving English writing skills...</view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

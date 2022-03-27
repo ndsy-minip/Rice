@@ -10,3 +10,10 @@
     <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png" style="width: 30vw;height:15vh" mode="aspectFit"></image>
   </view>
 </view>
+
+<view class="padding text-xl text-bold" style="padding-bottom: 0;">图书</view>
+<swiperCard swiperList="{{swiperList}}"></swiperCard>
+<view class="padding text-xl text-bold" style="padding-bottom: 0;padding-top:0">电影</view>
+<swiperCard swiperList="{{swiperList}}"></swiperCard>
+
+<view clas="padding bg-white"></view>

@@ -5,7 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
+    swiperList: [{
+      id: 0,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
 
+    },
+    {
+      id: 1,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg'
+    },
+    {
+      id: 2,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+    },
+    {
+      id: 3,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+    },
+    {
+      id: 4,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+    },
+    {
+      id: 5,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+    },
+    {
+      id: 6,
+      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+    }],
   },
 
   /**

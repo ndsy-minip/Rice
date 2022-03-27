@@ -1,0 +1,16 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<!-- <view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+  </view>
+</view> -->
+
+<view class="tabbar">
+  <view class="item {{index==idx?'active':''}}" wx:for="{{list}}" wx:for-index="idx" bindtap="goto" data-index='{{idx}}'>
+    <view style="background-image: url({{item.iconPath}});"></view>
+    <view class="text">{{item.text}}</view>
+  </view>
+  <view class="move" style="left:{{115+(index*210)}}rpx"></view>
+</view>

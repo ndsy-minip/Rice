@@ -15,14 +15,19 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationStyle": "custom"
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
   },
+  
   "usingComponents": {
     "cu-custom": "/components/colorui/components/cu-custom",
     "navBar-custom": "/components/navBar-custom/navBar-custom"
   },
   "tabBar": {
-    "selectedColor": "#1296db",
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
     "list": [{
         "pagePath": "pages/news/news",
         "text": "资讯",
@@ -40,8 +45,7 @@
         "text": "我的",
         "iconPath": "static/tabbar/我的未选中.png",
         "selectedIconPath": "static/tabbar/我的.png"
-      }
-    ]
+      }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
