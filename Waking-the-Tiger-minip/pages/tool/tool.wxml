@@ -8,12 +8,14 @@
   <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
     <swiper-item>
       <view class="swiper-item">
-        <block wx:if="{{item.type=='image'}}">
-          <view class="bg-white" style="height: 100%;width: 100%;">
-            <image src="{{item.url}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
-            <view class="text-white text-xl" style="z-index: 999;">123123</view>
+        <view class="bg-white" style="height: 100%;width: 100%;">
+          <image src="{{item.bgUrl}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
+          <view style="height:20%;padding-top:20%" class="flex justify-center" >
+            <view class="cu-avatar round lg solid" style="background-image: url({{swiperList[index+1].bgUrl}});"></view>
           </view>
-        </block>
+          <view class="text-center text-bold" style="padding-top: 35%;">Skilled English Writing</view>
+          <view class="padding">Sharing content on improving English writing skills...</view>
+        </view>
       </view>
     </swiper-item>
   </block>

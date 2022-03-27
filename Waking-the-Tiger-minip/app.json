@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/timer/timer",
+    "pages/tool/tool",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/module/module_myPage/profile/profile",
-    "pages/tool/tool", 
     
+    "pages/timer/timer",
     "pages/test/test",
     "pages/index/index",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs",
-
     "pages/news/news"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
