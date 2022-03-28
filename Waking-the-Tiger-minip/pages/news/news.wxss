@@ -1,1 +1,5 @@
 /* pages/news/news.wxss */
+page{
+  height: 120vh;
+  width: 100vw
+}

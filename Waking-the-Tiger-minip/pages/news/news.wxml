@@ -15,5 +15,3 @@
 <swiperCard swiperList="{{swiperList}}"></swiperCard>
 <view class="padding text-xl text-bold" style="padding-bottom: 0;padding-top:0">电影</view>
 <swiperCard swiperList="{{swiperList}}"></swiperCard>
-
-<view clas="padding bg-white"></view>

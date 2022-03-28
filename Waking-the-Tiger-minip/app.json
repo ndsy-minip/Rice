@@ -2,7 +2,7 @@
   "pages": [
     "pages/news/news",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
-    "pages/module/module_myPage/profile/profile",
+    "pages/profile/profile",
     "pages/tool/tool",
     "pages/timer/timer",
     "pages/test/test",
@@ -30,19 +30,16 @@
     "backgroundColor": "#000000",
     "list": [{
         "pagePath": "pages/news/news",
-        "text": "资讯",
         "iconPath": "static/tabbar/档案未选中.png",
         "selectedIconPath": "static/tabbar/档案.png"
       },
       {
         "pagePath": "pages/tool/tool",
-        "text": "工具",
         "iconPath": "static/tabbar/活动未选中.png",
         "selectedIconPath": "static/tabbar/活动.png"
       },
       {
-        "pagePath": "pages/module/module_myPage/profile/profile",
-        "text": "我的",
+        "pagePath": "pages/profile/profile",
         "iconPath": "static/tabbar/我的未选中.png",
         "selectedIconPath": "static/tabbar/我的.png"
       }]

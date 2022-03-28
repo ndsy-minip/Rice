@@ -1,78 +1,34 @@
-page {
-  width: 100%;
-  background: black;
-}
+@import "../components/colorui/icon.wxss";
+@import "../components/colorui/main.wxss";
 
-.tabbar {
-  width: 100%;
-  height: 7vh;
-  position: absolute;
+.tab-bar{
+  position: fixed;
   bottom: 0;
   left: 0;
-  background: #181c27;
+  right: 0;
+  height:7vh;
+  background-color: #5e7fe8;
+  border-radius: 50rpx;
+  margin-bottom:4vh;
+  margin-right: 3vw;
+  margin-left:3vw;
   display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 0 60rpx;
-
 }
 
-
-.tabbar .item {
+.tab-bar-item {
   flex: 1;
-  color: #fff;
-  height: 100rpx;
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 10;
-
+  flex-direction: column;
 }
 
-.tabbar .item .text {
-  position: absolute;
-  width: 100%;
-  bottom: 10rpx;
-  text-align: center;
-  font-size: 22rpx;
-  opacity: 0;
-  transition: all .8s;
-  transform: scale(0.8);
-  width: 100%;
+.tab-bar-item cover-image {
+  width: 27px;
+  height: 27px;
 }
 
-.tabbar .item.active .text {
-  opacity: 1;
-  transform: scale(1);
-}
-
-
-.tabbar .item.active .icon {
-  color: #3561f5;
-  transform: translateY(-55rpx);
-}
-
-.tabbar .item .icon {
-  font-size: 50rpx !important;
-  text-align: center;
-  transition: all .8s;
-
-}
-
-
-
-
-
-.move {
-  width: 100rpx;
-  height: 100rpx;
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  left: 115rpx;
-  top: -35%;
-  transition: all .3s;
-  z-index: 1;
+.tab-bar-item cover-view {
+  font-size: 10px;
 }

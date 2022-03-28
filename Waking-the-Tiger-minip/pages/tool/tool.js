@@ -9,7 +9,7 @@ Page({
     swiperList: [{
       id: 0,
       bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
-      
+
     },
     {
       id: 1,
@@ -55,7 +55,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
+    }
   },
 
   /**
@@ -97,9 +102,9 @@ Page({
   /**
    * 监控滑块
    */
-  cardSwiper: function(e){
+  cardSwiper: function (e) {
     this.setData({
-      cardCur : e.detail.current
+      cardCur: e.detail.current
     })
   }
 })
