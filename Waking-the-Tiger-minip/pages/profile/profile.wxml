@@ -1,5 +1,5 @@
 <!--pages/module/module_myPage/profile/profile.wxml-->
-<image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-profile.png" style="width:100vw;position: absolute;top:0;height:35vh;z-index: -1;" mode="aspectFill"></image>
+<view class="cover-bg" mode="aspectFill"></view>
 
 <view class="cu-list menu-avatar margin-top">
   <view class="cu-item padding" style="margin-top: 12vh;">

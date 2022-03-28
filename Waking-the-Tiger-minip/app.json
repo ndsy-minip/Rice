@@ -2,11 +2,11 @@
   "pages": [
     "pages/news/news",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
-    "pages/profile/profile",
+    "pages/index/index",
     "pages/tool/tool",
     "pages/timer/timer",
     "pages/test/test",
-    "pages/index/index",
+    "pages/profile/profile",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs"
