@@ -1,8 +1,7 @@
 <!--pages/tool/tool.wxml-->
-<navBar-custom title="理想飞船"></navBar-custom>
+<navBar-custom title="理想火箭"></navBar-custom>
 
 <view class="text-bold text-xl padding">Discover Spaces</view>
-<!-- <swiper class="card-swiper" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" 	display-multiple-items="3"> -->
 <swiper class="card-swiper" bindchange="cardSwiper" interval="5000" duration="500">
   <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
     <swiper-item style="padding:0">

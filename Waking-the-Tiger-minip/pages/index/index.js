@@ -6,15 +6,24 @@ Page({
    */
   data: {
     swiperList: [{
-      id: 0,
-      type: 'image',
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-test.png'
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_pi.png',
+      title: "唤醒勇虎",
+      firstLine: "少年漂流，心藏勇虎",
+      sencondLine : "无惧骇浪，纵纬所如"
     },
     {
-      id: 1,
-      type: 'image',
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-test.png'
-    }]
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_books.png',
+      title: "心绪宇宙",
+      firstLine: "时空探索，知识无穷",
+      sencondLine : "淡泊明志，宁静致远"
+    },
+    {
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_aircraft.png',
+      title: "理想火箭",
+      firstLine: "自我觉醒，功成名就",
+      sencondLine : "脚踏实地，心怀梦想"
+    }
+  ]
   },
 
   /**

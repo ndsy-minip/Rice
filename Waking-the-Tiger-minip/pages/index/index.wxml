@@ -1,16 +1,20 @@
 <!--pages/index.wxml-->
 <view class="bg-white" style="height:100vh">
-  <swiper class="screen-swiper square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" style="height:75vh" indicator-active-color="black" 	indicator-color="#808080">
-    <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <swiper class="screen-swiper square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" style="height:75vh" indicator-active-color="black" indicator-color="#808080">
+    <block wx:for="{{swiperList}}" wx:key="index">
       <swiper-item>
-        <block wx:if="{{item.type=='image'}}">
-          <image src="{{item.url}}" mode="aspectFill"></image>
-        </block>
-        <block wx:if="{{item.type=='video'}}"><video src="{{item.url}}" autoplay="{{true}}" loop="{{true}}" show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" muted="{{true}}"></video></block>
+          <view style="height:100%;width:100%;">
+            <view style="position:absolute;height:60vh;width:100vw;background: linear-gradient(#5e7fe8,#fff);z-index: -1;"></view>
+            <view style="height:12vh"></view>
+            <image src="{{item.url}}" style="height:75vw;width:90vw;margin-left:auto; margin-right:auto;"></image>
+            <view class="text-center text-bold margin-top" style="font-size: 28px;">{{item.title}}</view>
+            <view class="margin-top text-center text-grey">{{item.firstLine}}</view>
+            <view class="margin-top-xs text-center text-grey">{{item.sencondLine}}</view>
+          </view>
       </swiper-item>
     </block>
   </swiper>
 
-  <button bindtap="getUserProfile" style="margin-top:5vh;width: 90vw;height:6vh;padding:1.5vh" class="bg-blue">登录</button>
-  <view class="padding flex justify-center text-blue text-bold">未注册用户将自动注册，一起来唤醒你的内心猛虎吧！</view>
+  <button bindtap="getUserProfile" style="margin-top:10vh;width: 90vw;height:6vh;padding:1.5vh;background-color:#5e7fe8;border-radius: 30rpx;" class="text-white">登录</button>
+  <view class="padding text-center text-grey font-en" style="font-size: 16px;">Waking the Tiger!</view>
 </view>

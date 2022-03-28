@@ -12,8 +12,14 @@
     </view>
   </view>
 
-  <view class="padding text-xl text-bold" style="padding-bottom: 0;">图书</view>
+  <view class="padding flex justify-between align-center" style="padding-bottom: 0;">
+    <view class="text-xl text-bold">图书</view>
+    <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+  </view>
   <swiperCard swiperList="{{swiperList}}"></swiperCard>
-  <view class="padding text-xl text-bold" style="padding-bottom: 0;padding-top:0">电影</view>
+  <view class="padding flex justify-between align-center" style="padding-bottom: 0;padding-top:0">
+    <view class="text-xl text-bold">电影</view>
+    <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+  </view>
   <swiperCard swiperList="{{swiperList}}"></swiperCard>
 </scroll-view>
