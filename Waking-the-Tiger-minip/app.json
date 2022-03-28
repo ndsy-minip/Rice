@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/news/news",
-    "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/index/index",
+    "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/tool/tool",
+    "pages/news/news",
     "pages/timer/timer",
     "pages/test/test",
     "pages/profile/profile",

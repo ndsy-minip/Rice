@@ -5,36 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cardCur: 0,
-    swiperList: [{
-      id: 0,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
-
-    },
-    {
-      id: 1,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg'
-    },
-    {
-      id: 2,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
-    },
-    {
-      id: 3,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
-    },
-    {
-      id: 4,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
-    },
-    {
-      id: 5,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
-    },
-    {
-      id: 6,
-      bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
-    }],
+    tools: [[
+      {
+        "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png",
+        "path":"",
+        "title":"测评",
+        "bgColor":"#ab8fca"
+      }, {
+        "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_books.png",
+        "path":"",
+        "title":"直播",
+        "bgColor":"#866cb9"
+      }, {
+        "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_aircraft.png",
+        "path":"",
+        "title":"职业宝典",
+        "bgColor":"#8f6eae"
+      }, {
+        "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_pi.png",
+        "path":"",
+        "title":"冥想",
+        "bgColor":"#8980bc"
+      }
+    ], 
+    [{
+      "img":"",
+      "path":"",
+      "title":"冥想",
+      "bgColor":"#c0a2c7"
+    }, {
+      "img":"",
+      "path":"",
+      "title":"冥想",
+      "bgColor":"#896d8d"
+    }]]
   },
 
   /**
@@ -99,12 +103,5 @@ Page({
   },
 
 
-  /**
-   * 监控滑块
-   */
-  cardSwiper: function (e) {
-    this.setData({
-      cardCur: e.detail.current
-    })
-  }
+
 })

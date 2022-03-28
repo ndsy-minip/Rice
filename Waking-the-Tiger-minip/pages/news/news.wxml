@@ -1,7 +1,7 @@
 <!--pages/news/news.wxml-->
 <navBar-custom title="心绪宇宙"></navBar-custom>
 
-<scroll-view style="height:120vh" scroll-y="true">
+<scroll-view style="height:120vh" scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}">
   <view class="bg-white flex" style="height:15vh">
     <view class="padding flex-twice" style="height: 100%;">
       <view class="text-xl text-bold">Hi! 欢迎来到心绪宇宙!</view>

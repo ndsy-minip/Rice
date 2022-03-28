@@ -1,19 +1,24 @@
 <!--pages/tool/tool.wxml-->
 <navBar-custom title="理想火箭"></navBar-custom>
 
-<view class="text-bold text-xl padding">Discover Spaces</view>
-<swiper class="card-swiper" bindchange="cardSwiper" interval="5000" duration="500">
-  <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-    <swiper-item style="padding:0">
-      <view class="swiper-item">
-        <view class="bg-white" style="height: 100%;width: 100%;">
-          <image src="{{item.bgUrl}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
-          <view style="height:20%;padding-top:20%" class="flex justify-center" >
-            <view class="cu-avatar round lg solid" style="background-image: url({{swiperList[index+1].bgUrl}});"></view>
+<view class="margin padding shadow-blur radius margin-top" style="height:20vh;border-radius: 50rpx;background-color: #888afb;"></view>
+
+<!-- <view class="margin padding bg-blue light shadow-blur radius margin-top" style="height:5vh;border-radius: 50rpx;"></view> -->
+
+<swiper class="screen-swiper round-dots" style="height:44vh">
+  <block wx:for="{{tools}}" wx:for-item="item_" wx:for-key="index_" wx:key="index_">
+    <swiper-item>
+      <view class="grid col-2">
+        <block wx:for="{{item_}}" wx:key="index">
+          <view class="padding-bottom-sm padding-top-sm padding-left padding-right animation-slide-bottom" style="height:20vh;animation-delay:{{ (index + 1)*0.2 + 's'}}">
+            <view class="shadow-blur radius" style="height:100%;width:100%;border-radius: 50rpx;background-color: {{item.bgColor}};">
+              <view class="padding flex justify-center">
+                <image src="{{item.img}}" style="height:20vw;width:20vw"></image>
+              </view>
+              <view class="padding text-center text-bold text-lg" style="font-family: 宋体;padding-top:1vh">{{item.title}}</view>
+            </view>
           </view>
-          <view class="text-center text-bold" style="padding-top: 35%;">Skilled English Writing</view>
-          <view class="padding">Sharing content on improving English writing skills...</view>
-        </view>
+        </block>
       </view>
     </swiper-item>
   </block>
