@@ -8,7 +8,7 @@ Page({
     tools: [[
       {
         "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png",
-        "path":"",
+        "path":"../module/module_MBTI/MBTI_instructions/MBTI_instructions",
         "title":"测评",
         "bgColor":"#ab8fca"
       }, {
@@ -23,7 +23,7 @@ Page({
         "bgColor":"#8f6eae"
       }, {
         "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_pi.png",
-        "path":"",
+        "path":"../timer/timer",
         "title":"冥想",
         "bgColor":"#8980bc"
       }
@@ -102,6 +102,17 @@ Page({
 
   },
 
-
+  /**
+   * 跳转到功能页
+   */
+  navToFunc: function(e){
+    console.log(e.currentTarget.dataset.path)
+    wx.navigateTo({
+      url: e.currentTarget.dataset.path,
+      success(){},
+      error(){},
+      complete(res){console.log(res)},
+    })
+  }
 
 })

@@ -1,0 +1,18 @@
+/* pages/detailContent/detailContent.wxss */
+.background-image {
+  position: absolute;
+  top:0;
+  background-image: url(https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg);
+  background-position: center;
+  width: 100vw;
+  height: 40vh;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top:0;
+  width: 100vw;
+  height: 40vh;
+}
+

@@ -11,7 +11,7 @@
       <view class="grid col-2">
         <block wx:for="{{item_}}" wx:key="index">
           <view class="padding-bottom-sm padding-top-sm padding-left padding-right animation-slide-bottom" style="height:20vh;animation-delay:{{ (index + 1)*0.2 + 's'}}">
-            <view class="shadow-blur radius" style="height:100%;width:100%;border-radius: 50rpx;background-color: {{item.bgColor}};">
+            <view class="shadow-blur radius" style="height:100%;width:100%;border-radius: 50rpx;background-color: {{item.bgColor}};" bindtap="navToFunc" data-path="{{item.path}}">
               <view class="padding flex justify-center">
                 <image src="{{item.img}}" style="height:20vw;width:20vw"></image>
               </view>

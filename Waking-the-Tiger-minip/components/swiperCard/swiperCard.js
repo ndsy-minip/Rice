@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+
   },
 
   /**
@@ -27,6 +27,15 @@ Component({
     cardSwiper: function (e) {
       this.setData({
         cardCur: e.detail.current
+      })
+    },
+
+    /**
+     * 跳转到详情页
+     */
+    navToDetail: function (e) {
+      wx.navigateTo({
+        url: '../../pages/detailContent/detailContent',
       })
     }
   }

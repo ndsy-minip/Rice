@@ -1,3 +1,18 @@
 /* components/swiperCard/swiperCard.wxss */
 @import "../colorui/main.wxss";
 @import "../colorui/icon.wxss";
+
+.multiTextCut {
+  display: block;
+  display: -webkit-box;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 3vw
+}

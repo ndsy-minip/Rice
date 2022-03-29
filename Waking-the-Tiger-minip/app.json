@@ -3,22 +3,20 @@
     "pages/index/index",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/tool/tool",
-    "pages/news/news",
     "pages/timer/timer",
     "pages/test/test",
-    "pages/profile/profile",
+    "pages/profile/profile","pages/news/news",
+    "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs"
     
-
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black"
   },
-  
   "usingComponents": {
     "cu-custom": "/components/colorui/components/cu-custom",
     "navBar-custom": "/components/navBar-custom/navBar-custom"
@@ -28,7 +26,8 @@
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/news/news",
         "iconPath": "static/tabbar/档案未选中.png",
         "selectedIconPath": "static/tabbar/档案.png"
@@ -42,7 +41,8 @@
         "pagePath": "pages/profile/profile",
         "iconPath": "static/tabbar/我的未选中.png",
         "selectedIconPath": "static/tabbar/我的.png"
-      }]
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
