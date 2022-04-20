@@ -4,8 +4,10 @@
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/tool/tool",
     "pages/timer/timer",
+    
+    "pages/news/news",
     "pages/test/test",
-    "pages/profile/profile","pages/news/news",
+    "pages/profile/profile",
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",

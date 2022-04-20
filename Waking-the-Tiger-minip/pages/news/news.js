@@ -5,6 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
+    iconList: [
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "作物百科"
+      },
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "常见农药"
+      },
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "常见病虫害"
+      },
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "互助社区"
+      },
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "模块测验"
+      },
+      {
+        "iconPath": "../../static/img/1.png",
+        "navPath": "",
+        "text": "更多"
+      }
+    ],
+
+
     swiperList: [{
       id: 0,
       bgUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
