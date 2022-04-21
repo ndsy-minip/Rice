@@ -9,7 +9,16 @@ Component({
       value: "" //子组件初始值
     }
   },
-
+  ready: function() {
+    wx.getStorage({
+      "key": "userInfo",
+      success(res){
+        console.log(res)
+      }
+    })
+    console.log("ready")
+    console.log(wx.getStorage('userInfo'))
+   },
   /**
    * 组件的初始数据
    */

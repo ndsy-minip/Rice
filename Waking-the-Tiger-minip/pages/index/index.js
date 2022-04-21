@@ -6,24 +6,24 @@ Page({
    */
   data: {
     swiperList: [{
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_pi.png',
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_1.png',
       title: "唤醒勇虎",
-      firstLine: "少年漂流，心藏勇虎",
-      sencondLine : "无惧骇浪，纵纬所如"
+      firstLine: "人间烟火气，最抚凡人心",
+      sencondLine: "三分菜圃三分田，种月种诗又种花"
     },
     {
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_books.png',
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_2.png',
       title: "心绪宇宙",
-      firstLine: "时空探索，知识无穷",
-      sencondLine : "淡泊明志，宁静致远"
+      firstLine: "寒来暑往",
+      sencondLine: "秋收冬藏"
     },
     {
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_aircraft.png',
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_3.png',
       title: "理想火箭",
-      firstLine: "自我觉醒，功成名就",
-      sencondLine : "脚踏实地，心怀梦想"
+      firstLine: "绿遍山原白满川，子规声里雨如烟",
+      sencondLine: "乡村四月闲人少，才了蚕桑又插田"
     }
-  ]
+    ]
   },
 
   /**
@@ -87,16 +87,18 @@ Page({
    * 获取用户信息
    */
   getUserProfile(e) {
+    var that = this
     wx.getUserProfile({
       desc: '用于在个人页展示头像、昵称', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
+        console.log(res.iv)
         wx.setStorageSync('userInfo', res.userInfo)
+
         wx.switchTab({
           url: '../news/news',
         })
-        // wx.navigateTo({
-        //   url: '../news/news',
-        // })
+
+
       }
     })
   },
