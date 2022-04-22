@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/homepage/homepage",
     "pages/index/index",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/tool/tool",
     "pages/timer/timer",
     
-    "pages/news/news",
     "pages/test/test",
     "pages/profile/profile",
     "pages/detailContent/detailContent",
@@ -30,7 +30,7 @@
     "backgroundColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/news/news",
+        "pagePath": "pages/homepage/homepage",
         "iconPath": "static/tabbar/档案未选中.png",
         "selectedIconPath": "static/tabbar/档案.png"
       },
