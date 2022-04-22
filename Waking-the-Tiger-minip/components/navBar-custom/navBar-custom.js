@@ -9,21 +9,22 @@ Component({
       value: "" //子组件初始值
     }
   },
-  ready: function() {
+  ready: function () {
+    var that = this
     wx.getStorage({
       "key": "userInfo",
-      success(res){
-        console.log(res)
+      success(res) {
+        that.setData({
+          userInfo: res.data
+        })
       }
     })
-    console.log("ready")
-    console.log(wx.getStorage('userInfo'))
-   },
+  },
   /**
    * 组件的初始数据
    */
   data: {
-    userInfo : wx.getStorageSync('userInfo')
+
   },
 
   /**

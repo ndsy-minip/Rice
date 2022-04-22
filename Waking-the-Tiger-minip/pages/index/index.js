@@ -7,22 +7,28 @@ Page({
   data: {
     swiperList: [{
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_1.png',
-      title: "唤醒勇虎",
-      firstLine: "人间烟火气，最抚凡人心",
-      sencondLine: "三分菜圃三分田，种月种诗又种花"
+      title: "作物百科",
+      firstLine: "了解作物生长秘密",
+      sencondLine: ""
     },
     {
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_2.png',
-      title: "心绪宇宙",
-      firstLine: "寒来暑往",
-      sencondLine: "秋收冬藏"
+      title: "农药查询",
+      firstLine: "教会你如何安全使用农药",
+      sencondLine: " "
     },
     {
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_3.png',
-      title: "理想火箭",
-      firstLine: "绿遍山原白满川，子规声里雨如烟",
-      sencondLine: "乡村四月闲人少，才了蚕桑又插田"
-    }
+      title: "常见病虫害",
+      firstLine: "如何远离病虫危害",
+      sencondLine: ""
+    },
+    {
+      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_4.png',
+      title: "互助社区",
+      firstLine: "交流研究农业常识",
+      sencondLine: ""
+    },
     ]
   },
 
