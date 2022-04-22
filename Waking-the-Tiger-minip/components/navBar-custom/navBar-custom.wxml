@@ -1,6 +1,6 @@
 <!--components/navBar/navBar.wxml-->
-<view class="padding solids-bottom flex align-center" style="height:15vh;padding-top: 10vh;position: fixed;background-color:rgb(247,247,247);width:100%;z-index: 999;">
+<view class="padding solids-bottom flex align-center" style="height:12vh;padding-top: 7vh;position: fixed;background-color:rgb(247,247,247);width:100%;z-index: 999;">
   <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
   <view class="margin-left text-bold text-xl" style="letter-spacing:3rpx;">{{title}}</view>
 </view>
-<view style="height:15vh"></view>
+<view style="height:12vh"></view>

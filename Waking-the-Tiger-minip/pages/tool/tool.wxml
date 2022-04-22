@@ -1,5 +1,15 @@
 <!--pages/tool/tool.wxml-->
-<navBar-custom title="理想火箭"></navBar-custom>
+<navBar-custom title="农业直播"></navBar-custom>
+
+  <view class="bg-white flex" style="height:15vh">
+    <view class="padding flex-twice" style="height: 100%;">
+      <view class="text-xl text-bold">Hi! 欢迎来到心绪宇宙!</view>
+      <view class="text-grey margin-top">在这里，不同人在不同心绪下所创造的作品汇聚一隅，尽情享受吧！</view>
+    </view>
+    <view class="flex-sub" style="height: 100%;">
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png" style="width: 30vw;height:15vh" mode="aspectFit"></image>
+    </view>
+  </view>
 
 <view class="margin padding shadow-blur radius margin-top" style="height:20vh;border-radius: 50rpx;background-color: #888afb;"></view>
 

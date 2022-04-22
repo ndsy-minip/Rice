@@ -101,7 +101,7 @@ Page({
         wx.setStorageSync('userInfo', res.userInfo)
 
         wx.switchTab({
-          url: '../news/news',
+          url: '../homepage/homepage',
         })
 
 

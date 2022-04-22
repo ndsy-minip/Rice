@@ -30,7 +30,7 @@ App({
     // 如果已经授权信息则直接进入
     if(wx.getStorageSync('userInfo')){
       wx.switchTab({
-        url: 'pages/news/news',
+        url: 'pages/homepage/homepage',
         complete(res){
           console.log(res)
         }

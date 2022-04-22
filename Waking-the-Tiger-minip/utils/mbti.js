@@ -102,7 +102,7 @@ module.exports =
 	'quiz_zh': '在你的社交圈里你',
 	'answera_en': "Keep abreast of other's happenings",
 	'answera_zh': '及时了解他人的动态',
-	'answerb_en': 'Get behind on the news',
+	'answerb_en': 'Get behind on the homepage',
 	'answerb_zh': '在消息上有些落后'
 }, {
 	'quiz_en': 'In doing ordinary things are you more likely to',

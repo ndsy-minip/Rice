@@ -3,7 +3,7 @@ Component({
     selected: 0,
     index: 0,
     list: [{
-      "pagePath": "../news/news",
+      "pagePath": "../homepage/homepage",
       "iconPath": "../static/tabbar/档案未选中.png",
       "selectedIconPath": "../static/tabbar/档案.png"
     },

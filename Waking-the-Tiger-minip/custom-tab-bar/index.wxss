@@ -9,7 +9,7 @@
   height:7vh;
   background-color: #5e7fe8;
   border-radius: 50rpx;
-  margin-bottom:4vh;
+  margin-bottom:1vh;
   margin-right: 3vw;
   margin-left:3vw;
   display: flex;
