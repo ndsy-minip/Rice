@@ -1,1 +1,9 @@
-/**index.wxss**/
+.collapse-body {
+  transition: max-height 0.3s; 
+  max-height: 500rpx
+}
+
+.hidden {
+  max-height: 0;
+  overflow: hidden
+}

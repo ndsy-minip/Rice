@@ -4,4 +4,3 @@
     <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
   </cover-view>
 </cover-view>
-<view style="height:8vh;z-index: 9999;background-color: white"></view>

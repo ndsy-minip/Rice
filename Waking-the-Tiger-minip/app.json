@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/homepage/homepage",
+    
     "pages/index/index",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/tool/tool",
     "pages/timer/timer",
-    
+    "pages/homepage/homepage",
     "pages/test/test",
     "pages/profile/profile",
     "pages/detailContent/detailContent",

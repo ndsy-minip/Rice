@@ -1,94 +1,48 @@
+
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    timer: '',//定时器名字
-    countDownNum: 1440,//倒计时初始值
-    timer_M: '24',//m
-    timer_S: '00',//s
-    suspendButton: '暂停',//暂停按钮标题
-    isSuspend: '0' //是否暂停
+    selected: [false, false, false], // 这里表示列表项是否展开，默认初始时此数组的元素全为fasle，表示都没展开
+    infoList: [
+      {
+        "title": "整地",
+        "content": "种稻之前，必须先将稻田的土壤翻过，使其松软，这个过程分为粗耕、细耕和盖平三个期间。过去使用兽力和犁具，主要是水牛来整地犁田，但多用机器整地了。"
+      },
+      {
+        "title": "选种",
+        "content": "将秧苗仔细的插进稻田中，间格有序。传统的插秧法会使用秧绳、秧标或插秧轮，来在稻田中做记号。手工插秧时，会在左手的大拇指上戴分秧器，帮助农人将秧苗分出，并插进土里。插秧的气候相当重要，如大雨则会将秧苗打坏。现代多有插秧机插秧，但在土地起伏大，形状不是方型的稻田中，还是需要人工插秧。秧苗一般会呈南北走向。还有更为便利的抛秧。"
+      },
+      {
+        "title": "施肥",
+        "content": "秧苗在抽高，长出第一节稻茎的时候称为分蘗期，这段期间往往需要施肥，让稻苗成长的健壮，并促进日后结穗米质的饱满和数量。"
+      },
+      {
+        "title": "灌排水",
+        "content": "水稻比较倚赖这个程序，旱稻的话是旱田，灌排水的过程较不一样，但是一般都需在插秧后，幼穗形成时，还有抽穗开花期加强水份灌溉。"
+      },
+      {
+        "title": "收成",
+        "content": "当稻穗垂下，金黄饱满时，就可以开始收成，过去是农民一束一束，用镰刀割下，再扎起，利用打谷机使稻穗分离，现代则有收割机，将稻穗卷入后，直接将稻穗与稻茎分离出来，一粒一粒的稻穗就成为稻谷。"
+      },
+      {
+        "title": "干燥、删选",
+        "content": "收成的稻谷需要干燥，晒谷需时时翻动，让稻谷干燥。删选则是将瘪谷等杂质删掉，用电动分谷机、风车或手工抖动分谷，利用风力将饱满有重量的稻谷自动筛选出来。"
+      },
+    ],
   },
 
-  onShow: function () {
-    
-  },
+  show(e) {
+    let index = e.currentTarget.dataset.index;
+    let active = this.data.active;
 
-  //开始
-  setStart(e) {
-    this.countDown();
-    wx.showToast({
-      title: '开始',
-      icon: 'success',
-      duration: 1000
-    })
-  },
-
-  //暂停-继续
-  setSuspend(e) {
-    let that = this;
-    let isSuspend = that.data.isSuspend;
-    let suspendButton = that.data.suspendButton;//暂停按钮标题
-    if (isSuspend == 0){
-      isSuspend = '1';
-      suspendButton = "继续";
-    }else{
-      isSuspend = '0';
-      suspendButton = "暂停";
-    }
     this.setData({
-      isSuspend: isSuspend,//是否暂停
-      suspendButton: suspendButton
-    })
-  },
+      [`selected[${index}]`]: !this.data.selected[`${index}`],
+    });
 
-  //停止
-  setStop(e) {
-    let that = this;
-    clearInterval(that.data.timer);
-    this.setData({
-      timer: '',//定时器名字
-      countDownNum: '1440',//倒计时初始值
-      timer_M: '24',//m
-      timer_S: '00',//s
-      suspendButton: '暂停',//s
-    })
-  },
-  countDown: function () {
-    let that = this;
-    var m, s;
-    let countDownNum = that.data.countDownNum;
-    that.setData({
-      timer: setInterval(function () {
-
-        let isSuspend = that.data.isSuspend;
-        if (isSuspend == 0){
-
-          countDownNum--;
-
-          m = Math.floor(countDownNum / 60);
-          s = Math.floor(countDownNum % 60);
-          if (m < 10) {
-            m = "0" + m;
-          }
-          if (s < 10) {
-            s = "0" + s;
-          }
-
-          that.setData({
-            countDownNum: countDownNum,
-            timer_M: m,
-            timer_S: s
-          })
-          if (countDownNum == 0) {
-            clearInterval(that.data.timer);
-            that.setData({
-              countDownNumString: '截止'
-            })
-          }
-        }
-      }, 1000)
-    })
   }
+
 })
+

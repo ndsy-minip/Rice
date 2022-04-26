@@ -1,6 +1,22 @@
-<view class="padding" style="height:30vh"></view>
-<button bindtap="setStart">开始</button>
-<button bindtap="setSuspend">{{suspendButton}}</button>
-<button bindtap="setStop">停止</button>
+<view style="height:20vh"></view>
 
-<view class='countDown'>倒计时：<text style='color:red'>{{timer_M}}</text>:<text style='color:red'>{{timer_S}}</text></view>
+<view class="padding-lr text-xl text-bold">
+  栽培技术
+</view>
+
+<view class="padding">
+  <block wx:for="{{infoList}}" wx:key="{{index}}">
+    <view class="bg-white">
+      <view class="padding solids-bottom flex align-center justify-between" data-index="{{index}}" bindtap="show">
+        <view class="text-lg">{{item["title"]}}</view>
+        <view><text class="{{selected[index] ? 'cuIcon-fold' : 'cuIcon-unfold'}}"></text></view>
+      </view>
+      <!-- 隐藏内容 -->
+      <view class="collapse-body {{selected[index] ? '' : 'hidden'}} solids-bottom ">
+        <view class="padding-xs"></view>
+        <view class="padding-lr">{{item["content"]}}</view>
+        <view class="padding-xs"></view>
+      </view>
+    </view>
+  </block>
+</view>
