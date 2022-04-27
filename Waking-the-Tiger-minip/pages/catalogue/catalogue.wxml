@@ -1,0 +1,23 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">作物百科</view>
+</cu-custom>
+<scroll-view scroll-y scroll-into-view="{{scroll}}">
+  <view class="con">
+    <view class="catalogue_list" id="{{con.title}}" wx:for="{{catalogue_list}}" wx:key="index" wx:for-item="con">
+      <view class="title">{{con.title}}</view>
+      <view class="list" wx:for="{{con.list}}" wx:key="" wx:for-item="list">
+        <image src="{{list.img}}"></image>
+        <view class="name">{{list.name}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 字母导航 -->
+<view class="nav {{touchmove == 1?'touchmove':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend">
+  <view id="nav_item" wx:for="{{letter_list}}" wx:key="" data-index="{{index}}">
+    {{letter_list[index]}}
+  </view>
+</view>
+<!-- 当前选择字母提示框 -->
+<view class="hint_bok" hidden="{{hiddenn}}">{{nav_text}}</view>

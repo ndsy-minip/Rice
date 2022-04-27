@@ -1,0 +1,68 @@
+/* pages/catalogue/catalogue.wxss */
+
+page,
+scroll-view {
+  height: 100%;
+}
+
+.catalogue_list>view {
+  padding-left: 20rpx;
+}
+
+.catalogue_list .title {
+  line-height: 60rpx;
+  background: #eee;
+  font-size: 27rpx;
+}
+
+.catalogue_list .list {
+  line-height: 100rpx;
+  font-size: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 6rpx;
+  vertical-align: middle;
+}
+
+.list .name {
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  vertical-align: middle;
+}
+
+.nav {
+  position: fixed;
+  top: 200rpx;
+  right: 20rpx;
+  width: 40rpx;
+  z-index: 1;
+}
+
+.nav.touchmove {
+  background: #ddd;
+}
+
+.nav view {
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.hint_bok {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  width: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  padding: 15rpx 0;
+  font-size: 54rpx;
+}

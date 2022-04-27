@@ -1,18 +1,21 @@
 {
   "pages": [
     
-    "pages/index/index",
-    "pages/module/module_MBTI/MBTI_result/MBTI_result",
+    "pages/forum_/forum_",
     "pages/tool/tool",
-    "pages/timer/timer",
-    "pages/homepage/homepage",
-    "pages/test/test",
     "pages/profile/profile",
+    "pages/module/module_MBTI/MBTI_result/MBTI_result",
+    "pages/homepage/homepage",
+    "pages/index/index",
+    "pages/catalogue/catalogue",
+    "pages/timer/timer",
+    
+    "pages/test/test",
+    
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,9 +38,14 @@
         "selectedIconPath": "static/tabbar/档案.png"
       },
       {
-        "pagePath": "pages/tool/tool",
+        "pagePath": "pages/forum_/forum_",
         "iconPath": "static/tabbar/活动未选中.png",
         "selectedIconPath": "static/tabbar/活动.png"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "iconPath": "static/tabbar/直播未选中.png",
+        "selectedIconPath": "static/tabbar/直播.png"
       },
       {
         "pagePath": "pages/profile/profile",

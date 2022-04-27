@@ -24,7 +24,7 @@ Page({
     iconList: [
       {
         "iconPath": "../../static/img/作物百科.png",
-        "navPath": "",
+        "navPath": "../catalogue/catalogue",
         "text": "作物百科"
       },
       {
@@ -44,7 +44,7 @@ Page({
       },
       {
         "iconPath": "../../static/img/模块测验.png",
-        "navPath": "",
+        "navPath": "../module/module_MBTI/MBTI_quiz/MBTI_quiz",
         "text": "模块测验"
       },
       {
@@ -203,4 +203,10 @@ Page({
       currentSwiperIndex: e.detail.current
     })
   },
+
+  navToModule(e){
+    wx.navigateTo({
+      url: e.currentTarget.dataset.nav,
+    })
+  }
 })

@@ -17,7 +17,7 @@
   <!-- icon list -->
   <swiper class="padding-top bg-white" display-multiple-items="4" style="height:200rpx" next-margin="80rpx">
     <block wx:for="{{iconList}}" wx:key="index">
-      <swiper-item>
+      <swiper-item bindtap="navToModule" data-nav="{{item.navPath}}">
         <view class="flex justify-center">
           <image src="{{item.iconPath}}" style="height:100rpx;width:100rpx;margin:0 auto;"></image>
         </view>
