@@ -9,6 +9,7 @@
   height: 9vh;
   background-color: #5e7fe8;
   display: flex;
+  opacity: 0.97;
 }
 
 .tab-bar-item {

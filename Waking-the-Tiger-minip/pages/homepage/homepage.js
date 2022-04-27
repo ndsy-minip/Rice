@@ -39,7 +39,7 @@ Page({
       },
       {
         "iconPath": "../../static/img/互助社区.png",
-        "navPath": "",
+        "navPath": "../forum_/forum_",
         "text": "互助社区"
       },
       {
@@ -207,6 +207,11 @@ Page({
   navToModule(e){
     wx.navigateTo({
       url: e.currentTarget.dataset.nav,
+      fail(err){
+        wx.switchTab({
+          url: e.currentTarget.dataset.nav,
+        })
+      }
     })
   }
 })

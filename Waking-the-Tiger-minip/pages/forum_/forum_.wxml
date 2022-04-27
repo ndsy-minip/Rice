@@ -1,3 +1,32 @@
 <!--pages/forum_/forum_.wxml-->
 
-<view style="height:200rpx"></view>
+<navBar-custom title="互助社区"></navBar-custom>
+
+<view class="padding bg-white">
+  <view class="flex align-center">
+    <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
+    <view class="margin-left flex justify-between align-center">
+      <view class="text-black text-lg text-bold">{{userInfo.nickName}}</view>
+      <view style="margin-left:40vw">2022-04-27 17:45:21</view>
+    </view>
+  </view>
+  <view class="margin-top-sm text-xl text-bold text-black" style="line-height: 160%;">有人知道吗，可以帮帮我吗？</view>
+  <view class="margin-top-sm text-abbreviation">哪些非主要农作物需要登记？登记的具体流程是什么？</view>
+  <view class="margin-top-xs flex justify-end align-center"><text class="cuIcon-comment margin-right-xs"></text>5</view>
+</view>
+
+<view class="padding bg-white margin-top">
+  <view class="flex align-center">
+    <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
+    <view class="margin-left flex justify-between align-center">
+      <view class="text-black text-lg text-bold">{{userInfo.nickName}}</view>
+      <view style="margin-left:40vw">2022-04-27 17:45:21</view>
+    </view>
+  </view>
+  <view class="margin-top-sm text-xl text-bold text-black" style="line-height: 160%;">有人知道吗，可以帮帮我吗？</view>
+  <view class="margin-top-sm text-abbreviation">哪些非主要农作物需要登记？登记的具体流程是什么？</view>
+  <view class="margin-top-xs flex justify-end align-center"><text class="cuIcon-comment margin-right-xs"></text>5</view>
+</view>
+
+
+<view class="margin-top padding">只保存24小时</view>
