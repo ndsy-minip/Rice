@@ -20,7 +20,8 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationStyle": "custom",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "initialRenderingCache":"static"
   },
   "usingComponents": {
     "cu-custom": "/components/colorui/components/cu-custom",
