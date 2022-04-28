@@ -27,6 +27,3 @@
   <view class="margin-top-sm text-abbreviation">哪些非主要农作物需要登记？登记的具体流程是什么？</view>
   <view class="margin-top-xs flex justify-end align-center"><text class="cuIcon-comment margin-right-xs"></text>5</view>
 </view>
-
-
-<view class="margin-top padding">只保存24小时</view>

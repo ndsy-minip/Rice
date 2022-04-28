@@ -8,89 +8,20 @@ Page({
     letter_list: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
     catalogue_list: [
       {
-        title: 'A',
-        list: [
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-        ]
-      },
-      {
         title: 'B',
         list: [
           {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
+            name: "白菜",
+            img: "https://tse1-mm.cn.bing.net/th/id/R-C.db752b5a9355e4b5112d087ffa2ab873?rik=oI9yH7oW0YtlTA&riu=http%3a%2f%2fimg.365diandao.com%2fStorage%2fShop%2f528%2fProducts%2f8129%2f1.png&ehk=V0XZJC4phgEvQ1TwZE3DkhguWDWYxCMAc1tIua%2b9eX4%3d&risl=&pid=ImgRaw&r=0"
           }
         ]
       },
       {
-        title: 'G',
+        title: 'P',
         list: [
           {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
-          },
-          {
-            name: "阿嚏",
-            img: "https://zuhaowan.zuhaowan.com/pic/201907/5101CD9ED73C9D14379E63D631ABD796.379e63d631abd796.jpg"
+            name: "苹果",
+            img: "https://img95.699pic.com/element/40159/2228.png_860.png"
           }
         ]
       },
@@ -133,7 +64,7 @@ Page({
   },
   set_scroll: function (e) {
     console.log(e)
-    var page_y = e.changedTouches[0].pageY-95
+    var page_y = e.changedTouches[0].pageY - 95
     var nav_height = +this.data.nav_height
     var idx = Math.floor(page_y / nav_height)
     var zimu = this.data.letter_list[idx];
@@ -144,4 +75,11 @@ Page({
       hiddenn: false
     })
   },
+
+
+  navToDetail(e) {
+    wx.navigateTo({
+      url: '../test/test',
+    })
+  }
 })

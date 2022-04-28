@@ -41,6 +41,7 @@
   "appid": "wx70fa40832126b33a",
   "projectname": "Waking%20the%20Tiger",
   "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

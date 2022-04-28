@@ -42,6 +42,25 @@ Page({
       [`selected[${index}]`]: !this.data.selected[`${index}`],
     });
 
+  },
+  notification(e) {
+    wx.requestSubscribeMessage({
+      tmplIds: ['M6pds0pSRZ0_QpDlzJrZJKcY8BYhhW141zoAeOay-Pc'],
+      success: res=> {
+        wx.cloud.callFunction({
+          name: 'notification',
+          data: {
+            "templateId": "M6pds0pSRZ0_QpDlzJrZJKcY8BYhhW141zoAeOay",
+            "openId": "wx70fa40832126b33a"
+          }
+        }).then(res=>{
+          console.log(res)
+        })
+      },
+      fail: err=> {
+        console.log(err)
+      }
+    })
   }
 
 })

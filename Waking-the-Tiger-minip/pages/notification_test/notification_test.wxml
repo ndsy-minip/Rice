@@ -1,0 +1,11 @@
+<!--pages/notification_test/notification_test.wxml-->
+<view style="height:30vh"></view>
+
+<view class="cu-form-group">
+  <view class="title">日期选择</view>
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="picker">{{''+date+''}}</view>
+  </picker>
+</view>
+
+<button class="bg-blue" bindtap="addNotification">订阅</button>

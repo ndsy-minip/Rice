@@ -1,22 +1,21 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/test/test",
     "pages/forum_/forum_",
     "pages/tool/tool",
     "pages/profile/profile",
-
+    "pages/notification_test/notification_test",
     "pages/forum_detail/forum_detail",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/homepage/homepage",
-    
     "pages/catalogue/catalogue",
     "pages/timer/timer",
-    "pages/test/test",
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs"
-    
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,8 +31,7 @@
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/homepage/homepage",
         "iconPath": "static/tabbar/档案未选中.png",
         "selectedIconPath": "static/tabbar/档案.png"
