@@ -2,7 +2,7 @@
 
 <navBar-custom title="互助社区"></navBar-custom>
 
-<view class="padding bg-white">
+<view class="padding bg-white" bindtap="navToDetail">
   <view class="flex align-center">
     <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
     <view class="margin-left flex justify-between align-center">

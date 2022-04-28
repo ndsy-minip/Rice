@@ -3510,6 +3510,11 @@ scroll-view.cu-steps .cu-item {
 	color: var(--white);
 }
 
+.bg-custom {
+	background-color: #5e7fe8;
+	color: var(--white);
+}
+
 .bg-shadeBottom {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
 	color: var(--white);

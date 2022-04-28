@@ -1,21 +1,22 @@
 {
   "pages": [
-    
+    "pages/index/index",
     "pages/forum_/forum_",
     "pages/tool/tool",
     "pages/profile/profile",
+
+    "pages/forum_detail/forum_detail",
     "pages/module/module_MBTI/MBTI_result/MBTI_result",
     "pages/homepage/homepage",
-    "pages/index/index",
+    
     "pages/catalogue/catalogue",
     "pages/timer/timer",
-    
     "pages/test/test",
-    
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

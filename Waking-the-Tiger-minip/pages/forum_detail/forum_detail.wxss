@@ -1,0 +1,4 @@
+/* pages/forum_detail/forum_detail.wxss */
+page {
+  background-color: white;
+}

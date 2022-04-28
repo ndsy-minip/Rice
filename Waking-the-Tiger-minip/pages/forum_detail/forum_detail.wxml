@@ -1,0 +1,59 @@
+<!--pages/forum_detail/forum_detail.wxml-->
+<cu-custom bgColor="bg-custom" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">互助社区</view>
+</cu-custom>
+
+<view class="bg-white" style="height:100vh">
+  <view class="padding" style="border: 3rpx solid rgba(0, 0, 0, 0.1);">
+    <view class="text-xl text-black text-bold">有人知道吗？可以帮帮我吗？</view>
+    <view class="margin-top-lg flex align-center">
+      <view class="cu-avatar round" style="background-image: url(https://tse1-mm.cn.bing.net/th/id/R-C.e8891d9037a4ced784968f37f9aa58c4?rik=SGrAIotStgLi6Q&riu=http%3a%2f%2fscimg.jianbihuadq.com%2f202008%2f20200810213610197.jpg&ehk=7cI6rE%2fJVpe2JzmKEKQtdOydRVJ%2bgqInCU2VEC8cFUs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);"></view>
+      <view class="margin-left-sm">
+        <view class="text-black text-lg text-bold">一个爱劳动的人</view>
+      </view>
+    </view>
+    <view class="margin-top">哪些非主要农作物需要登记？登记的具体流程是什么？</view>
+    <image class="margin-top" src="https://tse1-mm.cn.bing.net/th/id/R-C.a5e4acd794022a9a9f8a8b068e5de06d?rik=Y%2f%2b6QuVSs4vzDQ&riu=http%3a%2f%2fpic130.huitu.com%2fres%2f20191009%2f1961776_20191009100737335070_1.jpg&ehk=SQZVwmQBBzszZvcnhHY7fM0C2xwafLqkPFvi33Iiy4M%3d&risl=&pid=ImgRaw&r=0" style="width: 100vw;"></image>
+    <view class="text-right margin-top">2022-04-27 17:45:21</view>
+  </view>
+
+  <view class="padding">
+    <view class="padding-bottom">
+      <view class="text-black">2条评论</view>
+      <view class="flex margin-top">
+        <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
+        <view class="margin-left bg-gray round flex align-center" style="width: 80vw;">
+          <input class="margin-left" placeholder="快来发表你的见解吧" style="width: 70vw;" />
+        </view>
+      </view>
+    </view>
+    <view class="flex margin-top align-start solids-bottom">
+      <view>
+        <view class="cu-avatar round" style="background-image: url(https://tse1-mm.cn.bing.net/th/id/R-C.e8891d9037a4ced784968f37f9aa58c4?rik=SGrAIotStgLi6Q&riu=http%3a%2f%2fscimg.jianbihuadq.com%2f202008%2f20200810213610197.jpg&ehk=7cI6rE%2fJVpe2JzmKEKQtdOydRVJ%2bgqInCU2VEC8cFUs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);"></view>
+      </view>
+      <view class="margin-left padding-bottom" style="width: 100vw;">
+        <view class="flex">
+          <view class="text-gray">一个爱劳动的人</view>
+          <view class="margin-left cu-tag bg-blue round">帖主</view>
+        </view>
+        <view class="margin-top-xs text-black">有人来解答一下吗？非常感谢！</view>
+        <view class="margin-top-xs text-right">1小时前</view>
+      </view>
+
+    </view>
+
+    <view class="flex margin-top align-start">
+      <view>
+        <view class="cu-avatar round" style="background-image: url({{userInfo.avatarUrl}});"></view>
+      </view>
+      <view class="margin-left padding-bottom">
+        <view class="text-gray">{{userInfo.nickName}}</view>
+        <view class="margin-top-xs text-black">农作物是农业上栽培的各种植物。包括粮食作物﹑经济作物（油料作物、蔬菜作物、花、草、树木）两大类。"人以食为天"，表达了人与食物的关系，合理的膳食搭配才能给人类带来健康。农作物的生长，离不开科学的科技生产技术，以及新型工业制造出来的能辅助农业生产的机械设备。</view>
+        <view class="margin-top-xs text-right">2小时前</view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

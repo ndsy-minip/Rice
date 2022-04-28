@@ -1,4 +1,4 @@
-// pages/forum_/forum_.js
+// pages/forum_detail/forum_detail.js
 Page({
 
   /**
@@ -12,14 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 1
-      })
-    }
     this.setData({
       userInfo: wx.getStorageSync('userInfo')
+    })
+
+    wx.setBackgroundColor({
+      backgroundColor: '#ffffff', // 窗口的背景色为白色
+      backgroundColorTop: '#ffffff',
     })
   },
 
@@ -71,11 +70,4 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-
-  navToDetail: function () {
-    wx.navigateTo({
-      url: '../forum_detail/forum_detail',
-    })
-  }
 })
