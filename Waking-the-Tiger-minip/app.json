@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/test1/test1",
     "pages/notification_test/notification_test",
     "pages/homepage/homepage",
     "pages/test/test",
@@ -8,9 +9,7 @@
     "pages/tool/tool",
     "pages/profile/profile",
     "pages/index/index",
-    
     "pages/forum_detail/forum_detail",
-    
     "pages/catalogue/catalogue",
     "pages/timer/timer",
     "pages/detailContent/detailContent",
@@ -23,7 +22,7 @@
     "backgroundTextStyle": "light",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
-    "initialRenderingCache":"static"
+    "initialRenderingCache": "static"
   },
   "usingComponents": {
     "cu-custom": "/components/colorui/components/cu-custom",

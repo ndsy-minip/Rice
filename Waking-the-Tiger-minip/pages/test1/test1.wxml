@@ -1,0 +1,28 @@
+<!--pages/test1/test1.wxml-->
+<cu-custom bgColor="bg-custom" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">添加提醒</view>
+</cu-custom>
+
+<view style="height:100vh" class="bg-white">
+  <import src="../calendar/calendar.wxml"></import>
+
+  <template is="calendar" data="{{selected_value,days,month,years,lunar_years,lunar_month,lunar_days,selectDateType,lunar_selected_value}}"></template>
+
+  <view style="height:620rpx"></view>
+
+  <view class="padding-left">事件名称</view>
+  <view class="margin padding-tb-sm padding-lr bg-gray">
+    <input placeholder="请输入事件，最多10字~" maxlength="10" bindinput="bindTitleChange" />
+  </view>
+  <view class="padding-left">事件描述</view>
+  <view class="margin padding-tb-sm padding-lr bg-gray">
+    <textarea placeholder="在这里详细描述，最多15字" maxlength="15" style="height:10vh" bindinput="bindDescribeChange">
+    </textarea>
+  </view>
+  <view class="margin-bottom padding text-grey text-center">我们将会在您设置的时间给您发送微信提醒</view>
+
+  <button class="bg-blue" bindtap="test">订阅</button>
+
+
+</view>

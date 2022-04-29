@@ -1,11 +1,31 @@
 <!--pages/notification_test/notification_test.wxml-->
-<view style="height:30vh"></view>
+<cu-custom bgColor="bg-custom" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">添加提醒</view>
+</cu-custom>
 
+<view class="padding">事件</view>
 <view class="cu-form-group">
-  <view class="title">日期选择</view>
-  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-    <view class="picker">{{''+date+''}}</view>
-  </picker>
+  <input placeholder="请输入事件，最多15字~" maxlength="15" />
 </view>
+
+<view class="padding">目标日</view>
+<view class="cu-form-group">
+  <view class="flex align-center text-lg">
+    <text class="cuIcon-time margin-right"></text>
+    <view class="text-bold">
+      <datepicker onchange="bindDateChange" value="{{value}}">
+        <view>{{date}}</view>
+      </datepicker>
+    </view>
+  </view>
+  <view class="switch">
+    <view class="switchNums {{_num == 0?'currentNum':''}}" bindtap="switchChange" data-index="0">{{selectOpen[0]}}</view>
+    <view class="switchNums {{_num == 1?'currentNum':''}}" bindtap="switchChange" data-index="1">{{selectOpen[1]}}</view>
+  </view>
+</view>
+
+
+<view class="padding"></view>
 
 <button class="bg-blue" bindtap="addNotification">订阅</button>

@@ -1,1 +1,26 @@
 /* pages/notification_test/notification_test.wxss */
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width:120px;
+  height: 54rpx;
+  border-radius: 54rpx;
+  background: #f7f7fb;
+}
+ 
+.switchNums {
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  border-radius: 54rpx;
+  text-align: center;
+  color: #C1C1C1;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+ 
+.currentNum {
+  background: #0081ff;
+  color: #ffffff;
+}

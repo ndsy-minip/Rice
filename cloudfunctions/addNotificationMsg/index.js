@@ -12,6 +12,8 @@ exports.main = async (event, context) => {
         page: 'index', // 订阅消息卡片点击后会打开小程序的哪个页面，注意这里的界面是线下小程序有的，否则跳不过去
         data: event.data, // 订阅消息的数据（课程信息）
         date: event.data.date2.value,
+        dateText: event.dateText,
+        dateType: event.dateType,
         templateId: event.templateId, // 订阅消息模板ID
         isSend: false, // 消息发送状态设置为 false
       },
