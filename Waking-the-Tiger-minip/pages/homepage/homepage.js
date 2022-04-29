@@ -49,7 +49,7 @@ Page({
       },
       {
         "iconPath": "../../static/img/更多.png",
-        "navPath": "",
+        "navPath": "../more_function/more_function",
         "text": "更多"
       }
     ],

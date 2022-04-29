@@ -1,0 +1,23 @@
+<!--pages/more_function/more_function.wxml-->
+<cu-custom bgColor="bg-custom" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">更多功能</view>
+</cu-custom>
+
+<view class="bg-white" style="height: 90vh;">
+
+  <block wx:for="{{iconList}}" wx:for-item="items">
+    <view class="text-xl padding">
+      <text class="text-black text-bold" style="letter-spacing:3rpx">{{index}}</text>
+    </view>
+
+    <view class="cu-list grid col-3">
+      <view class="cu-item" wx:for="{{iconList[index]}}">
+        <view class="margin-left:auto; margin-right:auto;" data-navPath="{{item.navPath}}">
+          <image src="{{item.iconPath}}" style="height:12vw;width:12vw"></image>
+          <view class="margin-top-xs text-black">{{item.text}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

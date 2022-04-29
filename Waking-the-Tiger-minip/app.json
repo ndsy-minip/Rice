@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/notification_test/notification_test",
+    "pages/homepage/homepage",
     "pages/test/test",
     "pages/forum_/forum_",
+    "pages/more_function/more_function",
     "pages/tool/tool",
     "pages/profile/profile",
-    "pages/notification_test/notification_test",
+    "pages/index/index",
+    
     "pages/forum_detail/forum_detail",
-    "pages/module/module_MBTI/MBTI_result/MBTI_result",
-    "pages/homepage/homepage",
+    
     "pages/catalogue/catalogue",
     "pages/timer/timer",
     "pages/detailContent/detailContent",
