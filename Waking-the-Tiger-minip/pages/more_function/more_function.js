@@ -44,7 +44,7 @@ Page({
         {
           "text": "备忘提醒",
           "iconPath": "../../static/img/备忘提醒.png",
-          "navPath": ""
+          "navPath": "../notification/notification"
         },
         {
           "text": "全国行情",
@@ -136,5 +136,17 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+
+  navToModule(e){
+    wx.navigateTo({
+      url: e.currentTarget.dataset.nav,
+      fail(err){
+        wx.switchTab({
+          url: e.currentTarget.dataset.nav,
+        })
+      }
+    })
+  },
 })

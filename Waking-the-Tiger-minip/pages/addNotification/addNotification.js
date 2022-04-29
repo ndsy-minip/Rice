@@ -58,6 +58,7 @@ Page({
 
 
   test(e) {
+    var _this = this
     if (this.data.title != '' && this.data.describe != '') {
       var date = ''
       if (this.data.selectDateType == 1) {
@@ -76,7 +77,9 @@ Page({
         content: (this.data.selectDateType == 1 ? '公历：' : '农历：') + ' ' + this.data.date + '\n' + (this.data.selectDateType == 2 ? '公历：' + this.data.dateText + '\n' : '') + "事件：" + this.data.title + '\n' + "描述：" + this.data.describe,
         success(res) {
           if (res.confirm) {
-            var _this = this
+            wx.showLoading({
+              title: '正在添加',
+            })
             wx.requestSubscribeMessage({
               tmplIds: ["M6pds0pSRZ0_QpDlzJrZJKcY8BYhhW141zoAeOay-Pc"],
               success(res) {
@@ -98,15 +101,20 @@ Page({
                       },
                     })
                     .then(() => {
-                      wx.showToast({
-                        title: '订阅成功',
-                        icon: 'success',
-                        success(res){
-                          wx.navigateBack({
-                            delta: 0,
-                          })
-                        }
-                      });
+                      wx.hideLoading({
+                        success: (res) => {
+                          wx.showToast({
+                            title: '添加成功',
+                            icon: 'success',
+                            success(res) {
+                              wx.navigateBack({
+                                delta: 0,
+                              })
+                            }
+                          });
+                        },
+                      })
+
                     })
                     .catch(() => {
                     });

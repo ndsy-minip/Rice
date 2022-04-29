@@ -13,7 +13,7 @@
 
     <view class="cu-list grid col-3">
       <view class="cu-item" wx:for="{{iconList[index]}}">
-        <view class="margin-left:auto; margin-right:auto;" data-navPath="{{item.navPath}}">
+        <view class="margin-left:auto; margin-right:auto;" data-nav="{{item.navPath}}" bindtap="navToModule">
           <image src="{{item.iconPath}}" style="height:12vw;width:12vw"></image>
           <view class="margin-top-xs text-black">{{item.text}}</view>
         </view>

@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/test1/test1",
-    "pages/notification_test/notification_test",
+    "pages/index/index",
     "pages/homepage/homepage",
+
+    "pages/notification/notification",
+    "pages/addNotification/addNotification",
     "pages/test/test",
     "pages/forum_/forum_",
     "pages/more_function/more_function",
     "pages/tool/tool",
     "pages/profile/profile",
-    "pages/index/index",
+
     "pages/forum_detail/forum_detail",
     "pages/catalogue/catalogue",
     "pages/timer/timer",

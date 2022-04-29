@@ -5,7 +5,7 @@
       <view bindtap="changeCalendarTab" data-tap="2" class="tab {{selectDateType === 2 ? 'active' : ''}}">农历</view>
     </view>
     <!--阳历选择器  -->
-    <picker-view indicator-class="selected-item" class="event-type_parent" indicator-style="height: 30px;" style="{{selectDateType === 1 ? '' : 'display: none;'}} width: 100%; height: 200px;" value="{{selected_value}}" id="_calendar" bindchange="changeDate">
+    <picker-view indicator-class="selected-item" class="event-type_parent" indicator-style="height: 30px;" style="width: 100%; height: 200px;{{selectDateType === 1 ? '' : 'display: none;'}} " value="{{selected_value}}" id="_calendar" bindchange="changeDate">
       <picker-view-column>
         <view wx:for="{{years}}" wx:key="key" class="event-type_child">
           <text class="event-type_txt">{{item.name}}</text>
@@ -24,7 +24,7 @@
     </picker-view>
 
     <!--农历选择器  -->
-    <picker-view indicator-class="selected-item" class="event-type_parent" indicator-style="height: 30px;" style="{{selectDateType === 2 ? '' : 'display: none;'}}width: 100%; height: 200px;" value="{{lunar_selected_value}}" id="_lunar_calendar" bindchange="changeLunarDate">
+    <picker-view indicator-class="selected-item" class="event-type_parent" indicator-style="height: 30px;" style="width: 100%; height: 200px;{{selectDateType === 2 ? '' : 'display: none;'}}" value="{{lunar_selected_value}}" id="_lunar_calendar" bindchange="changeLunarDate">
       <picker-view-column>
         <view wx:for="{{lunar_years}}" wx:key="key" class="event-type_child">
           <text class="event-type_txt">{{item.name}}</text>
