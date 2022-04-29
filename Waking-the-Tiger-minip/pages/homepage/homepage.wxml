@@ -3,11 +3,11 @@
 
 <scroll-view style="height:200vh" scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}" class="bg-white">
   <view>
-    <swiper class="padding square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500" easing-function="easeInOutCubic">
+    <swiper class="padding-tb square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500">
       <block wx:for="{{bannerImgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-        <swiper-item style="border-radius: 30rpx;">
-          <view style="width:100%;height:100%">
-            <image style="background-image: url({{item.imgUrl}});width: 100vw;height:100%"></image>
+        <swiper-item class="flex justify-center">
+          <view style="width:90%;height:100%;">
+            <image style="background-image: url({{item.imgUrl}});width: 90vw;height:100%;border-radius: 30rpx;"></image>
           </view>
         </swiper-item>
       </block>

@@ -5,7 +5,7 @@
 </cu-custom>
 
 <view class="bg-white" style="height:100vh">
-  <view class="padding" style="border: 3rpx solid rgba(0, 0, 0, 0.1);">
+  <view class="padding" style="border-bottom: 3rpx solid rgba(0, 0, 0, 0.1);">
     <view class="text-xl text-black text-bold">有人知道吗？可以帮帮我吗？</view>
     <view class="margin-top-lg flex align-center">
       <view class="cu-avatar round" style="background-image: url(https://tse1-mm.cn.bing.net/th/id/R-C.e8891d9037a4ced784968f37f9aa58c4?rik=SGrAIotStgLi6Q&riu=http%3a%2f%2fscimg.jianbihuadq.com%2f202008%2f20200810213610197.jpg&ehk=7cI6rE%2fJVpe2JzmKEKQtdOydRVJ%2bgqInCU2VEC8cFUs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);"></view>
