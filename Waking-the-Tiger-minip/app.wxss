@@ -27,3 +27,12 @@
   border-width: 2rpx;
   border-color: #0081ff;
 }
+
+sup{
+  font-size: 15rpx;
+  vertical-align:text-top;
+}
+sub{
+  font-size: 15rpx;
+  vertical-align:text-bottom;
+}

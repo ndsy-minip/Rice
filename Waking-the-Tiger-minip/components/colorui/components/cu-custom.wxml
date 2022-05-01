@@ -1,13 +1,15 @@
-<view class="fixed text-center bg-white">
-  <view style="height:10vh;"></view>
-  <view  class="nav text-center" scroll-x="{{true}}">
-    <view style="position:absolute;left:3%;top: 6.5vh;padding-right:10vw;z-index: 999;" bindtap="navBack">
-      <text class="cuIcon-back" style="font-size: 36rpx;"></text>
-    </view>
-    <view style="position:absolute;top:6.6vh;margin-left:auto;left: 0;right: 0;" class="text-bold">
+<view class="cu-custom text-center">
+  <view class="cu-bar fixed bg-white">
+    <view style="height:10vh;"></view>
+    <view class="nav text-center" scroll-x="{{true}}">
+      <view style="position:absolute;left:3%;top: 6.5vh;padding-right:10vw;z-index: 999;" bindtap="navBack">
+        <text class="cuIcon-back" style="font-size: 36rpx;"></text>
+      </view>
+      <view style="position:absolute;top:6.6vh;margin-left:auto;left: 0;right: 0;" class="text-bold">
         <text style="font-size: 30rpx;">{{title}}</text>
+      </view>
+      <view style="height:1vh"></view>
     </view>
-    <view style="height:1vh"></view>
   </view>
-
+  <view style="height:10vh;"></view>
 </view>

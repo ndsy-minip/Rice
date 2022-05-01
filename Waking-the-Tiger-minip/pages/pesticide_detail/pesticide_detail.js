@@ -1,27 +1,18 @@
-// pages/pesticide_catalogue/pesticide_detail.js
+// pages/pesticide_detail/pesticide_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabCur: 0
+    imgList: ['https://th.bing.com/th/id/OIP.uHfEyCfBUIddMCDemynvswHaIe?w=144&h=180&c=7&r=0&o=5&pid=1.7']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var list = [{}];
-    for (var i = 0; i < 26; i++) {
-      list[i] = {};
-      list[i].name = String.fromCharCode(65 + i);
-      list[i].id = i;
-    }
-    this.setData({
-      list,
-      listCur: list[0]
-    })
+
   },
 
   /**
@@ -71,19 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-
-
-  switchTab: function (e) {
-    this.setData({
-      tabCur: e.currentTarget.dataset.id
-    })
-  },
-
-  navToDetail: function (e) {
-    wx.navigateTo({
-      url: '../pesticide_detail/pesticide_detail',
-    })
   }
 })

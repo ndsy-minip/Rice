@@ -1,11 +1,11 @@
 {
   "pages": [
-
-    "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/more_function/more_function",
+    "pages/pesticide_catalogue/pesticide_catalogue",
+    
     "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
-    
+    "pages/pesticide_detail/pesticide_detail",
     "pages/disease_catalogue/disease_catalogue",
     "pages/index/index",
     "pages/notification/notification",
