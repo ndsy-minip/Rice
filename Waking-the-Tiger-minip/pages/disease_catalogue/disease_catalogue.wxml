@@ -1,0 +1,29 @@
+<!--pages/disease_catalogue/disease_catalogue.wxml-->
+<view class="fixed">
+  <view class="bg-white" style="height:5vh;"></view>
+  <scroll-view class="bg-white nav text-center" scroll-x="{{true}}">
+    <view style="position:absolute;left:3%;top: 1.5vh;" bindtap="navBack">
+      <text class="cuIcon-back" style="font-size: 36rpx;"></text>
+    </view>
+    <block wx:for="{{titleList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="{{['cu-item',index==tabCur?'text-blue cur':'']}} text-lg text-bold" data-index="{{index}}" bindtap="switchTab">{{item}}</view>
+    </block>
+  </scroll-view>
+
+  <view class="cu-bar search bg-white">
+    <view class="search-form round"><text class="cuIcon-search"></text><input adjust-position="{{false}}" type="text" placeholder="搜索图片、文章、视频" confirm-type="search" /></view>
+    <view class="action" style="width: 15vw;"><button class="cu-btn bg-blue shadow-blur round">搜索</button></view>
+  </view>
+</view>
+
+<view class="padding"></view>
+
+<view class="padding-sm flex">
+  <block wx:for="{{2}}">
+    <view class="flex-sub padding-xs" bindtap="navToDetail">
+      <view class="bg-img" style="background-image: url(https://bkimg.cdn.bcebos.com/pic/728da9773912b31bb0513666a452217adab44aed4b63?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg);width:45vw;height:10vh">
+        <view class="text-white text-lg" style="padding-top:6vh;padding-left: 3vw;font-weight:1000;">花生青枯病</view>
+      </view>
+    </view>
+  </block>
+</view>

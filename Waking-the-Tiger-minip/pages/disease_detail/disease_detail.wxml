@@ -1,0 +1,52 @@
+<!--pages/disease/disease.wxml-->
+<cu-custom title="花生青枯病"></cu-custom>
+
+<view class="bg-white">
+  <swiper class="margin-top-sm screen-swiper round-dot" duration="500" interval="5000" autoplay="{{true}}">
+    <block wx:for="{{imgList}}">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="padding text-xl text-bold text-black">名称</view>
+  <view class="padding text-black" style="padding-top:0;">花生青枯病</view>
+</view>
+
+<view class="margin-top padding bg-white">
+  <view class="text-xl text-bold text-black">概况</view>
+  <view class="margin-top" style="line-height: 40rpx;">花生青枯病是由青枯假单胞杆菌引起的、发生在花生的一种病害。该病是一种典型的维管束病害，也是一种典型的土传病害。该病主要为害花生根部。花生青枯病主要分布在印度尼西亚、越南、泰国等20多个国家；在中国主要分布于广东、广西、福建、江西、湖南、湖北、江苏和安徽等地，尤以南方各省（区）发病严重。一般发病率10-20%，严重的达50%以上，甚至绝产失收。花生感病后常全株死亡，造成损失严重。随着耕作制的变动，复种指数增加，旱地轮作年限缩短，花生青枯病有发展的趋势。花生青枯病的防治应采用以合理轮作为基础，种植抗病品种为主，加强栽培管理的农业防治措施；并适时进行生物防治和化学防治。</view>
+</view>
+
+<view class="margin-top padding bg-white">
+  <view class="text-xl text-bold text-black">为害症状</view>
+  <view class="margin-top" style="line-height: 40rpx;">
+    <text>花生青枯病在花生的整个生育期都能发生，花期达到发病高峰。花生青枯病主要为害根部，特征性症状是植株急性凋萎和维管束变色。\n病株地上部最初是主茎顶梢叶片中午失水萎蒿，1-2天后，全株叶片自上而下急剧凋萎下垂，整株青枯死亡，叶片暗淡，仍星青绿色，后期病株叶片变褐色枯焦，病株易拔起，可见根部发黑、腐烂。\n从发病到枯死，快则2-3天，慢则21天以上，一般7-15天，病菌从主根尖端开始向上扩展，主根变褐色湿腐，根瘤墨绿色。纵切根茎部，可见维管束变为浅褐色至黑褐色；湿润时挤压切口处，可溢出混浊的白色细菌脓液，将根茎病段插入清水中，可见从切口涌出成烟雾状混浊液，病株上的果柄、荚果呈黑褐色湿腐状。结果期发病的植株，症状不如前期明显。</text>
+  </view>
+</view>
+
+<view class="margin-top padding bg-white">
+  <view class="text-xl text-bold text-black">分布范围</view>
+  <view class="margin-top" style="line-height: 40rpx;">
+    <text>花生青枯病主要分布于印度尼西亚、越南、泰国等20多个国家；在中国主要分布于广东、广西、福建、江西、湖南、湖北、江苏和安徽等地，尤以南方各省（区）发病严重；随着病区的扩大，山东、辽宁、河北、河南等地也有发生，且部分地区逐渐严重。</text>
+  </view>
+</view>
+
+
+<view class="margin-top bg-white">
+  <view class="padding text-xl text-bold text-black">防治方法</view>
+  <block wx:for="{{infoList}}" wx:key="{{index}}">
+    <view class="padding flex align-center justify-between" data-index="{{index}}" bindtap="show">
+      <view class="text-dl">{{item["title"]}}</view>
+      <view><text class="{{selected[index] ? 'cuIcon-fold' : 'cuIcon-unfold'}}"></text></view>
+    </view>
+    <!-- 隐藏内容 -->
+    <view class="collapse-body {{selected[index] ? '' : 'hidden'}}">
+      <view class="padding-xs"></view>
+      <view class="padding-lr">{{item["content"]}}</view>
+      <view class="padding-xs"></view>
+    </view>
+  </block>
+</view>
+
+<view style="height:10vh"></view>

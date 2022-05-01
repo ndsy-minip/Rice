@@ -11,21 +11,9 @@ Component({
    * 组件的对外属性
    */
   properties: {
-    bgColor: {
+    title: {
       type: String,
-      default: ''
-    }, 
-    isCustom: {
-      type: [Boolean, String],
-      default: false
-    },
-    isBack: {
-      type: [Boolean, String],
-      default: false
-    },
-    bgImage: {
-      type: String,
-      default: ''
+      value: '',
     },
   },
   /**
@@ -44,11 +32,6 @@ Component({
       wx.navigateBack({
         delta: 1
       });
-    },
-    toHome(){
-      wx.reLaunch({
-        url: '/pages/index/index',
-      })
     }
   }
 })

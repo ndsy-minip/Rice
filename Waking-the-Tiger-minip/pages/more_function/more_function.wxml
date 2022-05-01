@@ -1,8 +1,5 @@
 <!--pages/more_function/more_function.wxml-->
-<cu-custom bgColor="bg-custom" isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">更多功能</view>
-</cu-custom>
+<cu-custom title="更多功能"></cu-custom>
 
 <view class="bg-white" style="height: 90vh;">
 

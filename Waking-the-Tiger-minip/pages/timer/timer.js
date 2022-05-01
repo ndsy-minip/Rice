@@ -234,6 +234,13 @@ Page({
   showNotebook() {
     var notebook = this.selectComponent("#notebook")
     notebook.showModal()
+  },
+
+
+  goBack() {
+    wx.navigateBack({
+      delta: 0,
+    })
   }
 
 })

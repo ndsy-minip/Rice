@@ -1,19 +1,21 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/more_function/more_function",
+    "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
-
+    "pages/disease_catalogue/disease_catalogue",
+    "pages/index/index",
     "pages/notification/notification",
     "pages/addNotification/addNotification",
     "pages/test/test",
     "pages/forum_/forum_",
-    "pages/more_function/more_function",
+    
     "pages/tool/tool",
     "pages/profile/profile",
-
+    "pages/timer/timer",
     "pages/forum_detail/forum_detail",
     "pages/catalogue/catalogue",
-    "pages/timer/timer",
+
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",

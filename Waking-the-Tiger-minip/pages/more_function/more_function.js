@@ -20,7 +20,7 @@ Page({
         {
           "text": "常见病虫害",
           "iconPath": "../../static/img/病虫害.png",
-          "navPath": ""
+          "navPath": "../disease_catalogue/disease_catalogue"
         }
       ],
       "社区与直播": [
@@ -59,7 +59,7 @@ Page({
         {
           "text": "桃园日记",
           "iconPath": "../../static/img/桃园日记.png",
-          "navPath": ""
+          "navPath": "../timer/timer"
         }
       ],
       "了解更多": [

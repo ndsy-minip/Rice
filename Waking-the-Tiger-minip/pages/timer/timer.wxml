@@ -1,5 +1,11 @@
 <!--pages/timer/timer.wxml-->
-<view class="timer-page" animation="gradientBG">\
+<view class="timer-page" animation="gradientBG">
+  <view class="padding" style="height:10vh;position: relative;">
+    <view style="height:5vh"></view>
+    <view style="width:15vw;height:3vh" bindtap="goBack">
+      <text class="cuIcon-back text-white" style="font-size: 36rpx;"></text>
+    </view>
+  </view>
   <view class="padding margin-xl timer-card" hover-class="timer-card-hover">
     <view class="flex justify-center text-white">
       开始冥想
