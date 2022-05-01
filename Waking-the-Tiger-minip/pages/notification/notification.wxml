@@ -1,9 +1,6 @@
 <!--pages/notification/notification.wxml-->
 
-<cu-custom bgColor="bg-custom" isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">备忘提醒</view>
-</cu-custom>
+<cu-custom title="备忘提醒"></cu-custom>
 
 <block wx:for="{{myNotifycation}}">
   <view class="margin-top">
@@ -24,6 +21,13 @@
   </view>
 </block>
 
+
+<block wx:if="{{myNotifycation==''}}">
+  <view class="noData">
+    <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/nodata.png" mode="widthFix" class="noDataImg"></image>
+    <view>暂时没有您的记录</view>
+  </view>
+</block>
 
 
 <movable-area class="movable-area" bindtap="navToAdd">

@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/more_function/more_function",
+    "pages/notification/notification",
     "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
+    "pages/more_function/more_function",
     "pages/disease_catalogue/disease_catalogue",
     "pages/index/index",
-    "pages/notification/notification",
+    
     "pages/addNotification/addNotification",
     "pages/test/test",
     "pages/forum_/forum_",

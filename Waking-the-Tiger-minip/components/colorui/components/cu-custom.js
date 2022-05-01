@@ -28,7 +28,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    BackPage() {
+    navBack() {
+      console.log(1)
       wx.navigateBack({
         delta: 1
       });
