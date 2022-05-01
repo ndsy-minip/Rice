@@ -15,7 +15,7 @@ Page({
         {
           "text": "常见农药",
           "iconPath": "../../static/img/常见农药.png",
-          "navPath": ""
+          "navPath": "../pesticide_catalogue/pesticide_catalogue"
         },
         {
           "text": "常见病虫害",
