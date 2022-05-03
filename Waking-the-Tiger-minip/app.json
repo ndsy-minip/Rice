@@ -1,6 +1,10 @@
 {
   "pages": [
 
+
+    "pages/camera/camera",
+
+    "pages/index/index",
     "pages/more_function/more_function",
     "pages/plantTech/plantTech",
 
@@ -9,7 +13,7 @@
 
     "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
-    "pages/index/index",
+
     "pages/pesticide_detail/pesticide_detail",
     "pages/disease_catalogue/disease_catalogue",
     "pages/aboutAs/aboutAs",

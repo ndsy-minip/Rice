@@ -1,0 +1,27 @@
+<!--pages/camera/camera.wxml-->
+
+<cu-custom title="图像识别"></cu-custom>
+
+<view class='camera' wx:if="{{isAuth}}">
+  <camera device-position="back" flash="off" binderror="error" wx:if="{{!src}}">
+    <cover-view class="flex justify-center align-center" style="height:70vh;width:100vw">
+
+      <cover-image src="../../static/img/test.png" style="width: 90vw;height:90vw"></cover-image>
+    </cover-view>
+  
+  </camera>
+  <!-- <image src="{{src}}" wx:if="{{src}}"></image> -->
+</view>
+
+<!-- <view class="padding flex" style="margin-top: 20vh;">
+  <button class="cu-btn bg-blue" style="width: 20vw;" bindtap="takePhoto">拍照</button>
+  <button class="cu-btn bg-red margin-right" style="width: 20vw;" bindtap="clearSrc">清空</button>
+  <button class="cu-btn bg-blue" style="width: 40vw;" bindtap="selectImg">从相册上传</button>
+</view> -->
+
+
+<view class="foot">
+  <view class="btn bg-white flex justify-center align-center" bindtap="takePhoto">
+    <text class="cuIcon-camera text-bold text-white" style="font-size:36px"></text>
+  </view>
+</view>
