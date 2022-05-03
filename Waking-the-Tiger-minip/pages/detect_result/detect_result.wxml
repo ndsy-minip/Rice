@@ -1,0 +1,6 @@
+<!--pages/detect_result/detect_result.wxml-->
+<cu-custom title="识别结果"></cu-custom>
+
+<view class="padding flex jusitify-center" style="height:20vh;width:100vw;">
+  <image src="{{img_url}}" style="width:30vw;height:30vw;margin-left:auto;margin-right:auto"></image>
+</view>

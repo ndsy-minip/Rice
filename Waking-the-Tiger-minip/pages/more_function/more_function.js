@@ -143,11 +143,30 @@ Page({
     wx.navigateTo({
       url: e.currentTarget.dataset.nav,
       fail(err){
-        console.log(err)
         wx.switchTab({
           url: e.currentTarget.dataset.nav,
           fail(err){
-            console.log(err)
+            wx.showActionSheet({
+              itemList: ["拍照","从相册中选择"],
+              success(res){
+                if(res.tapIndex==0){
+                  wx.navigateTo({
+                    url: '../camera/camera',
+                    
+                  })
+                } else{
+                  wx.chooseImage({
+                    count: 1,
+                    sourceType: ["album"],
+                    success(res){
+                      wx.navigateTo({
+                        url: '../detect_result/detect_result?img_url='+ res.tempFilePaths[0],
+                      })
+                    }
+                  })
+                }
+              }
+            })
           }
         })
       }

@@ -1,16 +1,15 @@
 {
   "pages": [
 
-
-    "pages/camera/camera",
-
     "pages/index/index",
     "pages/more_function/more_function",
+
+    "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
 
     "pages/tool/tool",
     "pages/pesticide_catalogue/pesticide_catalogue",
-
+    "pages/camera/camera",
     "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
 

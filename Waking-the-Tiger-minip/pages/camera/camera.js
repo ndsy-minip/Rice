@@ -73,45 +73,15 @@ Page({
 
   takePhoto() {
     const ctx = wx.createCameraContext()
+    var _this = this
     ctx.takePhoto({
       quality: 'high',
       success: (res) => {
-        this.setData({
-          src: res.tempImagePath
+        wx.navigateTo({
+          url: '../detect_result/detect_result?img_url=' + res.tempImagePath,
         })
-        wx.previewImage({
-          current: res.tempImagePath, // 当前显示图片的http链接
-          urls: [res.tempImagePath] // 需要预览的图片http链接列表
-        })
-      }
-    })
-  },
 
-  clearSrc() {
-    var _this = this
-    wx.showModal({
-      title: "提示",
-      content: "确定要删除这张照片吗",
-      success(res) {
-        if (res.confirm) {
-          _this.setData({
-            src: ''
-          })
-        }
       }
-    })
-  },
-
-  selectImg() {
-    var _this = this
-    wx.chooseImage({
-      count: 1,
-      success(res) { 
-        _this.setData({
-          src : res.tempFilePaths[0]
-        })
-      }
-
     })
   }
 
