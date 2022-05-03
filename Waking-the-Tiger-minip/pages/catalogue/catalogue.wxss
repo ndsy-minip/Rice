@@ -1,6 +1,4 @@
 /* pages/catalogue/catalogue.wxss */
-
-page,
 scroll-view {
   height: 100%;
 }

@@ -1,6 +1,12 @@
 <!--pages/tool/tool.wxml-->
 <navBar-custom title="农业直播"></navBar-custom>
 
+<view class="nav flex jusitify-center" style="background-color:rgb(247,247,247)">
+  <block wx:for="{{titleList}}" wx:key="index">
+    <view class="{{['cu-item',index==tabCur?'text-blue cur':'']}} text-lg text-bold" data-index="{{index}}" bindtap="switchTab">{{item}}</view>
+  </block>
+</view>
+
 <view class="bg-white flex" style="height:15vh">
   <view class="padding flex-twice" style="height: 100%;">
     <view class="text-xl text-bold">Hi! 欢迎来到直播板块!</view>

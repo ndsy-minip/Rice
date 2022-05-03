@@ -27,12 +27,12 @@ Page({
         {
           "text": "互助社区",
           "iconPath": "../../static/img/互助社区.png",
-          "navPath": "../forum_/forum _"
+          "navPath": "../forum_/forum_"
         },
         {
           "text": "知识直播",
           "iconPath": "../../static/img/知识直播.png",
-          "navPath": ""
+          "navPath": "../tool/tool"
         }
       ],
       "工具模块": [
@@ -66,15 +66,15 @@ Page({
         {
           "text": "科学种植技术",
           "iconPath": "../../static/img/科学种植技术.png",
-          "navPath": ""
+          "navPath": "../plantTech/plantTech"
         },
         {
           "text": "农业现代化",
           "iconPath": "../../static/img/农业现代化.png",
-          "navPath": ""
+          "navPath": "../modern_agriculture/modern_agriculture"
         },
         {
-          "text": "书籍资料",
+          "text": "相关资料",
           "iconPath": "../../static/img/书籍资料.png",
           "navPath": ""
         },
@@ -143,8 +143,12 @@ Page({
     wx.navigateTo({
       url: e.currentTarget.dataset.nav,
       fail(err){
+        console.log(err)
         wx.switchTab({
           url: e.currentTarget.dataset.nav,
+          fail(err){
+            console.log(err)
+          }
         })
       }
     })

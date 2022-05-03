@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    titleList : ["热播中","种植教学","乡村风景",],
+    tabCur: 1,
     tools: [[
       {
         "img":"cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png",
@@ -115,6 +117,13 @@ Page({
       error(){},
       complete(res){console.log(res)},
     })
-  }
+  },
+
+  switchTab: function (e) {
+    this.setData({
+      tabCur: e.currentTarget.dataset.index
+    })
+  },
+
 
 })

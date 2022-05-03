@@ -1,0 +1,9 @@
+/* pages/modern_agriculture/modern_agriculture.wxss */
+.text-abbreviation{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 160%;
+}

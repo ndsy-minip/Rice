@@ -14,60 +14,36 @@
 
 <view class="cu-list menu card-menu" style="margin-top:5vh">
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-discover text-blue"></text>暂未开放
-    </view>
+    <button class="cu-btn content"><text class="cuIcon-discover text-blue"></text><text class="text-grey">暂未开放</text></button>
   </view>
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-explore text-blue"></text>还没想好
-    </view>
+    <button class="cu-btn content"><text class="cuIcon-explore text-blue"></text><text class="text-grey">还没想好</text></button>
   </view>
 </view>
 
 <view class="cu-list menu card-menu">
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-btn text-blue"></text>我的测评
-    </view>
+    <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的测评</text></button>
   </view>
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-countdown text-green"></text>我的冥想
-    </view>
+    <button class="cu-btn content"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的冥想</text></button>
   </view>
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-like text-red"></text>我的收藏
-    </view>
+    <button class="cu-btn content"><text class="cuIcon-like text-red"></text><text class="text-grey">我的收藏</text></button>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu">
+  <view class="cu-item arrow" bindtap="navToAbout">
+    <button class="cu-btn content"><text class="cuIcon-friend text-cyan"></text><text class="text-grey">关于我们</text></button>
+  </view>
+  <view class="cu-item arrow">
+    <button class="cu-btn content" open-type="contact"><text class="cuIcon-btn text-olive"></text><text class="text-grey" style="font-style: normal;">联系我们</text></button>
   </view>
 </view>
 
 <view class="cu-list menu card-menu">
   <view class="cu-item arrow">
-    <view class="content">
-      <text class="cuIcon-friend text-cyan"></text>关于我们
-    </view>
-  </view>
-  <view class="cu-item arrow">
-    <view class="content">
-      <button open-type="contact" class="flex justify-start" style="border: none;background-color: transparent;outline: none;font-weight: normal; font-size: 15px;padding:0;margin: 0;margin-left:10rpx;width: 80vw;">
-        <view>
-          <text class="cuIcon-message text-blue margin-right-xs"></text> 联系我们
-        </view>
-      </button>
-    </view>
-  </view>
-</view>
-
-<view class="cu-list menu card-menu">
-  <view class="cu-item arrow">
-    <view class="content">
-      <button open-type="share" class="flex justify-start" style="border: none;background-color: transparent;outline: none;font-weight: normal; font-size: 15px;padding:0;margin: 0;margin-left:10rpx;width: 80vw;">
-        <view>
-          <text class="cuIcon-share text-blue margin-right-xs"></text> 分享给好友
-        </view>
-      </button>
-    </view>
+    <button class="cu-btn content" open-type="share"><text class="cuIcon-share text-olive"></text><text class="text-grey">分享给好友</text></button>
   </view>
 </view>

@@ -7,16 +7,11 @@ Page({
   data: {
     currentSwiperIndex: 0,
     bannerImgList: [{
-      imgUrl: "https://images.unsplash.com/photo-1651054222950-0edfc3059fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgUrl: "https://img.zcool.cn/community/013d445e1944daa8012165184c6141.jpg@1280w_1l_2o_100sh.jpg",
       imgTitle: "abcd",
       imgDescription: "1234"
     }, {
-      imgUrl: "https://images.unsplash.com/photo-1651135527891-da5b354b9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1647&q=80",
-      imgTitle: "sdf",
-      imgDescription: "5678"
-    },
-    {
-      imgUrl: "https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      imgUrl: "https://img.zcool.cn/community/019bc559b8f8a2a801207534bd0dc4.jpg@1280w_1l_2o_100sh.jpg",
       imgTitle: "sdf",
       imgDescription: "5678"
     }

@@ -7,9 +7,9 @@
     <view class="margin padding-left padding-top padding-bottom bg-white" style="border-radius:20rpx;">
       <view class="flex align-center justify-between">
         <view class="flex align-center">
-          <view class="cu-tag bg-blue light radius" wx:if="{{item.dateType==2}}">农历</view>
+          <view class="cu-tag bg-red light radius" wx:if="{{item.dateType==2}}">农历</view>
           <view class="margin-left" wx:if="{{item.dateType==2}}">{{item.dateText}}</view>
-          <view class="{{item.dateType==2?'margin-left-xl':''}} cu-tag bg-red light radius">公历</view>
+          <view class="{{item.dateType==2?'margin-left-xl':''}} cu-tag bg-blue light radius">公历</view>
           <view class="margin-left">{{item.date}}</view>
         </view>
         <view class="margin-right" bindtap="showActionSheet" data-_id="{{item._id}}"><text class="cuIcon-more text-xl"></text></view>

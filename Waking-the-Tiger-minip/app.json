@@ -1,21 +1,24 @@
 {
   "pages": [
-    "pages/index/index",
+
+    "pages/more_function/more_function",
+    "pages/plantTech/plantTech",
+
     "pages/tool/tool",
     "pages/pesticide_catalogue/pesticide_catalogue",
-    "pages/more_function/more_function",
+
     "pages/disease_detail/disease_detail",
     "pages/homepage/homepage",
-
+    "pages/index/index",
     "pages/pesticide_detail/pesticide_detail",
     "pages/disease_catalogue/disease_catalogue",
-    
+    "pages/aboutAs/aboutAs",
     "pages/notification/notification",
     "pages/addNotification/addNotification",
     "pages/test/test",
     "pages/forum_/forum_",
-    
-    
+    "pages/modern_agriculture/modern_agriculture",
+
     "pages/profile/profile",
     "pages/timer/timer",
     "pages/forum_detail/forum_detail",

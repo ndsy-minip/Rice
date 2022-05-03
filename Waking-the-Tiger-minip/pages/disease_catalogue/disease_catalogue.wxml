@@ -5,7 +5,7 @@
     <view style="position:absolute;left:3%;top: 1.5vh;" bindtap="navBack">
       <text class="cuIcon-back" style="font-size: 36rpx;"></text>
     </view>
-    <block wx:for="{{titleList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <block wx:for="{{titleList}}" wx:key="index">
       <view class="{{['cu-item',index==tabCur?'text-blue cur':'']}} text-lg text-bold" data-index="{{index}}" bindtap="switchTab">{{item}}</view>
     </block>
   </scroll-view>

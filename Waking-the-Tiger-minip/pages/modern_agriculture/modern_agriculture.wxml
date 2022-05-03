@@ -1,0 +1,13 @@
+<!--pages/modern_agriculture/modern_agriculture.wxml-->
+<cu-custom title="农业现代化"></cu-custom>
+
+<view class="margin-top padding flex bg-white">
+  <view style="flex:7">
+    <text class="text-abbreviation text-bold text-xl">国务院关于印发“十四五”推进农业农村现代化规划的通知</text>
+
+    <view class="margin-top-xl text-grey">新华社微博 2022-05-03</view>
+  </view>
+  <view style="flex:3">
+    <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.NSEbTVn_zOmNxwnUtiZvjQHaEJ?w=328&h=184&c=7&r=0&o=5&pid=17" style="width: 220rpx;height:160rpx" class="radius"></image>
+  </view>
+</view>

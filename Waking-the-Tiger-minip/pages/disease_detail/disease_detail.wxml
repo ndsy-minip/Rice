@@ -37,7 +37,7 @@
   <view class="padding text-xl text-bold text-black">防治方法</view>
   <block wx:for="{{infoList}}" wx:key="{{index}}">
     <view class="padding flex align-center justify-between" data-index="{{index}}" bindtap="show">
-      <view class="text-dl">{{item["title"]}}</view>
+      <view class="text-dl text-black">{{item["title"]}}</view>
       <view><text class="{{selected[index] ? 'cuIcon-fold' : 'cuIcon-unfold'}}"></text></view>
     </view>
     <!-- 隐藏内容 -->

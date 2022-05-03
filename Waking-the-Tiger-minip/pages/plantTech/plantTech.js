@@ -1,21 +1,17 @@
-// pages/module/module_myPage/profile/profile.js
+// pages/plantTech/plantTech.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var userInfo = wx.getStorageSync("userInfo")
-    this.setData({
-      userInfo
-    })
 
   },
 
@@ -30,12 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 3
-      })
-    }
+
   },
 
   /**
@@ -71,13 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  navToAbout: function () {
-    wx.navigateTo({
-      url: '../aboutAs/aboutAs',
-    })
   }
-
-
 })

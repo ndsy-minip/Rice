@@ -28,11 +28,28 @@
   border-color: #0081ff;
 }
 
-sup{
+sup {
   font-size: 15rpx;
-  vertical-align:text-top;
+  vertical-align: text-top;
 }
-sub{
+
+sub {
   font-size: 15rpx;
-  vertical-align:text-bottom;
+  vertical-align: text-bottom;
+}
+
+
+.button::after {
+  border: none;
+}
+
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: inherit;
+}
+
+button {
+  border-radius: 0;
 }

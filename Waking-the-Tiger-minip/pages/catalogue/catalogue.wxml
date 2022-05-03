@@ -1,7 +1,5 @@
-<cu-custom bgColor="bg-custom" isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">作物百科</view>
-</cu-custom>
+<cu-custom title="作物百科"></cu-custom>
+
 <scroll-view scroll-y scroll-into-view="{{scroll}}">
   <view class="con">
     <view class="catalogue_list" id="{{con.title}}" wx:for="{{catalogue_list}}" wx:key="index" wx:for-item="con">
