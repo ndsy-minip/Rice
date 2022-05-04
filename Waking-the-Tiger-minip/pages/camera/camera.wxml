@@ -1,6 +1,6 @@
 <!--pages/camera/camera.wxml-->
 
-<cu-custom title="图像识别"></cu-custom>
+<cu-custom title="害虫识别"></cu-custom>
 
 <view class='camera' wx:if="{{isAuth}}">
   <camera device-position="back" flash="off" binderror="error" wx:if="{{!src}}">

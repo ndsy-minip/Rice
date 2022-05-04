@@ -13,7 +13,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      img_url: options.img_url
+      img_url: options.img_url,
+      results: JSON.parse(options.results)
     })
   },
 

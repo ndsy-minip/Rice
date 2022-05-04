@@ -52,7 +52,7 @@ Page({
           "navPath": ""
         },
         {
-          "text": "图像识别",
+          "text": "害虫识别",
           "iconPath": "../../static/img/图像识别.png",
           "navPath": ""
         },
@@ -139,37 +139,119 @@ Page({
   },
 
 
-  navToModule(e){
+  navToModule(e) {
+    var _this = this
     wx.navigateTo({
       url: e.currentTarget.dataset.nav,
-      fail(err){
-        wx.switchTab({
-          url: e.currentTarget.dataset.nav,
-          fail(err){
-            wx.showActionSheet({
-              itemList: ["拍照","从相册中选择"],
-              success(res){
-                if(res.tapIndex==0){
-                  wx.navigateTo({
-                    url: '../camera/camera',
-                    
-                  })
-                } else{
-                  wx.chooseImage({
-                    count: 1,
-                    sourceType: ["album"],
-                    success(res){
-                      wx.navigateTo({
-                        url: '../detect_result/detect_result?img_url='+ res.tempFilePaths[0],
-                      })
-                    }
-                  })
-                }
-              }
-            })
-          }
-        })
+      fail(err) {
+        _this.switchTab(e.currentTarget.dataset.nav)
       }
     })
   },
+
+  switchTab: function (nav) {
+    var _this = this
+    wx.switchTab({
+      url: nav,
+      fail(err) {
+        _this.showActionSheet()
+      }
+    })
+  },
+
+  showActionSheet: function (e) {
+    var _this = this
+    wx.showActionSheet({
+      itemList: ["拍照", "从相册中选择"],
+      success(res) {
+        if (res.tapIndex == 0) {
+          _this.navToCamera()
+        } else {
+          _this.chooseImage()
+        }
+      }
+    })
+  },
+
+  navToCamera: function () {
+    wx.navigateTo({
+      url: '../camera/camera',
+    })
+  },
+
+
+  chooseImage: function () {
+    var _this = this
+    wx.chooseImage({
+      count: 1,
+      sourceType: ["album"],
+      success(res) {
+        wx.showLoading({
+          title: '正在识别中',
+        })
+        _this.setData({
+          img_url : res.tempFilePaths[0]
+        })
+        _this.readFile(res.tempFilePaths[0])
+
+      }
+    })
+  },
+
+  readFile: function (img) {
+    var _this = this
+    wx.getFileSystemManager().readFile({
+      filePath: img,
+      encoding: "base64",
+      success: res => {
+        _this.found(res.data)
+      }
+    })
+  },
+
+
+
+  found: function (img) {
+    var _this = this
+    let API_KEY = "W6Fmxb6VuWByufyuP4sD9ip3"
+    let SECRET_KEY = "8rnoHvwAWPcTgTXylCxGDnOCOzLngyH5"
+    wx.request({
+      url: 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=' + API_KEY + '&client_secret=' + SECRET_KEY, //仅为示例，并非真实的接口地址
+      data: {},
+      header: {
+        'Content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        wx.request({
+          url: 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/classification/ndsy_pests?access_token=' + res.data.access_token,
+          method: 'post',
+          data: {
+            image: img
+          },
+          header: {
+            "content-type": "application/json",
+          },
+          success(res) {
+            wx.hideLoading({
+              success: (res) => {
+                wx.showToast({
+                  title: '识别成功',
+                })
+              },
+            })
+            _this.navToResult(res.data.results)
+          }
+        })
+      }
+
+
+    })
+  },
+
+  navToResult(results) {
+    var _this = this
+    wx.navigateTo({
+      url: '../detect_result/detect_result?img_url=' + _this.data.img_url + '&results=' + JSON.stringify(results),
+    })
+  }
 })

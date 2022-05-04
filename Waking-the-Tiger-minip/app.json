@@ -1,8 +1,8 @@
 {
   "pages": [
-
-    "pages/index/index",
     "pages/more_function/more_function",
+    "pages/index/index",
+
 
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
