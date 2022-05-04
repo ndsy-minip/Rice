@@ -23,7 +23,7 @@
     <view class="padding flex justify-center text-white animation-fade" wx:if="{{mottoIndex==index}}">{{item}}</view>
   </block>
 
-  <view class="padding flex justify-center" style="position: absolute;bottom:150rpx;width: 100vw;">
+  <view class="flex justify-center" style="position: absolute;bottom:150rpx;width: 100vw;">
     <view class="flex-twice justify-center flex">
       <view class="btn bg-white flex justify-center align-center animation-shake margin-right" hover-class="btn-hover" bindtap="{{isStart==1?'setSuspend':'setStart'}}" wx:if="{{isStart == isSuspend}}">
         <text class="cuIcon-playfill text-white" style="font-size:30px"></text>
@@ -39,8 +39,11 @@
       <view class="btn bg-white flex justify-center align-center flex-sub margin-right" hover-class="btn-hover" bindtap="showNotebook">
         <text class="cuIcon-edit text-white" style="font-size:30px"></text>
       </view>
-      <view class="btn bg-white flex justify-center align-center flex-sub" hover-class="btn-hover" bindtap="showWhyMeditation">
+      <view class="btn bg-white flex justify-center align-center flex-sub margin-right" hover-class="btn-hover" bindtap="showWhyMeditation">
         <text class="cuIcon-question text-white" style="font-size:30px"></text>
+      </view>
+      <view class="btn bg-white flex justify-center align-center flex-sub" hover-class="btn-hover" bindtap="navToMyNotebook">
+        <text class="cuIcon-form text-white" style="font-size:30px"></text>
       </view>
     </view>
   </view>

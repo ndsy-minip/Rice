@@ -126,16 +126,6 @@ Page({
   },
 
 
-
-  unfold: function (e) {
-    var myNotebook = this.data.myNotebook
-    myNotebook[e.currentTarget.dataset.index].isAbbreviation = !myNotebook[e.currentTarget.dataset.index].isAbbreviation
-    this.setData({
-      myNotebook
-    })
-  },
-
-
   navToAdd: function (e) {
     wx.navigateTo({
       url: '../timer/timer',

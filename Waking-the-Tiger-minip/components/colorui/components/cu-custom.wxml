@@ -2,8 +2,8 @@
   <view class="cu-bar fixed bg-white">
     <view style="height:11vh;"></view>
     <view class="nav text-center" scroll-x="{{true}}">
-      <view style="position:absolute;left:3%;top: 6.5vh;padding-right:10vw;z-index: 999;" bindtap="navBack">
-        <text class="cuIcon-back" style="font-size: 36rpx;"></text>
+      <view style="position:absolute;left:3%;top: 6.5vh;padding-right:10vw;z-index: 999;" bindtap="{{isBack?'navBack':'navHome'}}">
+        <text class="{{isBack?'cuIcon-back':'cuIcon-home'}}" style="font-size: 36rpx;"></text>
       </view>
       <view style="position:absolute;top:6.6vh;margin-left:auto;left: 0;right: 0;" class="text-bold">
         <text style="font-size: 30rpx;">{{title}}</text>

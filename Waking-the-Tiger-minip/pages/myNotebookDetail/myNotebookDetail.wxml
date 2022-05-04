@@ -1,5 +1,5 @@
 <!--pages/myNotebookDetail/myNotebookDetail.wxml-->
-<cu-custom title="我的桃园日记"></cu-custom>
+<cu-custom title="我的桃园日记" isBack="{{isBack}}"></cu-custom>
 <wxs src='myNotebook.wxs' module='tools' />
 
 <view class="margin-tb bg-white padding">

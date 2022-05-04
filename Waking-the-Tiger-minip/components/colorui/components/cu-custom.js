@@ -15,6 +15,10 @@ Component({
       type: String,
       value: '',
     },
+    isBack: {
+      type: Boolean,
+      value: true
+    }
   },
   /**
    * 组件的初始数据
@@ -29,10 +33,14 @@ Component({
    */
   methods: {
     navBack() {
-      console.log(1)
       wx.navigateBack({
         delta: 1
       });
+    },
+    navHome() {
+      wx.switchTab({
+        url: '../homepage/homepage',
+      })
     }
   }
 })

@@ -3,7 +3,7 @@
 <wxs src='myNotebook.wxs' module='tools'/>
 
 <block wx:for="{{myNotebook}}">
-  <view class="margin-tb bg-white padding" catchtap="navToDetail" data-index="{{index}}" style="padding-right:0">
+  <view class="margin-tb bg-white padding" catchtap="navToDetail" data-index="{{index}}" style="padding-right:20rpx">
     <view class="flex align-center">
       <view class="cu-avatar round margin-right lg" style="background-image: url({{userInfo.avatarUrl}});"></view>
       <view style="margin-right:45vw">
@@ -15,7 +15,6 @@
       </view>
     </view>
     <view class="margin-top text-lg" style="line-height: 50rpx;"><text class="{{item.isAbbreviation?'text-abbreviation':''}}">{{item.text}}</text></view>
-    <view class="text-grey text-center margin-top-sm" wx:if="{{item.isExceed}}" data-index="{{index}}" catchtap="unfold">{{item.isAbbreviation?'查看更多':'收起'}}<text class="{{item.isAbbreviation?'cuIcon-unfold':'cuIcon-fold'}}"></text></view>
   </view>
 </block>
 

@@ -12,10 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this
+    var notebook = JSON.parse(options.notebook)
     this.setData({
-      notebook: JSON.parse(options.notebook),
+      notebook,
       userInfo: wx.getStorageSync('userInfo')
     })
+    console.log(notebook.openid)
+    if (notebook.openid == wx.getStorageSync('openid')) {
+      _this.setData({
+        isBack: true
+      })
+    } else {
+      _this.setData({
+        isBack: false
+      })
+    }
+
+
   },
 
   /**
@@ -67,8 +81,8 @@ Page({
     var that = this;
     // 设置菜单中的转发按钮触发转发事件时的转发内容
     var shareObj = {
-      title: that.data.userInfo.nickName + "的桃园日记",      
-      imageUrl: '../../static/img/logo.png',  
+      title: that.data.userInfo.nickName + "的桃园日记",
+      imageUrl: '../../static/img/logo.png',
       success: function (res) {
         if (res.errMsg == 'shareAppMessage:ok') {
         }
@@ -81,8 +95,8 @@ Page({
           // 转发失败，其中 detail message 为详细失败信息
         }
       }
-  };
-},
+    };
+  },
 
   unfold: function (e) {
     var notebook = this.data.notebook

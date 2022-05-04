@@ -241,6 +241,12 @@ Page({
     wx.navigateBack({
       delta: 0,
     })
+  },
+
+  navToMyNotebook() {
+    wx.navigateTo({
+      url: '../myNotebook/myNotebook',
+    })
   }
 
 })
