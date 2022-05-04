@@ -77,7 +77,19 @@ Page({
     wx.navigateTo({
       url: '../aboutAs/aboutAs',
     })
-  }
+  },
+
+  navToNotification: function () {
+    wx.navigateTo({
+      url: '../notification/notification',
+    })
+  },
+
+  navToMyNotebook:function (){
+    wx.navigateTo({
+      url: '../myNotebook/myNotebook'
+    })
+  },
 
 
 })

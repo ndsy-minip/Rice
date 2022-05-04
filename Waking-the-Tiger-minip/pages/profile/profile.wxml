@@ -14,22 +14,25 @@
 
 <view class="cu-list menu card-menu" style="margin-top:5vh">
   <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-discover text-blue"></text><text class="text-grey">暂未开放</text></button>
+    <button class="cu-btn content"><text class="cuIcon-discover text-blue"></text><text class="text-grey">我发布的帖子</text></button>
   </view>
   <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-explore text-blue"></text><text class="text-grey">还没想好</text></button>
+    <button class="cu-btn content"><text class="cuIcon-explore text-blue"></text><text class="text-grey">我收藏的帖子</text></button>
+  </view>
+  <view class="cu-item arrow">
+    <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的回复</text></button>
   </view>
 </view>
 
 <view class="cu-list menu card-menu">
   <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的测评</text></button>
+    <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的桃园日记</text></button>
   </view>
   <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的冥想</text></button>
+    <button class="cu-btn content" bindtap="navToNotification"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的备忘提醒</text></button>
   </view>
   <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-like text-red"></text><text class="text-grey">我的收藏</text></button>
+    <button class="cu-btn content"><text class="cuIcon-like text-red"></text><text class="text-grey">我的测验成绩</text></button>
   </view>
 </view>
 

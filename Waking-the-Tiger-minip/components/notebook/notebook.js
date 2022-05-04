@@ -72,15 +72,27 @@ Component({
       })
     },
 
-    submitNote: function () { 
-      wx.showToast({
-        title: '记录成功',
+    submitNote: function () {
+      var _this = this
+      wx.showLoading({
+        title: '正在记录中',
       })
-      console.log(this.data.note)
-      this.setData({
-        note : ''
+      wx.cloud.callFunction({
+        name: "newNotebook",
+        data: {
+          text: _this.data.note
+        },
+        success(e) {
+          console.log(e)
+          _this.setData({
+            note: ''
+          })
+          _this.hideModal()
+          wx.showToast({
+            title: '记录成功',
+          })
+        }
       })
-      this.hideModal()
     }
   }
 })

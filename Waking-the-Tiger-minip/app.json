@@ -1,12 +1,14 @@
 {
   "pages": [
-    "pages/more_function/more_function",
+    
+    "pages/myNotebook/myNotebook",
+    "pages/profile/profile",
     "pages/index/index",
-
-
+    "pages/more_function/more_function",
+    "pages/timer/timer",
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
-
+"pages/myNotebookDetail/myNotebookDetail",
     "pages/tool/tool",
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/camera/camera",
@@ -22,8 +24,8 @@
     "pages/forum_/forum_",
     "pages/modern_agriculture/modern_agriculture",
 
-    "pages/profile/profile",
-    "pages/timer/timer",
+
+
     "pages/forum_detail/forum_detail",
     "pages/catalogue/catalogue",
 

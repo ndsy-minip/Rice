@@ -1,0 +1,32 @@
+/* pages/myNotebook/myNotebook.wxss */
+.text-abbreviation{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+.movable-view {
+  pointer-events: auto;
+  height: 100rpx;
+  width: 100rpx;
+  left: 0vw;
+  top: 90vh;
+  margin: auto;
+  border-radius: 30%;
+  text-align: center;
+}
+
+.movable-area {
+  pointer-events: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

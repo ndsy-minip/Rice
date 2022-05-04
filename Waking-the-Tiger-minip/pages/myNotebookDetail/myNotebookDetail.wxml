@@ -1,0 +1,18 @@
+<!--pages/myNotebookDetail/myNotebookDetail.wxml-->
+<cu-custom title="我的桃园日记"></cu-custom>
+<wxs src='myNotebook.wxs' module='tools' />
+
+<view class="margin-tb bg-white padding">
+  <view class="flex align-center">
+    <view class="cu-avatar round margin-right lg" style="background-image: url({{userInfo.avatarUrl}});"></view>
+    <view style="margin-right:33vw">
+      <view class="text-black text-lg">{{tools.substring(notebook.time,0,10)}}</view>
+      <view class="margin-top-xs">{{notebook.weekday}} {{tools.substring(notebook.time,11,16)}}</view>
+    </view>
+    <view>
+      <button style="padding:0;width: 15vw;" class="cu-btn line-blue sm shadow" open-type="share">转发</button>
+    </view>
+  </view>
+  <view class="margin-top text-lg" style="line-height: 50rpx;"><text class="{{notebook.isAbbreviation?'text-abbreviation':''}}">{{notebook.text}}</text></view>
+  <view class="text-grey text-center margin-top-sm" wx:if="{{notebook.isExceed}}" catchtap="unfold">{{notebook.isAbbreviation?'查看更多':'收起'}}<text class="{{notebook.isAbbreviation?'cuIcon-unfold':'cuIcon-fold'}}"></text></view>
+</view>
