@@ -1,6 +1,35 @@
 <!--miniprogram/custom-tab-bar/index.wxml-->
-<view class="tab-bar bg-white">
-  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" style="height:60rpx;width:{{index==2?'75rpx':'60rpx'}}"></image>
+
+<view class="cu-bar tabbar padding-bottom-xl" style="background-color:rgb(247,247,247);z-index: 1;">
+  <block wx:for="{{list}}" wx:key="index">
+    <block wx:if="{{index!=1}}">
+      <view class="action" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+        <view class="{{selected === index ? (item.classFill) : item.class}}"></view>
+      </view>
+    </block>
+    <block wx:if="{{index==1}}">
+      <view class="action" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+        <view class="{{selected === index ? (item.classFill) : item.class}}"></view>
+      </view>
+      <view class="action add-action" bindtap="mainMenuClick">
+        <button class="cu-btn cuIcon-add bg-green shadow" role="button" aria-disabled="false"></button>
+
+      </view>
+    </block>
+  </block>
+</view>
+
+<view style="width:100%;z-index: 0;">
+  <!--弹出菜单1-->
+  <view class="flex align-center justify-center shadow-blur img-style" animation="{{menu1}}" bindtap="menu1Click">
+    <text class="cuIcon-formfill text-xxl"></text>
+  </view>
+  <!--弹出菜单2-->
+  <view class="flex align-center justify-center shadow-blur img-style bg-red" animation="{{menu2}}" bindtap="menu2Click">
+    <text class="cuIcon-countdownfill text-xxl"></text>
+  </view>
+  <!--弹出菜单3-->
+  <view class="flex align-center justify-center shadow-blur img-style bg-green" animation="{{menu3}}" bindtap="menu3Click">
+    <text class="cuIcon-writefill text-xxl"></text>
   </view>
 </view>

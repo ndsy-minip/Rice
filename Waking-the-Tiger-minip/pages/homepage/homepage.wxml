@@ -3,7 +3,7 @@
 
 
 
-<scroll-view style="height:100vh" scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}" class="bg-white">
+<scroll-view style="height:100vh" scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}" class="bg-white ">
   <view>
     <swiper class="padding-tb square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500">
       <block wx:for="{{bannerImgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
@@ -29,29 +29,4 @@
 
   </swiper>
   <view class="padding-xs" style="background-color: #f8f8f8;"></view>
-
-
-
-
-
 </scroll-view>
-
-
-<view>
-  <!--弹出菜单1-->
-  <view class="flex align-center justify-center bg-custom shadow-blur img-style" animation="{{menu1}}" bindtap="menu1Click">
-    <text class="text-white">帖子</text>
-  </view>
-  <!--弹出菜单2-->
-  <view class="flex align-center justify-center bg-custom shadow-blur img-style" animation="{{menu2}}" bindtap="menu2Click">
-    <text class="text-white">备忘</text>
-  </view>
-  <!--弹出菜单3-->
-  <view class="flex align-center justify-center bg-custom shadow-blur img-style" animation="{{menu3}}" bindtap="menu3Click">
-    <text class="text-white">日记</text>
-  </view>
-  <!--主菜单-->
-  <view class="main-menu flex align-center justify-center bg-custom shadow-blur" bindtap="mainMenuClick">
-    <text class="cuIcon-add text-white text-bold text-xl" style="font-size: 70rpx;"></text>
-  </view>
-</view>

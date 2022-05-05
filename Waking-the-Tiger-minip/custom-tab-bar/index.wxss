@@ -1,32 +1,13 @@
 @import "../components/colorui/icon.wxss";
 @import "../components/colorui/main.wxss";
 
-.tab-bar{
+.img-style {
+  height: 100rpx;
+  width: 100rpx;
   position: fixed;
-  bottom: 0;
+  bottom: 2.5vh;
+  margin: auto;
   left: 0;
   right: 0;
-  height: 9vh;
-  background-color: #5e7fe8;
-  display: flex;
-  opacity: 0.97;
-}
-
-.tab-bar-item {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3vh;
-  flex-direction: column;
-}
-
-.tab-bar-item cover-image {
-  width: 27px;
-  height: 27px;
-}
-
-.tab-bar-item cover-view {
-  font-size: 10px;
+  border-radius: 30%;
 }

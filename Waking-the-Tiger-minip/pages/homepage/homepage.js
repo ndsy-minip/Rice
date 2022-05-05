@@ -299,7 +299,7 @@ Page({
      */
     menu1.translate(0, 75).rotateZ(360).opacity(1).step();
     menu2.translate(-75, 0).rotateZ(360).opacity(1).step();
-    menu3.translate(0, -75).rotateZ(360).opacity(1).step();
+    menu3.translate(0, -100).rotateZ(360).opacity(1).step();
 
     this.setData({
       menu1: menu1.export(),
