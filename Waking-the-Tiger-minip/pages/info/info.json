@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "swiperCard":"../../components/swiperCard/swiperCard"
+  }
+}

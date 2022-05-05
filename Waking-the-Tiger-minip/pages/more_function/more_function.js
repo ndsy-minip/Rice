@@ -76,7 +76,7 @@ Page({
         {
           "text": "相关资料",
           "iconPath": "../../static/img/书籍资料.png",
-          "navPath": ""
+          "navPath": "../info/info"
         },
       ]
     }

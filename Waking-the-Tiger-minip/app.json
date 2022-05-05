@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/myNotebook/myNotebook",
     "pages/profile/profile",
-    
+    "pages/info/info",
     "pages/more_function/more_function",
     "pages/timer/timer",
     "pages/detect_result/detect_result",

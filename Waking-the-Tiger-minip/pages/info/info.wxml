@@ -1,0 +1,26 @@
+<!--pages/info/info.wxml-->
+<cu-custom title="相关资料"></cu-custom>
+
+
+<view class="margin padding text-xl text-bold text-white radius flex justify-center align-center radius shadow-blur bg-img" style="background-image: url(https://th.bing.com/th/id/R.db73ff4e296f132d0830e8612cf1c1ba?rik=o3aUGwKa1Jmtdw&riu=http%3a%2f%2fwww.08lr.cn%2fuploads%2fallimg%2f170427%2f1-1F42G52049.jpg&ehk=8r3k614gxuvRqSphA21B46d%2bzFpwByrN8PQsQJVg390%3d&risl=&pid=ImgRaw&r=0);">
+  <view class="cu-avatar round lg margin-right" style="background-image: url(https://images.uiiiuiii.com/wp-content/uploads/2020/09/i-illust-nm0908-2-15.jpg);"></view>
+
+田家几日闲，耕种从此起
+</view>
+
+
+<view class="padding flex justify-between align-center" style="padding-bottom: 0;">
+  <view class="text-xl text-black">书籍</view>
+  <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+</view>
+<swiperCard swiperList="{{mainPlantList}}"></swiperCard>
+<view class="padding flex justify-between align-center solids-top" style="padding-bottom: 0;">
+  <view class="text-black text-xl ">电影</view>
+  <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+</view>
+<swiperCard swiperList="{{swiperList}}"></swiperCard>
+<view class="padding flex justify-between align-center solids-top" style="padding-bottom: 0;">
+  <view class="text-xl">论文</view>
+  <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+</view>
+<swiperCard swiperList="{{swiperList}}"></swiperCard>
