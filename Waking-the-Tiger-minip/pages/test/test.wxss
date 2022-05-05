@@ -1,9 +1,27 @@
-.collapse-body {
-  transition: max-height 0.3s; 
-  max-height: 500rpx
+page {
+  background-color: #eee;
 }
 
-.hidden {
-  max-height: 0;
-  overflow: hidden
+/*主菜单*/
+
+.main-menu {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 500rpx;
+  right: 0rpx;
+  z-index: 100;
+  border-radius: 30%;
 }
+
+/**opacity 设置不透明级别  0.0到 1.0 之间*/
+
+.img-style {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 500rpx;
+  right: 0rpx;
+  border-radius: 30%;
+}
+

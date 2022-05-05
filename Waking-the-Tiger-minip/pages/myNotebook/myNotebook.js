@@ -128,7 +128,7 @@ Page({
 
   navToAdd: function (e) {
     wx.navigateTo({
-      url: '../timer/timer',
+      url: '../timer/timer?newNotebook='+'1',
     })
   },
 

@@ -12,3 +12,25 @@ page{
   transform: scale(1);
   transition: all 0.7s ease-in 0s;
 }
+
+/*主菜单*/
+.main-menu {
+  height: 100rpx;
+  width: 100rpx;
+  position: fixed;
+  bottom: 500rpx;
+  right: 0rpx;
+  z-index: 100;
+  border-radius: 30%;
+}
+
+/**opacity 设置不透明级别  0.0到 1.0 之间*/
+
+.img-style {
+  height: 100rpx;
+  width: 100rpx;
+  position: fixed;
+  bottom: 500rpx;
+  right: 0rpx;
+  border-radius: 30%;
+}

@@ -38,18 +38,25 @@ sub {
   vertical-align: text-bottom;
 }
 
-
-.button::after {
-  border: none;
+.movable-view {
+  pointer-events: auto;
+  height: 100rpx;
+  width: 100rpx;
+  left: 38vw;
+  top: 80vh;
+  margin: auto;
+  border-radius: 30%;
+  text-align: center;
 }
 
-button {
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  line-height: inherit;
-}
-
-button {
-  border-radius: 0;
+.movable-area {
+  pointer-events: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

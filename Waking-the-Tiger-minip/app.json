@@ -1,8 +1,12 @@
 {
   "pages": [
+    "pages/homepage/homepage",
+    "pages/test/test",
     "pages/index/index",
+
     "pages/myNotebook/myNotebook",
     "pages/profile/profile",
+
     "pages/info/info",
     "pages/more_function/more_function",
     "pages/timer/timer",
@@ -13,14 +17,14 @@
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/camera/camera",
     "pages/disease_detail/disease_detail",
-    "pages/homepage/homepage",
+
 
     "pages/pesticide_detail/pesticide_detail",
     "pages/disease_catalogue/disease_catalogue",
     "pages/aboutAs/aboutAs",
     "pages/notification/notification",
     "pages/addNotification/addNotification",
-    "pages/test/test",
+
     "pages/forum_/forum_",
     "pages/modern_agriculture/modern_agriculture",
 

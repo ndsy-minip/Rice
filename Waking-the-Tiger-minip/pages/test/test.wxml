@@ -1,24 +1,18 @@
-<view style="height:20vh"></view>
-
-<view class="padding-lr text-xl text-bold">
-  栽培技术
-</view>
-
-<button bindtap="notification"></button>
-
-<view class="padding">
-  <block wx:for="{{infoList}}" wx:key="{{index}}">
-    <view class="bg-white">
-      <view class="padding solids-bottom flex align-center justify-between" data-index="{{index}}" bindtap="show">
-        <view class="text-lg">{{item["title"]}}</view>
-        <view><text class="{{selected[index] ? 'cuIcon-fold' : 'cuIcon-unfold'}}"></text></view>
-      </view>
-      <!-- 隐藏内容 -->
-      <view class="collapse-body {{selected[index] ? '' : 'hidden'}} solids-bottom ">
-        <view class="padding-xs"></view>
-        <view class="padding-lr">{{item["content"]}}</view>
-        <view class="padding-xs"></view>
-      </view>
-    </view>
-  </block>
+<view>
+  <!--弹出菜单1-->
+  <view class="flex align-center justify-center bg-blue shadow-blur img-style" animation="{{menu1}}" bindtap="menu1Click">
+    <text class="cuIcon-add text-white text-bold text-xl" style="font-size: 70rpx;"></text>
+  </view>
+  <!--弹出菜单2-->
+  <view class="flex align-center justify-center bg-blue shadow-blur img-style" animation="{{menu2}}" bindtap="menu2Click">
+    <text class="cuIcon-add text-white text-bold text-xl" style="font-size: 70rpx;"></text>
+  </view>
+  <!--弹出菜单3-->
+  <view class="flex align-center justify-center bg-blue shadow-blur img-style" animation="{{menu3}}" bindtap="menu3Click">
+    <text class="cuIcon-add text-white text-bold text-xl" style="font-size: 70rpx;"></text>
+  </view>
+  <!--主菜单-->
+  <view class="main-menu flex align-center justify-center bg-blue shadow-blur" bindtap="mainMenuClick">
+    <text class="cuIcon-add text-white text-bold text-xl" style="font-size: 70rpx;"></text>
+  </view>
 </view>
