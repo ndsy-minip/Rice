@@ -1,10 +1,10 @@
 {
   "pages": [
-
+    "pages/index/index",
     "pages/market/market",
     "pages/catalogue/catalogue",
     "pages/more_function/more_function",
-    "pages/index/index",
+
     "pages/test/test",
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/homepage/homepage",

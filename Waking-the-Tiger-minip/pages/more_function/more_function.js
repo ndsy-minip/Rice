@@ -49,7 +49,7 @@ Page({
         {
           "text": "全国行情",
           "iconPath": "../../static/img/全国行情.png",
-          "navPath": ""
+          "navPath": "../market/market"
         },
         {
           "text": "害虫识别",
