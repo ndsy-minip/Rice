@@ -77,7 +77,9 @@ Page({
 
   switchTab: function (e) {
     this.setData({
-      tabCur: e.currentTarget.dataset.id
+      tabCur: e.currentTarget.dataset.id,
+      mainCur: e.currentTarget.dataset.id,
+      verticalNavTop: (e.currentTarget.dataset.id - 1) * 50
     })
   },
 

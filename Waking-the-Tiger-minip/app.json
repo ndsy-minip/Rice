@@ -1,20 +1,22 @@
 {
   "pages": [
-    "pages/homepage/homepage",
-    "pages/test/test",
+"pages/pesticide_catalogue/pesticide_catalogue",
+    "pages/more_function/more_function",
     "pages/index/index",
+    "pages/test/test",
 
+    "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
     "pages/profile/profile",
 
     "pages/info/info",
-    "pages/more_function/more_function",
+    
     "pages/timer/timer",
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
     "pages/tool/tool",
-    "pages/pesticide_catalogue/pesticide_catalogue",
+    
     "pages/camera/camera",
     "pages/disease_detail/disease_detail",
 
@@ -55,24 +57,16 @@
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
     "list": [{
-        "pagePath": "pages/homepage/homepage",
-        "iconPath": "static/tabbar/档案未选中.png",
-        "selectedIconPath": "static/tabbar/档案.png"
+        "pagePath": "pages/homepage/homepage"
       },
       {
-        "pagePath": "pages/forum_/forum_",
-        "iconPath": "static/tabbar/活动未选中.png",
-        "selectedIconPath": "static/tabbar/活动.png"
+        "pagePath": "pages/forum_/forum_"
       },
       {
-        "pagePath": "pages/tool/tool",
-        "iconPath": "static/tabbar/直播未选中.png",
-        "selectedIconPath": "static/tabbar/直播.png"
+        "pagePath": "pages/tool/tool"
       },
       {
-        "pagePath": "pages/profile/profile",
-        "iconPath": "static/tabbar/我的未选中.png",
-        "selectedIconPath": "static/tabbar/我的.png"
+        "pagePath": "pages/profile/profile"
       }
     ]
   },
