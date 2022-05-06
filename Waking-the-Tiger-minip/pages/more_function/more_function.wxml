@@ -1,5 +1,6 @@
 <!--pages/more_function/more_function.wxml-->
 <cu-custom title="更多功能"></cu-custom>
+<view style="height:11vh"></view>
 
 <view class="bg-white" style="height: 90vh;">
 

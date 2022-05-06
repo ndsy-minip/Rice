@@ -40,8 +40,8 @@ picker-view-column {
   width: 100px;
   text-align: center;
   font-size: 16px;
-  color: #5e7fe8;
-  border: #5e7fe8 1px solid;
+  color: #0081ff;
+  border: #0081ff 1px solid;
 }
 
 .tab-bar {
@@ -56,7 +56,7 @@ picker-view-column {
 
 .tab-bar .active {
   color: white;
-  background: #5e7fe8;
+  background: #0081ff;
 }
 
 .selected-item {

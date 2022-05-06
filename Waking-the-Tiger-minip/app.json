@@ -1,22 +1,24 @@
 {
   "pages": [
-"pages/pesticide_catalogue/pesticide_catalogue",
+
     "pages/more_function/more_function",
+    "pages/catalogue/catalogue",
+    
     "pages/index/index",
     "pages/test/test",
-
+    "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
     "pages/profile/profile",
 
     "pages/info/info",
-    
+
     "pages/timer/timer",
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
     "pages/tool/tool",
-    
+
     "pages/camera/camera",
     "pages/disease_detail/disease_detail",
 
@@ -33,7 +35,6 @@
 
 
     "pages/forum_detail/forum_detail",
-    "pages/catalogue/catalogue",
 
     "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",

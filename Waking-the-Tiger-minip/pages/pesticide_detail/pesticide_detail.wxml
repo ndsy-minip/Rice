@@ -2,7 +2,7 @@
 <view class="fixed">
   <cu-custom title="倍腈松"></cu-custom>
 </view>
-
+<view style="height:11vh"></view>
 
 <view class="bg-white padding-bottom">
   <swiper class="margin-top-sm screen-swiper round-dot" duration="500" interval="5000" autoplay="{{true}}">

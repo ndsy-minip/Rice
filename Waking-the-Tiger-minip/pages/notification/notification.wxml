@@ -2,6 +2,8 @@
 
 <cu-custom title="备忘提醒"></cu-custom>
 
+<view style="height:11vh"></view>
+
 <block wx:for="{{myNotifycation}}">
   <view class="margin-top">
     <view class="margin padding-left padding-top padding-bottom bg-white" style="border-radius:20rpx;">

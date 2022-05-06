@@ -1,6 +1,6 @@
 <!--pages/info/info.wxml-->
 <cu-custom title="相关资料"></cu-custom>
-
+<view style="height:11vh"></view>
 
 <view class="margin padding text-xl text-bold text-white radius flex justify-center align-center radius shadow-blur bg-img" style="background-image: url(https://th.bing.com/th/id/R.db73ff4e296f132d0830e8612cf1c1ba?rik=o3aUGwKa1Jmtdw&riu=http%3a%2f%2fwww.08lr.cn%2fuploads%2fallimg%2f170427%2f1-1F42G52049.jpg&ehk=8r3k614gxuvRqSphA21B46d%2bzFpwByrN8PQsQJVg390%3d&risl=&pid=ImgRaw&r=0);">
   <view class="cu-avatar round lg margin-right" style="background-image: url(https://images.uiiiuiii.com/wp-content/uploads/2020/09/i-illust-nm0908-2-15.jpg);"></view>

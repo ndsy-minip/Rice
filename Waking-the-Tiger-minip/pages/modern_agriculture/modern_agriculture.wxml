@@ -1,6 +1,6 @@
 <!--pages/modern_agriculture/modern_agriculture.wxml-->
 <cu-custom title="农业现代化"></cu-custom>
-
+<view style="height:11vh"></view>
 <view class="margin-top padding flex bg-white">
   <view style="flex:7">
     <text class="text-abbreviation text-bold text-xl">国务院关于印发“十四五”推进农业农村现代化规划的通知</text>

@@ -2,6 +2,8 @@
 
 <cu-custom title="害虫识别"></cu-custom>
 
+<view style="height:11vh"></view>
+
 <view class='camera' wx:if="{{isAuth}}">
   <camera device-position="back" flash="off" binderror="error" wx:if="{{!src}}">
     <cover-view class="flex justify-center align-center" style="height:70vh;width:100vw">

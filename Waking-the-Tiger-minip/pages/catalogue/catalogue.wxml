@@ -1,21 +1,31 @@
-<cu-custom title="作物百科"></cu-custom>
-
-<scroll-view scroll-y scroll-into-view="{{scroll}}">
-  <view class="con">
-    <view class="catalogue_list" id="{{con.title}}" wx:for="{{catalogue_list}}" wx:key="index" wx:for-item="con">
-      <view class="title">{{con.title}}</view>
-      <view class="list" wx:for="{{con.list}}" wx:key="" wx:for-item="list" bindtap="navToDetail">
-        <image src="{{list.img}}"></image>
-        <view class="name">{{list.name}}</view>
+<view>
+  <cu-custom title="作物百科"></cu-custom>
+  
+  <scroll-view scroll-y class="indexes" scroll-into-view="{{'indexes-'+ listCurID}}" style="height:{{'calc(100vh - '+ CustomBar + 'px - 50px)'}}" scroll-with-animation="{{true}}" enable-back-to-top="{{true}}">
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="{{'indexItem-' + item.name}}" id="{{'indexes-' + item.name}}" data-index="{{item.name}}">
+        <view class="padding">{{item.name}}</view>
+        <view class="cu-list menu-avatar no-padding">
+          <view class="cu-item" wx:for="{{2}}" wx:for-item="{{items}}" wx:for-index="{{sub}}" wx:key="sub">
+            <view class="cu-avatar round lg">{{item.name}}</view>
+            <view class="content">
+              <view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view>
+              <view class="text-gray text-sm">
+                有{{sub+2}}个主子需要伺候
+              </view>
+            </view>
+          </view>
+        </view>
       </view>
+    </block>
+  </scroll-view>
+  <view class="indexBar" style="height:{{'calc(100vh - ' + CustomBar + 'px - 50px)'}}">
+    <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+      <view class="indexBar-item" wx:for="{{list}}" wx:key="index" id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur"> {{item.name}}</view>
     </view>
   </view>
-</scroll-view>
-<!-- 字母导航 -->
-<view class="nav {{touchmove == 1?'touchmove':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend">
-  <view id="nav_item" wx:for="{{letter_list}}" wx:key="" data-index="{{index}}">
-    {{letter_list[index]}}
+  <!--选择显示-->
+  <view class="indexToast" wx:if="{{!hidden}}">
+    {{listCur}}
   </view>
 </view>
-<!-- 当前选择字母提示框 -->
-<view class="hint_bok" hidden="{{hiddenn}}">{{nav_text}}</view>

@@ -1,7 +1,7 @@
 <!--pages/myNotebook/myNotebook.wxml-->
 <cu-custom title="我的桃园日记"></cu-custom>
 <wxs src='myNotebook.wxs' module='tools'/>
-
+<view style="height:11vh"></view>
 <block wx:for="{{myNotebook}}">
   <view class="margin-tb bg-white padding" catchtap="navToDetail" data-index="{{index}}" style="padding-right:20rpx">
     <view class="flex align-center">

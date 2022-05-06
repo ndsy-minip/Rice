@@ -1,7 +1,7 @@
 <!--pages/pesticide_catalogue/pesticide_detail.wxml-->
-<view class="fixed">
-  <cu-custom title="常见农药"></cu-custom>
-</view>
+<cu-custom title="常见农药"></cu-custom>
+<view style="height:11vh"></view>
+
 
 <view class="VerticalBox">
   <scroll-view class="VerticalNav nav" style="height:100vh;" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-top="{{verticalNavTop}}">

@@ -1,7 +1,7 @@
 <!--pages/myNotebookDetail/myNotebookDetail.wxml-->
 <cu-custom title="我的桃园日记" isBack="{{isBack}}"></cu-custom>
 <wxs src='myNotebook.wxs' module='tools' />
-
+<view style="height:11vh"></view>
 <view class="margin-tb bg-white padding">
   <view class="flex align-center">
     <view class="cu-avatar round margin-right lg" style="background-image: url({{userInfo.avatarUrl}});"></view>

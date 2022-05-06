@@ -1,5 +1,7 @@
 <!--pages/plantTech/plantTech.wxml-->
 <cu-custom title="科学种植技术"></cu-custom>
+<view style="height:11vh"></view>
+
 
 <view class="margin-top padding flex bg-white">
   <view style="flex:7">
