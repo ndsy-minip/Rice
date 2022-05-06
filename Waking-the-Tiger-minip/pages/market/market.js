@@ -136,9 +136,16 @@ Page({
     });
     that.setData(addressBean);
     var REGION_CITY = this.data.REGION_CITY
-    this.setData({
-      city: REGION_CITY
-    })
+    if (REGION_CITY.indexOf("市") == -1) {
+      this.setData({
+        city: REGION_CITY + "市"
+      })
+    } else {
+      this.setData({
+        city: REGION_CITY
+      })
+    }
+
   }
 
 
