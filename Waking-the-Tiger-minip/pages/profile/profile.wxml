@@ -3,9 +3,9 @@
 
 <view class="cu-list menu-avatar margin-top">
   <view class="cu-item padding" style="margin-top: 12vh;">
-    <view class="cu-avatar round xl" style="background-image: url({{userInfo.avatarUrl}});border-style:solid;border-color:white;border-width: 5rpx;"></view>
+    <view class="cu-avatar round xl" style="background-image: url({{userInfo.avatarUrl}});border-style:solid;border-color:white;border-width: 5rpx;" bindtap="getUserProfile"></view>
     <view class="margin-left-lg content text-white text-xl text-bold">
-      {{userInfo.nickName}}
+      {{userInfo.nickName?userInfo.nickName:'尚未登陆'}}
     </view>
     <text class="text-white text-lg text-bold margin-right-sm">编辑</text>
     <text class="cuIcon-right text-white text-bold margin-right"></text>
@@ -15,9 +15,6 @@
 <view class="cu-list menu card-menu" style="margin-top:5vh">
   <view class="cu-item arrow">
     <button class="cu-btn content"><text class="cuIcon-discover text-blue"></text><text class="text-grey">我发布的帖子</text></button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-explore text-blue"></text><text class="text-grey">我收藏的帖子</text></button>
   </view>
   <view class="cu-item arrow">
     <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的回复</text></button>
@@ -46,6 +43,9 @@
 </view>
 
 <view class="cu-list menu card-menu">
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="navToPay"><text class="cuIcon-pay text-green"></text><text class="text-grey">支持我们</text></button>
+  </view>
   <view class="cu-item arrow">
     <button class="cu-btn content" open-type="share"><text class="cuIcon-share text-olive"></text><text class="text-grey">分享给好友</text></button>
   </view>

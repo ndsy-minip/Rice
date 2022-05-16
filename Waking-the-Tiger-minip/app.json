@@ -1,16 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/market/market",
+    "pages/profile/profile",
+    "pages/pay/pay",
     "pages/catalogue/catalogue",
     "pages/more_function/more_function",
-
-    "pages/test/test",
+"pages/index/index",
+    
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
-    "pages/profile/profile",
 
+    "pages/market/market",
     "pages/info/info",
 
     "pages/timer/timer",

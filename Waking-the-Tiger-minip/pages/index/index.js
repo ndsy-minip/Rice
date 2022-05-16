@@ -103,9 +103,12 @@ Page({
         wx.switchTab({
           url: '../homepage/homepage',
         })
-
-
-      }
+      },
+      fail(err){
+        wx.switchTab({
+          url: '../homepage/homepage',
+        })
+      } 
     })
   },
 })

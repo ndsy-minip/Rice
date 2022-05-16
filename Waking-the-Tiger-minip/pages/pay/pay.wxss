@@ -1,0 +1,13 @@
+button{
+  background-color: #07c160;
+  color: #fff;
+  margin: 70px auto;
+  min-width: 75%;
+  min-height: 50px;
+  line-height: 34px !important;
+}
+
+button:active{
+  background-color: #37cf80;
+  color: #fff;
+}

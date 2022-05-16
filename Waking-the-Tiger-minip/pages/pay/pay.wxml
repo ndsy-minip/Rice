@@ -1,0 +1,16 @@
+<view style="height:30vh"></view>
+<cu-custom title="支持我们"></cu-custom>
+<view class="bg-white padding solids-bottom">
+  <view class="text-black">支持金额</view>
+  <view class="margin-top text-bold flex align-center" style="font-size:50rpx;height:auto">
+    <text class="margin-right-xs">￥</text>
+    <input placeholder="请输入支持金额" placeholder-class="text-gray" style="height:auto" type="number" bindinput="amountInput" value="{{amount}}" />
+  </view>
+</view>
+
+<view class="bg-white padding" wx:if="{{amount==''}}">
+  <text class="text-red">请输入正确的金额</text>
+</view>
+
+
+<button bindtap="do_pay">确认支持</button>
