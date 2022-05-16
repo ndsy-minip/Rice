@@ -16,13 +16,11 @@
   </view>
 </view>
 
-<view class="padding"></view>
-
-<view class="padding-sm flex">
-  <block wx:for="{{2}}">
-    <view class="flex-sub padding-xs" bindtap="navToDetail">
-      <view class="bg-img" style="background-image: url(https://bkimg.cdn.bcebos.com/pic/728da9773912b31bb0513666a452217adab44aed4b63?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg);width:45vw;height:10vh">
-        <view class="text-white text-lg" style="padding-top:6vh;padding-left: 3vw;font-weight:1000;">花生青枯病</view>
+<view class="padding-xs flex flex-wrap justify-center">
+  <block wx:for="{{tabCur==0?diseaseInfo:insectInfo}}">
+    <view bindtap="navToDetail" class="margin-xs">
+      <view class="bg-img" style="background-image:url(https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/disease/{{tabCur==0?index+1:index+23}}_1.jpg?sign=a15ca6a030985a5fbff540b40579d03b&t=1652708531);width:45vw;height:10vh">
+        <view class="text-white text-lg" style="padding-top:1vh;padding-left: 3vw;font-weight:1000;">{{item.name}}</view>
       </view>
     </view>
   </block>

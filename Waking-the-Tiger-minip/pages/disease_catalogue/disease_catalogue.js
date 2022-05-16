@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getDiseaseInfo()
   },
 
   /**
@@ -84,6 +84,31 @@ Page({
   navBack: function (e) {
     wx.navigateBack({
       delta: 1,
+    })
+  },
+
+  getDiseaseInfo: function (e) {
+    var that = this
+    wx.cloud.callFunction({
+      name: "getDisease",
+      success(res) {
+        var data = res.result.data
+        var diseaseInfo = []
+        var insectInfo = []
+        for (var i in data) {
+          data[i].method = JSON.parse(data[i].method)
+          // data[i].image_url = 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/disease/' + data[i].image_url + '.jpg'
+          if (data[i].type == "病害") {
+            diseaseInfo.push(data[i])
+          } else {
+            insectInfo.push(data[i])
+          }
+        }
+        that.setData({
+          diseaseInfo,
+          insectInfo
+        })
+      }
     })
   }
 })
