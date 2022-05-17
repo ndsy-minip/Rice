@@ -6,13 +6,17 @@ Page({
    */
   data: {
     titleList: ["病害", "虫害"],
-    tabCur: 0
+    tabCur: 0,
+    word: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '正在加载中',
+    })
     this.getDiseaseInfo()
   },
 
@@ -71,12 +75,14 @@ Page({
     this.setData({
       tabCur: e.currentTarget.dataset.index
     })
+    this.search()
   },
 
 
   navToDetail: function (e) {
+    console.log(e)
     wx.navigateTo({
-      url: '../disease_detail/disease_detail',
+      url: '../disease_detail/disease_detail?info=' + JSON.stringify(e.currentTarget.dataset.info),
     })
   },
 
@@ -108,7 +114,32 @@ Page({
           diseaseInfo,
           insectInfo
         })
+        wx.hideLoading({
+          success: (res) => {},
+        })
       }
+    })
+  },
+
+  inputChange(e){
+    this.setData({
+      word: e.detail.value
+    })
+    this.search()
+  },
+
+  search(e){
+    var tabCur = this.data.tabCur
+    var info = tabCur==0?this.data.diseaseInfo:this.data.insectInfo
+    var word = this.data.word
+    var result = []
+    for (var i in info){
+      if(info[i].general.indexOf(word)!=-1){
+        result.push(info[i])
+      }
+    }
+    this.setData({
+      result
     })
   }
 })
