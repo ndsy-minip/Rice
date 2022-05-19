@@ -10,11 +10,9 @@
 
 <view class="bg-white padding-bottom">
   <swiper class="margin-top-sm screen-swiper round-dot" duration="500" interval="5000" autoplay="{{true}}">
-    <block wx:for="{{imgList}}">
-      <swiper-item>
-        <image src="{{item}}"></image>
-      </swiper-item>
-    </block>
+    <swiper-item>
+      <image src="https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/pesticide/{{info._id}}.webp?sign=f2c304614bca47dd417f628198ef9ecf&t=1652940378"></image>
+    </swiper-item>
   </swiper>
   <view class="padding text-xl text-bold text-black">基本信息</view>
   <view class="padding-lr text-black">名称：{{info.name}}</view>
@@ -33,7 +31,7 @@
 <view class="margin-top bg-white padding-bottom">
   <view class="padding text-xl text-bold text-black">使用方法</view>
   <view class="padding-lr text-black"><text style="line-height: 40rpx;">
-    {{filters.formatLineFeed(info.method)}}
+      {{filters.formatLineFeed(info.method)}}
     </text></view>
 </view>
 

@@ -18,7 +18,7 @@
         <view class="cu-list menu-avatar">
           <block wx:for="{{item}}" wx:for-item="_item" wx:for-index="_index" wx:key="_index">
             <view class="cu-item bg-white" bindtap="navToDetail" data-info="{{_item}}">
-              <view class="cu-avatar round lg" style="background-image:url(https://th.bing.com/th/id/OIP.uHfEyCfBUIddMCDemynvswHaIe?w=144&h=180&c=7&r=0&o=5&pid=1.7);"></view>
+              <view class="cu-avatar round lg" style="background-image:url(https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/pesticide/{{_index+1}}.webp?sign=f2c304614bca47dd417f628198ef9ecf&t=1652940378);"></view>
               <view class="content">
                 <view class="text-grey">{{_item.name}}</view>
               </view>
