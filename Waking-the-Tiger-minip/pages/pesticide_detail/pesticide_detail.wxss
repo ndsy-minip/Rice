@@ -1,1 +1,2 @@
 /* pages/pesticide_detail/pesticide_detail.wxss */
+@import "../../wxParse/wxParse.wxss";

@@ -12,16 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var list = [{}];
-    for (var i = 0; i < 26; i++) {
-      list[i] = {};
-      list[i].name = String.fromCharCode(65 + i);
-      list[i].id = i;
-    }
-    this.setData({
-      list,
-      listCur: list[0]
-    })
+    this.getPesticide()
   },
 
   /**
@@ -84,8 +75,33 @@ Page({
   },
 
   navToDetail: function (e) {
+    console.log(e)
     wx.navigateTo({
-      url: '../pesticide_detail/pesticide_detail',
+      url: '../pesticide_detail/pesticide_detail?info='+JSON.stringify(e.currentTarget.dataset.info),
+    })
+  },
+
+
+  getPesticide: function (e) {
+    var that = this
+    var pesticide = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
+    wx.cloud.callFunction({
+      name: "getPesticide",
+      success(res) {
+        var data = res.result.data
+        var index = 0
+        for (var i in data) {
+          if (i == 0 || data[i].type_id != data[i-1].type_id) {
+            pesticide[index].push(data[i])
+            index++
+          } else {
+            pesticide[index].push(data[i])
+          }
+        }
+        that.setData({
+          pesticide
+        })
+      }
     })
   }
 })

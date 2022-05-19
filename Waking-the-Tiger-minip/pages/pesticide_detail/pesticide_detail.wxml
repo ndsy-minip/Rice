@@ -1,6 +1,10 @@
 <!--pages/pesticide_detail/pesticide_detail.wxml-->
+<import src="../../wxParse/wxParse" />
+<wxs module="filters" src="util.wxs"></wxs>
+
+
 <view class="fixed">
-  <cu-custom title="倍腈松"></cu-custom>
+  <cu-custom title="{{info.name}}"></cu-custom>
 </view>
 <view style="height:11vh"></view>
 
@@ -13,23 +17,28 @@
     </block>
   </swiper>
   <view class="padding text-xl text-bold text-black">基本信息</view>
-  <view class="padding-lr text-black">名称：倍腈松</view>
-  <view class="margin-top-xs padding-lr text-black">学名：辛硫磷（C<sub>12</sub>H<sub>15</sub>N<sub>2</sub>O<sub>3</sub>PS）</view>
-  <view class="margin-top-xs padding-lr text-black">种类：有机磷杀虫剂</view>
-  <view class="margin-top-xs padding-lr text-black">其他名称：肟硫磷；倍氰松</view>
+  <view class="padding-lr text-black">名称：{{info.name}}</view>
+  <view class="margin-top-xs padding-lr text-black">学名：
+    <template is="wxParse" data="{{wxParseData:scientific_name.nodes}}"></template>
+  </view>
+  <view class="margin-top-xs padding-lr text-black">种类：{{info.type}}</view>
+  <view class="margin-top-xs padding-lr text-black">其他名称：{{info.other_name==''?'无':info.other_name}}</view>
 </view>
 
 <view class="margin-top bg-white padding-bottom">
   <view class="padding text-xl text-bold text-black">适用范围</view>
-  <view class="margin-top-xs padding-lr text-black"><text style="line-height: 40rpx;">适合于防治地下害虫。对危害花生、小麦、水稻、棉花、玉米、果树、蔬菜、桑、茶等作物的多种鳞翅目害虫的幼虫有良好的作用效果，对虫卵也有一定的杀伤作用。也适于防治仓库和卫生害虫。</text></view>
+  <view class="margin-top-xs padding-lr text-black"><text style="line-height: 40rpx;">{{info.range}}</text></view>
 </view>
 
 <view class="margin-top bg-white padding-bottom">
   <view class="padding text-xl text-bold text-black">使用方法</view>
-  <view class="margin-top-xs padding-lr text-black"><text style="line-height: 40rpx;">1、茎叶喷雾：一般每亩用50%乳油1000-2000倍，对水50L喷雾，防治小麦蚜虫、麦叶蜂、棉蚜、菜青虫、蓟马、粘虫、果树上的蚜虫、苹果小卷叶蛾、梨星毛虫、葡萄斑叶蝉、尺蠖、粉虱、烟青虫等。每亩用50毫升50%乳油稀释1000倍喷雾,可防治稻苞虫、稻纵卷叶螟、叶蝉、飞虱、稻蓟马、棉蛉虫、红蛉虫、地老虎、小灰蝉、松毛虫等。\n\n2、拌种：用50%乳油100-165mL，兑水5-7.5kg，拌麦种50kg，可防治地下害虫，拌种方可用于玉米、高粱、谷子、花生及其他作物种子。\n\n3、防治地下害虫：可用50%乳油100g，对水5kg，拌麦种50kg，堆闷后播种，可防治地下害虫。\n\n4、灌浇和灌心：用50%乳油1000倍液浇灌防治地老虎，15分钟后即有中毒草幼虫爬出地面。\n\n5、防治贮粮害虫：将辛硫磷配成1.25-2.5mg/kg药液均匀拌粮后堆放，可防治米象、拟谷盗等贮粮害虫。\n\n6、防治卫生害虫：用50%乳油500-1000倍液喷洒家畜厩舍，防治卫生害虫效果好，对家畜安全。</text></view>
+  <view class="padding-lr text-black"><text style="line-height: 40rpx;">
+    {{filters.formatLineFeed(info.method)}}
+    </text></view>
 </view>
 
 <view class="margin-top bg-white padding-bottom">
   <view class="padding text-xl text-bold text-black">注意事项</view>
-  <view class="margin-top-xs padding-lr text-black"><text style="line-height: 40rpx;">1、不能与碱性物质混合使用。\n\n2、黄瓜、菜豆对辛硫磷敏感，易产生药害。\n\n3、辛硫磷见光易分解，所以田间使用最好在夜晚或傍晚使用。\n\n4、高粱对辛硫磷敏感，不宜喷撒使用。玉米田只能用颗粒剂防治玉米螟，不要喷雾防治蚜虫、粘虫等。\n\n5、中毒症状，急救措施与其他有机磷相同。</text></view>
+  <view class="padding-lr text-black"><text style="line-height: 40rpx;">
+      {{filters.formatLineFeed(info.notice)}}</text></view>
 </view>

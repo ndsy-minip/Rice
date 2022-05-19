@@ -3,26 +3,27 @@
 <view style="height:11vh"></view>
 
 
-<view class="VerticalBox">
-  <scroll-view class="VerticalNav nav" style="height:100vh;" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-top="{{verticalNavTop}}">
-    <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-      <view class="{{['cu-item',index==tabCur?'text-green cur':'']}}" data-id="{{index}}" bindtap="switchTab">{{'Tab-'+item.name+''}}</view>
+<view class="VerticalBox" style="height:2000rpx">
+  <scroll-view class="VerticalNav nav" style="height:2000rpx;" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-top="{{verticalNavTop}}">
+    <block wx:for="{{pesticide}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="{{['cu-item',index==tabCur?'text-green cur':'']}}" data-id="{{index}}" bindtap="switchTab" style="font-size: 26rpx;line-height: 40rpx;display:flex;align-items:center;justify-content: center;height:5.9vh">{{item[0].type}}</view>
     </block>
   </scroll-view>
-  <scroll-view class="VerticalMain" style="height:100vh;" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="{{'main-'+mainCur}}">
-    <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <scroll-view class="VerticalMain" style="height:88vh;" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="{{'main-'+mainCur}}">
+    <block wx:for="{{pesticide}}" wx:for-item="item" wx:for-index="index" wx:key="index">
       <view class="padding-top padding-lr" id="{{'main-'+index}}">
         <view class="cu-bar solid-bottom bg-white">
-          <view class="action">{{item.name}}</view>
+          <view class="action">{{item[0].type}}</view>
         </view>
-        <view class="cu-list menu-avatar" bindtap="navToDetail">
-          <view class="cu-item bg-white">
-            <view class="cu-avatar round lg" style="background-image:url(https://th.bing.com/th/id/OIP.uHfEyCfBUIddMCDemynvswHaIe?w=144&h=180&c=7&r=0&o=5&pid=1.7);"></view>
-            <view class="content">
-              <view class="text-grey">倍腈松</view>
+        <view class="cu-list menu-avatar">
+          <block wx:for="{{item}}" wx:for-item="_item" wx:for-index="_index" wx:key="_index">
+            <view class="cu-item bg-white" bindtap="navToDetail" data-info="{{_item}}">
+              <view class="cu-avatar round lg" style="background-image:url(https://th.bing.com/th/id/OIP.uHfEyCfBUIddMCDemynvswHaIe?w=144&h=180&c=7&r=0&o=5&pid=1.7);"></view>
+              <view class="content">
+                <view class="text-grey">{{_item.name}}</view>
+              </view>
             </view>
-          </view>
-
+          </block>
         </view>
       </view>
     </block>

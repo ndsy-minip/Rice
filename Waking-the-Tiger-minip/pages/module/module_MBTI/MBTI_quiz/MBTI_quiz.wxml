@@ -1,9 +1,8 @@
 <!--pages/module/MBTI/MBTI_quiz/MBTI_quiz.wxml-->
-<cu-custom bgColor="bg-white" isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">MBTI</view>
+<cu-custom title="MBTI">
 </cu-custom>
 
+<view style="height:10vh"></view>
 <questionSelection id="questionSelection" customResult="{{customResult}}"
   bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
 <view style="height:80%">

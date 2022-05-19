@@ -1,4 +1,5 @@
 // pages/pesticide_detail/pesticide_detail.js
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
   /**
@@ -12,7 +13,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var info = JSON.parse(options.info)
+    this.setData({
+      info
+    })
+    var scientific_name = info['scientific_name']
+    WxParse.wxParse('scientific_name','html',scientific_name,this)
   },
 
   /**
