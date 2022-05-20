@@ -1,13 +1,14 @@
 <!--pages/detect_result/detect_result.wxml-->
 <cu-custom title="识别结果"></cu-custom>
+<view style="height:11vh"></view>
 
 <view class="padding flex jusitify-center" style="height:20vh;width:100vw;">
   <image src="{{img_url}}" style="width:30vw;height:30vw;margin-left:auto;margin-right:auto"></image>
 </view>
 
 
-<block wx:for="{{results}}">
-  <view class="padding">
-    {{item.name}} : {{item.score}}
+<block wx:for="{{insectResult}}" wx:key="index">
+  <view class="bg-img" style="background-image:url(https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/disease/{{item._id}}_1.jpg?sign=a15ca6a030985a5fbff540b40579d03b&t=1652708531);width:45vw;height:10vh">
+    <view class="text-white text-lg" style="padding-top:1vh;padding-left: 3vw;font-weight:1000;">{{item.name}}</view>
   </view>
 </block>

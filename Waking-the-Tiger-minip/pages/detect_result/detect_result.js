@@ -5,16 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img_url : ""
+    img_url: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var insectInfo = wx.getStorageSync('insectInfo')
+    var results = JSON.parse(options.results)
+    var insectResult = []
+    for (var i in insectInfo) {
+      if (insectInfo[i].name == results[0].name || insectInfo[i].name == results[1].name) {
+        insectResult.push(insectInfo[i])
+      }
+    }
     this.setData({
       img_url: options.img_url,
-      results: JSON.parse(options.results)
+      results: results.splice(0,2),
+      insectResult
     })
   },
 

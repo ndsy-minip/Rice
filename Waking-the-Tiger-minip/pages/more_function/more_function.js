@@ -190,7 +190,7 @@ Page({
           title: '正在识别中',
         })
         _this.setData({
-          img_url : res.tempFilePaths[0]
+          img_url: res.tempFilePaths[0]
         })
         _this.readFile(res.tempFilePaths[0])
 
@@ -232,6 +232,7 @@ Page({
             "content-type": "application/json",
           },
           success(res) {
+            console.log(res)
             wx.hideLoading({
               success: (res) => {
                 wx.showToast({
@@ -253,5 +254,5 @@ Page({
     wx.navigateTo({
       url: '../detect_result/detect_result?img_url=' + _this.data.img_url + '&results=' + JSON.stringify(results),
     })
-  }
+  },
 })
