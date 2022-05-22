@@ -1,4 +1,7 @@
 /* pages/tool/tool.wxss */
+page{
+  height: 120vh
+}
 
 .live-title{
   padding-left: 20rpx;

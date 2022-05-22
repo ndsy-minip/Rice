@@ -47,22 +47,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     this.setData({
       userInfo: wx.getStorageSync('userInfo')
     })
     wx.cloud.callFunction({
       name: "getRoomId",
-      success(res){
-        console.log(res)
-      },
-      fail(err){
-        console.log(err)
+      success(res) {
+        that.setData({
+          room_info: res.result.room_info
+        })
       }
     })
-    let roomId = [直播房间id] // 填写具体的房间号，可通过下面【获取直播房间列表】 API 获取
     let customParams = encodeURIComponent(JSON.stringify({ path: 'pages/tool/tool', pid: 1 })) // 开发者在直播间页面路径上携带自定义参数（如示例中的 path 和pid参数），后续可以在分享卡片链接和跳转至商详页时获取，详见【获取自定义参数】、【直播间到商详页面携带参数】章节（上限600个字符，超过部分会被截断）
     this.setData({
-      roomId,
       customParams
     })
   },
@@ -139,6 +137,14 @@ Page({
       tabCur: e.currentTarget.dataset.index
     })
   },
+
+  navToStreamRoom: function (e) {
+    var roomid = e.currentTarget.dataset.index
+    var customParams = this.data.customParams
+    wx.navigateTo({
+      url: 'plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id=' + roomid + '&custom_params=' + customParams,
+    })
+  }
 
 
 })
