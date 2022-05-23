@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/tool/tool",
+    
     "pages/test/test",
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
@@ -11,7 +11,7 @@
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
-
+"pages/tool/tool",
     "pages/market/market",
     "pages/info/info",
 
@@ -70,7 +70,7 @@
         "pagePath": "pages/homepage/homepage"
       },
       {
-        "pagePath": "pages/forum_/forum_"
+        "pagePath": "pages/test/test"
       },
       {
         "pagePath": "pages/tool/tool"

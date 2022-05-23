@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    videoList : ["cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/演示视频.mp4","cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/video.MP4"]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
+    }
+    this.setData({
+      userInfo: wx.getStorageSync('userInfo')
+    })
   },
 
   /**
@@ -46,15 +54,15 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
+  onPullDownRefresh(e) {
+    console.log(e)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
+  onReachBottom(e) {
+    console.log(e)
   },
 
   /**
@@ -62,5 +70,24 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+
+  touchStart(e) {
+    this.setData({
+      "touch.x": e.changedTouches[0].clientX,
+      "touch.y": e.changedTouches[0].clientY
+    });
+  },
+
+
+  touchEnd(e) {
+    if (e.changedTouches[0].clientY - this.data.touch.y >= 200) {
+      console.log("下拉")
+    }
+    if (e.changedTouches[0].clientY - this.data.touch.y <= -200) {
+      console.log("上滑")
+    }
+  },
+  
 })

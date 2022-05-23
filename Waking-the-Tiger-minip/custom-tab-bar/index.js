@@ -16,7 +16,7 @@ Component({
     {
       "class": "cuIcon-discover",
       "classFill": "cuIcon-discoverfill",
-      "pagePath": "../forum_/forum_"
+      "pagePath": "../test/test"
     },
 
     {
