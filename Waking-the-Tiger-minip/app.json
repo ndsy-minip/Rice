@@ -1,17 +1,20 @@
 {
   "pages": [
-    
+
+    "pages/homepage/homepage",
+    "pages/more_function/more_function",
+    "pages/aboutAs/aboutAs",
     "pages/test/test",
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
     "pages/catalogue/catalogue",
-    "pages/more_function/more_function",
-"pages/index/index",
+
+    "pages/index/index",
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
-    "pages/homepage/homepage",
+
     "pages/myNotebook/myNotebook",
-"pages/tool/tool",
+    "pages/tool/tool",
     "pages/market/market",
     "pages/info/info",
 
@@ -19,7 +22,7 @@
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
-    
+
 
     "pages/camera/camera",
     "pages/disease_detail/disease_detail",
@@ -27,7 +30,7 @@
 
     "pages/pesticide_detail/pesticide_detail",
 
-    "pages/aboutAs/aboutAs",
+
     "pages/notification/notification",
     "pages/addNotification/addNotification",
 
@@ -85,7 +88,7 @@
   "cloud": true,
   "plugins": {
     "live-player-plugin": {
-      "version": "1.3.0", 
+      "version": "1.3.0",
       "provider": "wx2b03c6e691cd7370"
     }
   }

@@ -1,7 +1,7 @@
 <!--pages/disease/disease.wxml-->
 <cu-custom title="{{info.name}}"></cu-custom>
 
-<view style="height:5vh"></view>
+<view style="height:11vh"></view>
 
 <view class="bg-white">
   <swiper class="margin-top-sm screen-swiper round-dot" duration="500" interval="5000" autoplay="{{true}}">

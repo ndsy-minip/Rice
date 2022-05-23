@@ -14,6 +14,9 @@ Page({
   onLoad: function (options) {
     var insectInfo = wx.getStorageSync('insectInfo')
     var results = JSON.parse(options.results)
+    for(var i in results){
+      results[i].score = (results[i].score * 100).toFixed(1)
+    }
     var insectResult = []
     for (var i in insectInfo) {
       if (insectInfo[i].name == results[0].name || insectInfo[i].name == results[1].name) {
@@ -74,5 +77,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  navToDetail: function (e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '../disease_detail/disease_detail?info=' + JSON.stringify(e.currentTarget.dataset.info),
+    })
+  },
 })

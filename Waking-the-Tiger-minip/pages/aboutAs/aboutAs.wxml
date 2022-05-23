@@ -1,5 +1,14 @@
 <!--pages/aboutAs/aboutAs.wxml-->
 <cu-custom title="关于我们">
-
-
 </cu-custom>
+
+<view style="height:11vh"></view>
+
+<view class="box">
+  <view class="cu-bar">
+    <view class="action sub-title">
+      <text class="text-xxl text-bold text-green">关于我们</text>
+      <text class="bg-green" style="width:5rem;"></text>
+    </view>
+  </view>
+</view>
