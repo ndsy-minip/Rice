@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/questionCatalogue/questionCatalogue",
+    "pages/market/market",
     "pages/homepage/homepage",
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
@@ -8,14 +8,14 @@
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
     "pages/catalogue/catalogue",
-
+    "pages/questionCatalogue/questionCatalogue",
     "pages/index/index",
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
 
     "pages/myNotebook/myNotebook",
     "pages/tool/tool",
-    "pages/market/market",
+    
     "pages/info/info",
 
     "pages/timer/timer",
