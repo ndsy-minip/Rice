@@ -1,6 +1,6 @@
 {
   "pages": [
-
+    "pages/questionCatalogue/questionCatalogue",
     "pages/homepage/homepage",
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",

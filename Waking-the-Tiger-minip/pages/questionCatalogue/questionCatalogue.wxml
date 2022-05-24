@@ -1,0 +1,36 @@
+<!--pages/questionCatalogue/questionCatalogue.wxml-->
+<cu-custom title="专项答题"></cu-custom>
+<view style="height:12vh"></view>
+
+<view class="cu-timeline">
+  <view class="cu-time" style="font-size: 30rpx;">2022/05/23</view>
+  <view class="cu-item cur text-green">
+    <view class="content bg-white shadow-blur">
+      <view class="text-lg text-black text-bold">“新时代文明实践中心建设相关知识”专项答题</view>
+      <view class="text-end text-green text-bold margin-bottom-sm flex justify-end padding-right-sm">已完成  96分</view>
+    </view>
+  </view>
+  <view class="cu-item cur">
+    <view class="content bg-white shadow-blur">
+      <view class="text-lg text-black text-bold">“新时代文明实践中心建设相关知识”专项答题</view>
+      <view class="padding-top padding-right-sm padding-left-sm flex justify-end">
+        <view class="bg-brown padding-xs">开始答题</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-time" style="font-size: 30rpx;">2022/05/24</view>
+  <view class="cu-item cur text-green">
+    <view class="content bg-white shadow-blur">
+      <view class="text-lg text-black text-bold">“新时代文明实践中心建设相关知识”专项答题</view>
+      <view class="text-end text-green text-bold margin-bottom-sm flex justify-end padding-right-sm">已完成  96分</view>
+    </view>
+  </view>
+  <view class="cu-item cur">
+    <view class="content bg-white shadow-blur">
+      <view class="text-lg text-black text-bold">“新时代文明实践中心建设相关知识”专项答题</view>
+      <view class="padding-top padding-right-sm padding-left-sm flex justify-end">
+        <view class="bg-brown padding-xs">开始答题</view>
+      </view>
+    </view>
+  </view>
+</view>
