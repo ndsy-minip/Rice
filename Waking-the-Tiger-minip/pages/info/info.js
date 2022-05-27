@@ -139,5 +139,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  viewAll: function () {
+    wx.navigateTo({
+      url: '../moreInfo/moreInfo',
+    })
   }
 })

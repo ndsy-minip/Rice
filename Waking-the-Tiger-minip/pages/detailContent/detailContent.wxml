@@ -2,7 +2,8 @@
 <view class="background-image"></view>
 <view class="mask"></view>
 
-<view style="height:40vh;position: relative">  <!-- 这一层确保背景图下面的内容露出来 -->
+<view style="height:40vh;position: relative">
+  <!-- 这一层确保背景图下面的内容露出来 -->
   <view class="padding" style="height:10vh;position: relative;">
     <view style="height:5vh"></view>
     <view style="width:15vw;height:3vh" bindtap="goBack">
@@ -20,6 +21,20 @@
   </view>
   <scroll-view class="nav text-white" scroll-x="{{true}}" scroll-with-animation="{{true}}" style="position: absolute;bottom:0">
     <view class="cu-item {{tabCur==0?'text-white cur':''}}" bindtap="switchTab" data-index="0">短评</view>
-    <view class="cu-item {{tabCur==1?'text-white cur':''}}" bindtap="switchTab"  data-index="1">摘录</view>
+    <view class="cu-item {{tabCur==1?'text-white cur':''}}" bindtap="switchTab" data-index="1">摘录</view>
   </scroll-view>
 </view>
+
+<!-- 短评 -->
+<block wx:for="{{2}}" wx:if="{{tabCur==0}}">
+  <view class="padding margin radius bg-grey light shadow shadow-warp">
+    <view class="text-lg text-black" style="line-height: 55rpx;">竞争有悖于黑手党的道德规范。你努力工作并不是要和街上的同行作对，而是因为自己的一切，名声、荣誉、家庭和人生，全都悬于一线。</view>
+  </view>
+</block>
+
+<!-- 摘录 -->
+<block wx:for="{{3}}" wx:if="{{tabCur==1}}">
+  <view class="padding margin radius bg-grey light shadow shadow-warp">
+    <view class="text-lg text-black" style="line-height: 55rpx;">尼尔·斯蒂芬森出生于美国马里兰州的米德堡。他的父亲是电子工程学教授，祖父是物理学教授，母亲在一家生物化学实验室，而而外祖父是一位生物化学教授。</view>
+  </view>
+</block>

@@ -11,7 +11,7 @@
 
 <view class="padding flex justify-between align-center" style="padding-bottom: 0;">
   <view class="text-xl text-black">书籍</view>
-  <view class="text-grey">查看全部 <text class="cuIcon-right"></text></view>
+  <view class="text-grey" bindtap="viewAll">查看全部 <text class="cuIcon-right"></text></view>
 </view>
 <swiperCard swiperList="{{mainPlantList}}"></swiperCard>
 <view class="padding flex justify-between align-center solids-top" style="padding-bottom: 0;">

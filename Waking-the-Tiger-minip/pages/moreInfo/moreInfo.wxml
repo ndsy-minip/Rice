@@ -1,0 +1,3 @@
+<!--pages/moreInfo/moreInfo.wxml-->
+<cu-custom title="书籍"></cu-custom>
+<view style="height:11vh"></view>

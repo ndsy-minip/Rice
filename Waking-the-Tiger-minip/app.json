@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/market/market",
+    "pages/info/info",
+    "pages/detailContent/detailContent",
     "pages/homepage/homepage",
+    "pages/articleContent/articleContent",
+    "pages/market/market",
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
     "pages/test/test",
@@ -12,40 +15,24 @@
     "pages/index/index",
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
-
     "pages/myNotebook/myNotebook",
     "pages/tool/tool",
-    
-    "pages/info/info",
-
     "pages/timer/timer",
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
-
-
     "pages/camera/camera",
     "pages/disease_detail/disease_detail",
-
-
     "pages/pesticide_detail/pesticide_detail",
-
-
     "pages/notification/notification",
     "pages/addNotification/addNotification",
-
     "pages/forum_/forum_",
     "pages/modern_agriculture/modern_agriculture",
-
-
-
     "pages/forum_detail/forum_detail",
-
-    "pages/detailContent/detailContent",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
-    "pages/logs/logs"
-
+    "pages/logs/logs",
+    "pages/moreInfo/moreInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -57,19 +44,18 @@
     "cu-custom": "/components/colorui/components/cu-custom",
     "navBar-custom": "/components/navBar-custom/navBar-custom"
   },
-
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
-
   "tabBar": {
     "custom": true,
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/homepage/homepage"
       },
       {
