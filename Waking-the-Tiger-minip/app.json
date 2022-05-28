@@ -1,8 +1,14 @@
 {
   "pages": [
+
+    
+    "pages/homepage/homepage",
+    "pages/test1/test1",
+    "pages/index/index",
+    "pages/moreInfo/moreInfo",
     "pages/info/info",
     "pages/detailContent/detailContent",
-    "pages/homepage/homepage",
+
     "pages/articleContent/articleContent",
     "pages/market/market",
     "pages/more_function/more_function",
@@ -12,7 +18,7 @@
     "pages/pay/pay",
     "pages/catalogue/catalogue",
     "pages/questionCatalogue/questionCatalogue",
-    "pages/index/index",
+
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/myNotebook/myNotebook",
@@ -31,8 +37,8 @@
     "pages/forum_detail/forum_detail",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
-    "pages/logs/logs",
-    "pages/moreInfo/moreInfo"
+    "pages/logs/logs"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -54,8 +60,7 @@
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/homepage/homepage"
       },
       {

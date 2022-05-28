@@ -1,0 +1,21 @@
+/* pages/test1/test1.wxss */
+.trapezoid{
+  position:relative;
+  height: 80px;
+  width: 360rpx;
+  overflow:hidden;
+}
+.trapezoid:before{
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width: 360rpx;
+  border:2rpx solid #c8c8c8;
+
+  background-color: blue;
+  transform-origin:0 100%;
+  transform:skewX(10deg);
+}

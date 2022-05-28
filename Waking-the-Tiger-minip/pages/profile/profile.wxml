@@ -12,15 +12,6 @@
   </view>
 </view>
 
-<view class="cu-list menu card-menu" style="margin-top:5vh">
-  <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-discover text-blue"></text><text class="text-grey">我发布的帖子</text></button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的回复</text></button>
-  </view>
-</view>
-
 <view class="cu-list menu card-menu">
   <view class="cu-item arrow">
     <button class="cu-btn content" bindtap="navToMyNotebook"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的桃园日记</text></button>

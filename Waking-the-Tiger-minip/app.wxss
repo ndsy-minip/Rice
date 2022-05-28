@@ -15,7 +15,7 @@
 
 /* 统一英语字体 */
 .font-en {
-  font-family: 'Times New Roman'
+  font-family: "宋体"
 }
 
 /* 圆圈样式 */

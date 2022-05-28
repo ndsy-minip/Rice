@@ -1,0 +1,22 @@
+<!--pages/test1/test1.wxml-->
+<view style="height:20vh"></view>
+
+
+
+<view class="flex align-center justify-center">
+  <view class="flex-sub padding">
+    <view class="bg-gradual-blue shadow-blur radius" style="border-radius: 30rpx;">
+      <view class="margin-top-xl padding-left text-xxl text-bold padding-top-xl">识别害虫</view>
+      <view class="margin-top-sm padding-left text-dl">图像处理技术</view>
+      <image src="../../static/img/相机.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
+    </view>
+  </view>
+
+  <view class="flex-sub padding">
+    <view class="bg-gradual-red shadow-blur radius" style="border-radius: 30rpx;">
+      <view class="margin-top-xl padding-left text-xxl text-bold padding-top-xl">更多功能</view>
+      <view class="margin-top-sm padding-left text-dl">等你发现</view>
+      <image src="../../static/img/功能.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
+    </view>
+  </view>
+</view>
