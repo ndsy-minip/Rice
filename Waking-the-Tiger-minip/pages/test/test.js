@@ -5,13 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    videoList : ["cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/演示视频.mp4","cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/video.MP4"]
+    list: ["cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/shorts/1.mp4", "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/shorts/2.mp4"],
+    current: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
@@ -34,7 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.getRandomList()
   },
 
   /**
@@ -62,7 +64,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom(e) {
-    console.log(e)
+
   },
 
   /**
@@ -72,22 +74,19 @@ Page({
 
   },
 
+  scrolltop(e) {
 
-  touchStart(e) {
     this.setData({
-      "touch.x": e.changedTouches[0].clientX,
-      "touch.y": e.changedTouches[0].clientY
-    });
+      current: e.detail.current
+    })
+
   },
 
+  getRandomList() {
+    var random = Array(7).fill(1).map(v => Math.floor(Math.random() * (30 - 0)) + 1)
+    this.setData({
+      random
+    })
+  }
 
-  touchEnd(e) {
-    if (e.changedTouches[0].clientY - this.data.touch.y >= 200) {
-      console.log("下拉")
-    }
-    if (e.changedTouches[0].clientY - this.data.touch.y <= -200) {
-      console.log("上滑")
-    }
-  },
-  
 })

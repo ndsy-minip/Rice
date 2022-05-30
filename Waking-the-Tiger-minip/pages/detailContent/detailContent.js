@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var info = JSON.parse(decodeURIComponent(options.info))
+    this.setData({
+      info: info
+    })
   },
 
   /**
@@ -78,7 +81,7 @@ Page({
    */
   switchTab: function (e) {
     this.setData({
-      tabCur : parseInt(e.currentTarget.dataset.index)
+      tabCur: parseInt(e.currentTarget.dataset.index)
     })
   }
 

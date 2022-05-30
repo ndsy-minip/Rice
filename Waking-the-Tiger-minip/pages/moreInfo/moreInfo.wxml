@@ -1,15 +1,15 @@
 <!--pages/moreInfo/moreInfo.wxml-->
-<cu-custom title="书籍"></cu-custom>
+<cu-custom title="{{title}}"></cu-custom>
 <view style="height:11vh"></view>
 
-<view class="padding text-grey text-bold text-xl">欢迎来到图书世界</view>
+<view class="padding text-grey text-bold text-xl">欢迎来到{{title}}世界</view>
 
-<block wx:for="{{mainPlantList}}">
-  <view class="padding flex bg-white margin shadow shadow-xl" bindtap="navToDetail">
+<block wx:for="{{list}}">
+  <view class="padding flex bg-white margin shadow shadow-xl" bindtap="navToDetail" data-info="{{item}}">
     <image src="{{item.bgUrl}}" style="height:100rpx;width:100rpx;border-radius: 30%;"></image>
-    <view class="margin-left">
-      <view class="text-lg text-black text-bold">{{item.title}}</view>
-      <view class="text-abbreviation margin-top-xs" style="width: 65vw;">{{item.description}}</view>
+    <view class="margin-left" style="width: 65vw;">
+      <view class="text-lg text-black text-bold">{{item.name}}</view>
+      <view class="text-abbreviation margin-top-xs" style="width: 65vw;">{{item.extract[0]}}</view>
     </view>
   </view>
 </block>

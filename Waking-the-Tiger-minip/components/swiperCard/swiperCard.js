@@ -35,7 +35,7 @@ Component({
      */
     navToDetail: function (e) {
       wx.navigateTo({
-        url: '../../pages/detailContent/detailContent',
+        url: '../detailContent/detailContent?info=' + encodeURIComponent(JSON.stringify(e.currentTarget.dataset.info))
       })
     }
   }

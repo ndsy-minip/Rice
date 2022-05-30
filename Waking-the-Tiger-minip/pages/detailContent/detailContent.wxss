@@ -2,7 +2,6 @@
 .background-image {
   position: absolute;
   top:0;
-  background-image: url(https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg);
   background-position: center;
   width: 100vw;
   height: 40vh;

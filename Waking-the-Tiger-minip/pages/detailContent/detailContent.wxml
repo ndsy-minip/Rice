@@ -1,5 +1,5 @@
 <!--pages/detailContent/detailContent.wxml-->
-<view class="background-image"></view>
+<view class="background-image" style="background-image: url({{info.bgUrl}});"></view>
 <view class="mask"></view>
 
 <view style="height:40vh;position: relative">
@@ -11,30 +11,40 @@
     </view>
     <view class="padding flex">
       <view class="flex-sub">
-        <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg" mode="aspectFill" style="height:15vh;width: 25vw;"></image>
+        <image src="{{info.mainUrl}}" mode="aspectFill" style="height:15vh;width: 25vw;"></image>
       </view>
       <view class="flex-twice">
-        <view class="padding text-xl text-white text-bold">雪崩</view>
-        <view class="padding text-white">美国·斯蒂芬森</view>
+        <view class="padding text-xl text-white text-bold">{{info.name}}</view>
+        <view class="padding text-white">{{info.author}}</view>
       </view>
     </view>
   </view>
   <scroll-view class="nav text-white" scroll-x="{{true}}" scroll-with-animation="{{true}}" style="position: absolute;bottom:0">
-    <view class="cu-item {{tabCur==0?'text-white cur':''}}" bindtap="switchTab" data-index="0">短评</view>
+    <view class="cu-item {{tabCur==0?'text-white cur':''}}" bindtap="switchTab" data-index="0">{{info.type!='papers'?'短评':'相关信息'}}</view>
     <view class="cu-item {{tabCur==1?'text-white cur':''}}" bindtap="switchTab" data-index="1">摘录</view>
   </scroll-view>
 </view>
 
 <!-- 短评 -->
-<block wx:for="{{2}}" wx:if="{{tabCur==0}}">
-  <view class="padding margin radius bg-grey light shadow shadow-warp">
-    <view class="text-lg text-black" style="line-height: 55rpx;">竞争有悖于黑手党的道德规范。你努力工作并不是要和街上的同行作对，而是因为自己的一切，名声、荣誉、家庭和人生，全都悬于一线。</view>
+<block wx:if="{{tabCur==0}}">
+  <view class="padding margin radius bg-grey light shadow shadow-warp" wx:if="{{info.type!='papers'}}" wx:for="{{info.comment}}">
+    <view class="text-lg text-black" style="line-height: 55rpx;">{{item}}</view>
+  </view>
+  <view wx:if="{{info.type=='papers'}}">
+    <view class="padding margin radius bg-grey light shadow shadow-warp">
+      <view class="text-lg text-black" style="line-height: 55rpx;"><text class="text-xl text-bold">关键词：\n</text>{{info.keyword}}</view>
+    </view>
+    <view class="padding margin radius bg-grey light shadow shadow-warp">
+      <view class="text-lg text-black" style="line-height: 55rpx;"><text class="text-xl text-bold">摘要：\n</text><text>{{info.context}}</text></view>
+    </view>
+
   </view>
 </block>
 
+
 <!-- 摘录 -->
-<block wx:for="{{3}}" wx:if="{{tabCur==1}}">
+<block wx:for="{{info.extract}}" wx:if="{{tabCur==1}}">
   <view class="padding margin radius bg-grey light shadow shadow-warp">
-    <view class="text-lg text-black" style="line-height: 55rpx;">尼尔·斯蒂芬森出生于美国马里兰州的米德堡。他的父亲是电子工程学教授，祖父是物理学教授，母亲在一家生物化学实验室，而而外祖父是一位生物化学教授。</view>
+    <view class="text-lg text-black" style="line-height: 55rpx;">{{item}}</view>
   </view>
 </block>

@@ -38,7 +38,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    var title = ""
+    var list = []
+    if (options.id == 0) {
+      title = "图书",
+        list = wx.getStorageSync('books')
+    } else if (options.id == 1) {
+      title = "电影",
+        list = wx.getStorageSync('movies')
+    } else {
+      title = "论文",
+        list = wx.getStorageSync('papers')
+    }
+    this.setData({
+      title,
+      list
+    })
   },
 
   /**
@@ -90,9 +105,9 @@ Page({
 
   },
 
-  navToDetail() {
+  navToDetail(e) {
     wx.navigateTo({
-      url: '../detailContent/detailContent',
+      url: '../detailContent/detailContent?info=' + encodeURIComponent(JSON.stringify(e.currentTarget.dataset.info)),
     })
   }
 })

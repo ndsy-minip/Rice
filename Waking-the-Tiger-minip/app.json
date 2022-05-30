@@ -1,19 +1,19 @@
 {
   "pages": [
 
-    
+    "pages/info/info",
     "pages/homepage/homepage",
     "pages/test1/test1",
     "pages/index/index",
     "pages/moreInfo/moreInfo",
-    "pages/info/info",
-    "pages/detailContent/detailContent",
 
+    "pages/detailContent/detailContent",
+    "pages/test/test",
     "pages/articleContent/articleContent",
     "pages/market/market",
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
-    "pages/test/test",
+
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
     "pages/catalogue/catalogue",
