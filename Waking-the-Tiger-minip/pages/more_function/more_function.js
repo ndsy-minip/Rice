@@ -8,11 +8,6 @@ Page({
     iconList: {
       "种植指南": [
         {
-          "text": "作物百科",
-          "iconPath": "../../static/img/作物百科.png",
-          "navPath": "../catalogue/catalogue"
-        },
-        {
           "text": "常见农药",
           "iconPath": "../../static/img/常见农药.png",
           "navPath": "../pesticide_catalogue/pesticide_catalogue"
@@ -25,9 +20,9 @@ Page({
       ],
       "社区与直播": [
         {
-          "text": "互助社区",
+          "text": "短视频社区",
           "iconPath": "../../static/img/互助社区.png",
-          "navPath": "../forum_/forum_"
+          "navPath": "../test/test"
         },
         {
           "text": "知识直播",

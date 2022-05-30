@@ -1,12 +1,13 @@
 {
   "pages": [
-"pages/homepage/homepage",
-    "pages/info/info",
     
-    "pages/test1/test1",
+    "pages/homepage/homepage",
+    "pages/info/info",
+    "pages/timer/timer",
+"pages/test1/test1",
     "pages/index/index",
     "pages/moreInfo/moreInfo",
-
+    "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/detailContent/detailContent",
     "pages/test/test",
     "pages/articleContent/articleContent",
@@ -23,7 +24,7 @@
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/myNotebook/myNotebook",
     "pages/tool/tool",
-    "pages/timer/timer",
+    
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
@@ -36,7 +37,7 @@
     "pages/modern_agriculture/modern_agriculture",
     "pages/forum_detail/forum_detail",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
-    "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
+
     "pages/logs/logs"
 
   ],

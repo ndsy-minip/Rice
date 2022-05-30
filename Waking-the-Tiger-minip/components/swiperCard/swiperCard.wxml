@@ -5,10 +5,10 @@
       <view class="swiper-item" bindtap="navToDetail" style="width:110%" data-info="{{item}}">
         <view class="bg-white" style="height: 100%;width: 100%;">
           <image src="{{item.bgUrl}}" mode="aspectFill" style="height:30%;position: absolute;"></image>
-          <view style="height:20%;padding-top:30%" class="flex justify-center" >
-            <view class="cu-avatar round lg solid" style="background-image: url({{item.mainUrl}});"></view>
+          <view style="padding-top:100rpx;z-index:999" class="flex justify-center" >
+            <image src="{{item.mainUrl}}" style="width: 96rpx;height: 96rpx;border-radius: 50%;"></image>
           </view>
-          <view class="text-center text-bold" style="padding-top: 35%;">{{item.name}}</view>
+          <view class="text-center text-bold" style="padding-top: 10%;">{{item.name}}</view>
           <view class="multiTextCut" wx:if="{{swiperList[0]._id!='aa3345b762945b6a0014a74c264318b9'}}">{{item.extract[0]}}</view>
         </view>
       </view>

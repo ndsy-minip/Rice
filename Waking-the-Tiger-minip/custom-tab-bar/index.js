@@ -1,7 +1,6 @@
 Component({
   data: {
     mainMenu: {}, //主菜单动画
-    menu1: {}, //菜单1动画
     menu2: {}, //菜单2动画
     menu3: {}, //菜单3动画
 
@@ -61,19 +60,6 @@ Component({
     },
 
     /**
-     * 菜单1点击
-     */
-    menu1Click: function () {
-      this.setData({
-        isPopping: false
-      })
-      this.shrink()
-      wx.navigateTo({
-        url: '../timer/timer',
-      })
-    },
-
-    /**
      * 菜单2点击
      */
     menu2Click: function () {
@@ -102,10 +88,7 @@ Component({
     //弹出动画
     eJect: function () {
       //顺时针旋转
-      var menu1 = wx.createAnimation({
-        duration: 500, // 弹出的速度
-        timingFunction: 'ease-out'
-      })
+
       var menu2 = wx.createAnimation({
         duration: 500,
         timingFunction: 'ease-out'
@@ -121,12 +104,10 @@ Component({
        * 第二个括号值(菜单弹出旋转的度数)
        * 第三个括号值(菜单的透明度0.0~1.0之间)
        */
-      menu1.translate(60, -60).rotateZ(360).opacity(1).step();
-      menu2.translate(-60, -60).rotateZ(360).opacity(1).step();
-      menu3.translate(0, -80).rotateZ(360).opacity(1).step();
+      menu2.translate(-70, -70).rotateZ(360).opacity(1).step();
+      menu3.translate(70, -70).rotateZ(360).opacity(1).step();
 
       this.setData({
-        menu1: menu1.export(),
         menu2: menu2.export(),
         menu3: menu3.export(),
       })
@@ -134,10 +115,6 @@ Component({
 
     //收回动画
     shrink: function () {
-      var menu1 = wx.createAnimation({
-        duration: 500,
-        timingFunction: 'ease-out'
-      })
       var menu2 = wx.createAnimation({
         duration: 500,
         timingFunction: 'ease-out'
@@ -148,12 +125,10 @@ Component({
       })
 
       //处理动画效果
-      menu1.translate(0, 0).rotateZ(0).opacity(0).step();
       menu2.translate(0, 0).rotateZ(0).opacity(0).step();
       menu3.translate(0, 0).rotateZ(0).opacity(0).step();
 
       this.setData({
-        menu1: menu1.export(),
         menu2: menu2.export(),
         menu3: menu3.export(),
       })

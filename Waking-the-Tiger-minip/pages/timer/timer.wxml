@@ -24,7 +24,7 @@
   </block>
 
   <view class="flex justify-center" style="position: absolute;bottom:150rpx;width: 100vw;">
-    <view class="flex-twice justify-center flex">
+    <view class="justify-center flex" style="flex:2">
       <view class="btn bg-white flex justify-center align-center animation-shake margin-right" hover-class="btn-hover" bindtap="{{isStart==1?'setSuspend':'setStart'}}" wx:if="{{isStart == isSuspend}}">
         <text class="cuIcon-playfill text-white" style="font-size:30px"></text>
       </view>
@@ -35,7 +35,7 @@
         <text class="cuIcon-ellipse text-bold text-white" style="font-size:20px"></text>
       </view>
     </view>
-    <view class="flex-sub justify-center flex margin-right">
+    <view class="justify-center flex margin-right" style="flex:3">
       <view class="btn bg-white flex justify-center align-center flex-sub margin-right" hover-class="btn-hover" bindtap="showNotebook">
         <text class="cuIcon-edit text-white" style="font-size:30px"></text>
       </view>

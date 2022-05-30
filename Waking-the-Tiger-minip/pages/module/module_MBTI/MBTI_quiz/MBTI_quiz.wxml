@@ -2,45 +2,38 @@
 <cu-custom title="MBTI">
 </cu-custom>
 
-<view style="height:10vh"></view>
-<questionSelection id="questionSelection" customResult="{{customResult}}"
-  bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
+<view style="height:11vh"></view>
+<questionSelection id="questionSelection" customResult="{{customResult}}" bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
 <view style="height:80%">
   <!-- 题目 -->
-  <view class="padding-xl bg-white" style="height:auto">
-    <view class="flex justify-end">
-      <image src="/static/img/logo.png" mode="aspectFit" style="height: 60rpx; position: relative; left: 20vw"></image>
+  <view class="padding-xl bg-white">
+    <view class="margin-bottom-sm">
+      <text class="text-xl text-bold">题目 {{now_index}} </text>
+      <text class="text-lg"> /10</text>
     </view>
     <view class="cu-progress round sm striped active margin-bottom-xl margin-top-xs">
       <view class="bg-green" style="width:{{competition}}vw">{{competition}}%</view>
     </view>
     <!-- <text class="cuIcon-titles text-blue margin-right-xs" style="font-size: 50rpx;"></text> -->
-    <text class="text-bold"
-      style="letter-spacing:10rpx;font-size:48rpx;line-height:65rpx;">{{mbti[now_index-1].quiz_zh}}</text>
-    <view class="margin-top-sm text-grey font-en" style="font-size:36rpx;line-height:50rpx;">
-      {{mbti[now_index-1].quiz_en}}</view>
+    <text class="text-bold text-xl" style="line-height:65rpx;">{{mbti[now_index-1].quiz_zh}}</text>
   </view>
   <!-- 答案 -->
-  <view class="cu-timeline" style="position:absolute;top:42vh;width:100%">
-    <view class="cu-time">选出最符合你的选项</view>
-    <view class="cu-item {{customResult[now_index]==0?'cuIcon-roundcheckfill text-green':''}}">
-      <view class="content {{customResult[now_index]==0?'bg-green':'bg-grey'}} shadow-blur" hover-class="select-answer" data-result="0" bindtap="answer">
+  <view class="cu-timeline margin-top">
+    <view class="margin-left-sm cu-time">请选择最符合题意的选项</view>
+    <view class="cu-item {{customResult[now_index]==0?'cuIcon-roundcheckfill text-blue':''}}">
+      <view class="content {{customResult[now_index]==0?'bg-blue':'bg-grey'}} shadow-blur" hover-class="select-answer" data-result="0" bindtap="answer">
         <view class="text-lg" style="letter-spacing:5rpx">{{mbti[now_index-1].answera_zh}}</view>
-        <view class="font-en">{{mbti[now_index-1].answera_en}}</view>
       </view>
     </view>
-    <view class="cu-item {{customResult[now_index]==1?'cuIcon-roundcheckfill text-green':''}}">
-      <view class="content {{customResult[now_index]==1?'bg-green':'bg-grey'}} shadow-blur " hover-class="select-answer" data-result="1" bindtap="answer">
+    <view class="cu-item {{customResult[now_index]==1?'cuIcon-roundcheckfill text-blue':''}}">
+      <view class="content {{customResult[now_index]==1?'bg-blue':'bg-grey'}} shadow-blur " hover-class="select-answer" data-result="1" bindtap="answer">
         <view class="text-lg" style="letter-spacing:5rpx">{{mbti[now_index-1].answerb_zh}}</view>
-        <view class="font-en">{{mbti[now_index-1].answerb_en}}</view>
       </view>
     </view>
   </view>
 
-  <view class="padding flex shadow shadow-lg text-blue bg-white margin"
-    style="position: absolute; bottom: 20rpx;width:92vw">
-    <view bindtap="changeQuiz" id="previous" disabled="{{now_index==0}}" class="flex-sub margin-left text-left"
-      wx:if="{{now_index!=1}}">
+  <view class="padding flex shadow shadow-blur text-blue bg-white margin" style="position: absolute; bottom: 20rpx;width:92vw">
+    <view bindtap="changeQuiz" id="previous" disabled="{{now_index==0}}" class="flex-sub margin-left text-left" wx:if="{{now_index!=1}}">
       <text class="cuIcon-back"></text>
       上一题
     </view>

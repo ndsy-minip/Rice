@@ -1,83 +1,79 @@
 <!--pages/homepage/homepage.wxml-->
 
 
-<view style="height:100vh" scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}">
-<image src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" style="width:100vw;height:25vh"></image>
-  <!-- <view>
-    <swiper class="padding-tb square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500">
-      <block wx:for="{{bannerImgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-        <swiper-item class="flex justify-center">
-          <view style="width:90%;height:100%;">
-            <image style="background-image: url({{item.imgUrl}});width: 90vw;height:100%;border-radius: 30rpx;"></image>
-          </view>
-        </swiper-item>
-      </block>
-    </swiper>
-  </view> -->
+<view style="height:auto;z-index: -1;">
+  <image src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" style="width:100vw;height:25vh"></image>
 
   <!-- icon list -->
   <swiper class="margin-lr padding bg-white iconList" display-multiple-items="4" next-margin="80rpx">
     <block wx:for="{{iconList}}" wx:key="index">
       <swiper-item bindtap="navToModule" data-nav="{{item.navPath}}">
-        <view class="flex justify-center">
-          <image src="{{item.iconPath}}" style="height:100rpx;width:100rpx;margin:0 auto;"></image>
+        <view class="flex justify-center align-center">
+          <image src="{{item.iconPath}}" style="height:80rpx;width:80rpx;margin:0 auto;"></image>
         </view>
-        <view class="text-center padding-top-xs text-bold">{{item.text}}</view>
+        <view class="text-center padding-top-xs text-bold text-sm">{{item.text}}</view>
       </swiper-item>
     </block>
   </swiper>
 
-  <view class="margin-lr bg-blue light padding shadow-blur" style="height:270rpx;border-radius: 5%;">
+  <view class="margin-lr bg-gradual-orange padding shadow-blur text-white" style="height: 20vh; border-radius: 5%; position: relative; left: 0rpx; top: -50rpx">
     <view class="text-bold">市场农产品价格</view>
-    <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:200rpx">
-      <swiper-item class="margin-top">
-        <view class="padding flex text-center">
-          <view class="margin-top-xs flex-sub text-bold text-xl text-black">苹果</view>
-          <view class="flex-sub">
-            <text class="text-price text-bold text-red text-xl">220</text>
-            <view class="text-grey text-bold margin-top-xs">最高价</view>
-          </view>
-          <view class="flex-sub">
-            <text class="text-price text-bold text-orange text-xl">220</text>
-            <view class="text-grey text-bold margin-top-xs">最高价</view>
-          </view>
+    <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:15vh">
+      <swiper-item class="flex text-center align-center">
+        <view class="margin-top-xs flex-sub text-bold" style="font-size: 3vh;">苹果</view>
+        <view class="flex-sub" style="font-size: 2vh;">
+          <text class="text-price text-bold text-xl">220</text>
+          <view class="text-bold margin-top-xs">最高价</view>
+        </view>
+        <view class="flex-sub">
+          <text class="text-price text-bold text-xl">220</text>
+          <view class="text-bold margin-top-xs">最高价</view>
         </view>
       </swiper-item>
-      <swiper-item class="margin-top">
-        <view class="padding flex text-center">
-          <view class="margin-top-xs flex-sub text-bold text-xl text-black">梨子</view>
-          <view class="flex-sub">
-            <text class="text-price text-bold text-red text-xl">220</text>
-            <view class="text-grey text-bold margin-top-xs">最高价</view>
-          </view>
-          <view class="flex-sub">
-            <text class="text-price text-bold text-orange text-xl">220</text>
-            <view class="text-grey text-bold margin-top-xs">最高价</view>
-          </view>
+      <swiper-item class="flex text-center align-center">
+        <view class="margin-top-xs flex-sub text-bold" style="font-size: 3vh;">梨子</view>
+        <view class="flex-sub" style="font-size: 2vh;">
+          <text class="text-price text-bold text-xl">220</text>
+          <view class="text-bold margin-top-xs">最高价</view>
+        </view>
+        <view class="flex-sub">
+          <text class="text-price text-bold text-xl">220</text>
+          <view class="text-bold margin-top-xs">最高价</view>
         </view>
       </swiper-item>
     </swiper>
   </view>
 
 
-  <view class="flex align-center justify-center">
-    <view class="flex-sub padding">
-      <view class="bg-gradual-blue shadow-blur radius" style="border-radius: 30rpx;">
-        <view class="margin-top-xl padding-left text-xxl text-bold padding-top-xl">识别害虫</view>
-        <view class="margin-top-sm padding-left text-dl">图像处理技术</view>
-        <image src="../../static/img/相机.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
+
+  <view class="padding-left flex align-center justify-center">
+
+    <view class="flex-sub">
+      <view class="padding bg-gradual-green shadow-blur radius flex" style="border-radius: 30rpx;">
+        <view>
+          <view class="text-lg text-bold">桃园日记</view>
+          <view class="text-dl margin-top-xs">记录农作</view>
+        </view>
+        <image src="../../static/img/书本.png" style="height:80rpx;width:80rpx;margin-left:7vw;margin-top:1vh"></image>
       </view>
+      <view class="margin-top-sm padding bg-gradual-blue shadow-blur radius flex" style="border-radius: 30rpx;">
+        <view>
+          <view class="text-lg text-bold">识别害虫</view>
+          <view class="text-dl margin-top-xs">图像处理</view>
+        </view>
+        <image src="../../static/img/相机.png" style="height:80rpx;width:80rpx;margin-left:7vw;margin-top:1vh"></image>
+      </view>
+
     </view>
 
-    <view class="flex-sub padding">
+
+    <view class="flex-sub padding-lr">
       <view class="bg-gradual-red shadow-blur radius" style="border-radius: 30rpx;">
-        <view class="margin-top-xl padding-left text-xxl text-bold padding-top-xl">更多功能</view>
+        <view class="margin-top-xl padding-left text-xxl text-bold">更多功能</view>
         <view class="margin-top-sm padding-left text-dl">等你发现</view>
         <image src="../../static/img/功能.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
       </view>
     </view>
   </view>
 
-
-  <view class="padding-xs" style="background-color: #f8f8f8;"></view>
 </view>

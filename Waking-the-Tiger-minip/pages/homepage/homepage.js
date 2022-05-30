@@ -24,9 +24,9 @@ Page({
     ],
     iconList: [
       {
-        "iconPath": "../../static/img/作物百科.png",
-        "navPath": "../catalogue/catalogue",
-        "text": "作物百科"
+        "iconPath": "../../static/img/病虫害.png",
+        "navPath": "",
+        "text": "常见病虫害"
       },
       {
         "iconPath": "../../static/img/常见农药.png",
@@ -34,19 +34,19 @@ Page({
         "text": "常见农药"
       },
       {
-        "iconPath": "../../static/img/病虫害.png",
-        "navPath": "",
-        "text": "常见病虫害"
-      },
-      {
         "iconPath": "../../static/img/互助社区.png",
-        "navPath": "../forum_/forum_",
-        "text": "互助社区"
+        "navPath": "../test/test",
+        "text": "短视频"
       },
       {
         "iconPath": "../../static/img/模块测验.png",
         "navPath": "../module/module_MBTI/MBTI_quiz/MBTI_quiz",
         "text": "模块测验"
+      },
+      {
+        "text": "相关资料",
+        "iconPath": "../../static/img/书籍资料.png",
+        "navPath": "../info/info"
       },
       {
         "iconPath": "../../static/img/更多.png",
@@ -61,8 +61,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDiseaseInfo()
-    this.getInfo()
+    // this.getDiseaseInfo()
+    // this.getInfo()
   },
 
   /**
@@ -158,7 +158,7 @@ Page({
     })
   },
 
-  getInfo: function(e){
+  getInfo: function (e) {
     wx.cloud.callFunction({
       name: "getInfo",
       success(res) {
@@ -166,16 +166,16 @@ Page({
         var books = res.result[1].data
         var papers = res.result[2].data
         for (var i = 1; i < movies.length + 1; i++) {
-          movies[i - 1].bgUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/movies/bg/" + i + ".webp?sign=02b9794724b5eab4e79eccd91d40ca24&t=1653895832"
-          movies[i - 1].mainUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/movies/main/" + i + ".webp?sign=c2732d559d4858f84683395bc7fd09a6&t=1653895851"
+          movies[i - 1].bgUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/movies/bg/" + i + ".webp"
+          movies[i - 1].mainUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/movies/main/" + i + ".webp"
         }
         for (var i = 1; i < books.length + 1; i++) {
-          books[i - 1].bgUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/books/bg/" + i + ".webp?sign=e5245926251e71a94875cb5ac80edf1e&t=1653895799"
-          books[i - 1].mainUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/books/main/" + i + ".jpg?sign=65d7efb881ccfd3c1fa5c800552ade06&t=1653895817"
+          books[i - 1].bgUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/books/bg/" + i + ".webp"
+          books[i - 1].mainUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/books/main/" + i + ".jpg"
         }
         for (var i = 1; i < papers.length + 1; i++) {
-          papers[i - 1].bgUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/papers/bg/" + i + ".jpg?sign=38ff4a5b63b76b8d1d511ade255975f9&t=1653895632"
-          papers[i - 1].mainUrl = "https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/papers/main/" + i + ".jpg?sign=886dfe66252b638ccb3cb251c8673ae9&t=1653895694"
+          papers[i - 1].bgUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/papers/bg/" + i + ".jpg"
+          papers[i - 1].mainUrl = "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/papers/main/" + i + ".jpg"
         }
         wx.setStorageSync('books', books)
         wx.setStorageSync('movies', movies)

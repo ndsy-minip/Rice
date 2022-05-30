@@ -6,7 +6,7 @@
 
 <block wx:for="{{list}}">
   <view class="padding flex bg-white margin shadow shadow-xl" bindtap="navToDetail" data-info="{{item}}">
-    <image src="{{item.bgUrl}}" style="height:100rpx;width:100rpx;border-radius: 30%;"></image>
+    <image src="{{item.mainUrl}}" style="height:100rpx;width:100rpx;border-radius: 30%;"></image>
     <view class="margin-left" style="width: 65vw;">
       <view class="text-lg text-black text-bold">{{item.name}}</view>
       <view class="text-abbreviation margin-top-xs" style="width: 65vw;">{{item.extract[0]}}</view>
