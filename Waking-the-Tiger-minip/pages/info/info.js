@@ -15,7 +15,7 @@ Page({
     this.setData({
       books : wx.getStorageSync('books').slice(0,5),
       movies : wx.getStorageSync('movies').slice(0,5),
-      papers: wx.getStorageSync('books').slice(0,5)
+      papers: wx.getStorageSync('papers').slice(0,5)
     })
   },
 
@@ -68,7 +68,6 @@ Page({
 
   },
   viewAll: function (e) {
-    console.log(e)
     wx.navigateTo({
       url: '../moreInfo/moreInfo?id='+e.currentTarget.dataset.id,
     })
