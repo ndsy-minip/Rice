@@ -34,7 +34,7 @@ Page({
         {
           "text": "模块测验",
           "iconPath": "../../static/img/模块测验.png",
-          "navPath": "../module/module_MBTI/MBTI_quiz/MBTI_quiz"
+          "navPath": "../questionCatalogue/questionCatalogue",
         },
         {
           "text": "备忘提醒",

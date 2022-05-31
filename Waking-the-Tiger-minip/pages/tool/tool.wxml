@@ -17,12 +17,12 @@
   </view>
 </view>
 
-<view class="flex flex-wrap margin-top">
+<view class="flex flex-wrap margin-top" wx:if="{{tabCur!=0}}">
   <block wx:for="{{room_info}}" wx:key="index">
-    <view class="bg-white margin-sm" style="width:43vw;" data-index="{{item.roomid}}" bindtap="navToStreamRoom">
+    <view class="bg-white margin-sm padding-bottom" style="width:43vw;" data-index="{{item.roomid}}" bindtap="navToStreamRoom">
       <image src="{{item.share_img}}" style="width:100%;height:20vh"></image>
-      <view class="live-title margin-bottom">{{item.name}}</view>
-      <view class="margin-left-sm flex align-center">
+      <view class="live-title margin-top-xs text-lg">{{item.name}}</view>
+      <view class="flex align-center margin-top-xs justify-end" style="padding-right: 10rpx;">
         <view class="cu-avatar round sm" style="background-image: url({{item.feeds_img}});"></view>
         <view class="margin-left-xs">{{item.anchor_name}}</view>
         <!-- <view style="margin-left:10vw"><text class="cuIcon-people margin-right-xs"></text>20</view> -->
@@ -31,27 +31,7 @@
   </block>
 </view>
 
-
-<!-- 
-<view class="margin padding shadow-blur radius margin-top" style="height:20vh;border-radius: 50rpx;background-color: #888afb;"></view> -->
-
-<!-- <view class="margin padding bg-blue light shadow-blur radius margin-top" style="height:5vh;border-radius: 50rpx;"></view> -->
-
-<!-- <swiper class="screen-swiper round-dots" style="height:44vh">
-  <block wx:for="{{tools}}" wx:for-item="item_" wx:for-key="index_" wx:key="index_">
-    <swiper-item>
-      <view class="grid col-2">
-        <block wx:for="{{item_}}" wx:key="index">
-          <view class="padding-bottom-sm padding-top-sm padding-left padding-right animation-slide-bottom" style="height:20vh;animation-delay:{{ (index + 1)*0.2 + 's'}}">
-            <view class="shadow-blur radius" style="height:100%;width:100%;border-radius: 50rpx;background-color: {{item.bgColor}};" bindtap="navToFunc" data-path="{{item.path}}">
-              <view class="padding flex justify-center">
-                <image src="{{item.img}}" style="height:20vw;width:20vw"></image>
-              </view>
-              <view class="padding text-center text-bold text-lg" style="font-family: 宋体;padding-top:1vh">{{item.title}}</view>
-            </view>
-          </view>
-        </block>
-      </view>
-    </swiper-item>
-  </block>
-</swiper> -->
+<view class="flex flex-wrap margin-top flex justify-center" wx:if="{{tabCur==0}}">
+  <image src="../../static/img/暂无数据.png"></image>
+  <view class="margin-top-sm text-xl text-bold">暂无播放中的直播</view>
+</view>

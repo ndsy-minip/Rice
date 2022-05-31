@@ -4,8 +4,8 @@ page{
 }
 
 .live-title{
-  padding-left: 20rpx;
-  padding-right: 20rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
   color: rgb(39, 39, 39);
   overflow: hidden;
   text-overflow: ellipsis;

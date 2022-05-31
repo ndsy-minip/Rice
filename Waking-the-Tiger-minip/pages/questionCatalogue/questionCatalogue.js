@@ -12,7 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    var that = this
+    this.setData({
+      quiz: wx.getStorageSync('quiz')
+    })
+    // wx.cloud.callFunction({
+    //   name: "getQuiz",
+    //   success(res) {
+    //     wx.setStorageSync('quiz', res.result.data)
+    //     that.setData({
+    //       quiz: res.result.data
+    //     })
+    //   }
+    // })
   },
 
   /**
@@ -62,5 +74,11 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  navToQuiz(e) {
+    wx.navigateTo({
+      url: "../module/module_MBTI/MBTI_quiz/MBTI_quiz?quiz=" + JSON.stringify(e.currentTarget.dataset.quiz),
+    })
   }
 })

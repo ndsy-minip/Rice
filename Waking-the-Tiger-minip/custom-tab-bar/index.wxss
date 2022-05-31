@@ -1,13 +1,21 @@
 @import "../components/colorui/icon.wxss";
 @import "../components/colorui/main.wxss";
 
-.img-style {
-  height: 100rpx;
-  width: 100rpx;
-  position: fixed;
-  bottom: 2.5vh;
-  margin: auto;
-  left: 0;
-  right: 0;
-  border-radius: 30%;
+
+.tab-bar {
+  z-index: -1;
+  background-color: #5e7fe8;
+  display: flex;
+  opacity: 0.97;
+  border-radius: 100rpx;
+  margin-bottom: 3vh;
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

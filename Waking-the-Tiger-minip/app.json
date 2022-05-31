@@ -1,10 +1,10 @@
 {
   "pages": [
-    
-    "pages/homepage/homepage",
+    "pages/questionCatalogue/questionCatalogue",
     "pages/info/info",
+    "pages/homepage/homepage",
     "pages/timer/timer",
-"pages/test1/test1",
+    "pages/test1/test1",
     "pages/index/index",
     "pages/moreInfo/moreInfo",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
@@ -18,13 +18,13 @@
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
     "pages/catalogue/catalogue",
-    "pages/questionCatalogue/questionCatalogue",
+    
 
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
     "pages/myNotebook/myNotebook",
     "pages/tool/tool",
-    
+
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",

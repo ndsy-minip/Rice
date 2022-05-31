@@ -1,7 +1,5 @@
 // pages/module/MBTI/MBTI_quiz/MBTI_quiz.js
 
-var mbti = require('../../../../utils/mbti');
-
 Page({
 
   /**
@@ -9,20 +7,24 @@ Page({
    */
   data: {
     now_index: 1,
-    personalityScore: { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var quizJSON = JSON.parse(options.quiz)
+    var quiz = quizJSON.exam[0].quiz
+    var date = quizJSON.date
     var customResult = {}
-    for (let i in mbti) {
-      customResult[++i] = 2
+    for (let i in quiz) {
+      customResult[++i] = -1
     }
+
     this.setData({
-      mbti,
-      customResult
+      date,
+      quiz,
+      customResult,
     })
   },
 
@@ -123,21 +125,22 @@ Page({
       now_index = now_index + 1
     }
     var competition = this.calCompetition()
+
     this.setData({
       customResult,
       competition
     })
-    setTimeout(function(){
+    setTimeout(function () {
       that.setData({
-         now_index,
+        now_index,
       })
-    }, 1000);
-    if(competition==100.0){
+    }, 500);
+    if (competition == 100.0) {
       wx.showModal({
         title: "所有题目已作答完成",
         content: "是否提交",
-        success(res){
-          if(res.confirm){
+        success(res) {
+          if (res.confirm) {
             that.submit()
           }
         }
@@ -151,11 +154,11 @@ Page({
   calCompetition: function () {
     var unfinished = 0
     for (let i in this.data.customResult) {
-      if (this.data.customResult[i] == 2) {
+      if (this.data.customResult[i] == -1) {
         unfinished = unfinished + 1
       }
     }
-    var competition = (100 - (unfinished / this.data.mbti.length * 100)).toFixed(1)
+    var competition = (100 - (unfinished / this.data.quiz.length * 100)).toFixed(1)
     return competition
   },
 
@@ -194,7 +197,6 @@ Page({
     var customResult = this.data.customResult
     var personalityScore = this.data.personalityScore
     for (var i in customResult) {
-      console.log(i)
       switch (i % 7) {
         case 1:
           if (customResult[i] == 0) {

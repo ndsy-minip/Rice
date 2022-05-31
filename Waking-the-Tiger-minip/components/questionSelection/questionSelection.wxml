@@ -8,8 +8,8 @@
       <view class="grid text-center justify-center col-6 bg-white">
         <block wx:for="{{customResult}}">
           <view class="padding-sm">
-            <view class="flex align-center justify-center circle-item text-blue" wx:if="{{item==2}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
-            <view class="flex align-center justify-center circle-item text-white bg-blue" wx:if="{{item!=2}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
+            <view class="flex align-center justify-center circle-item text-blue" wx:if="{{item==-1}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
+            <view class="flex align-center justify-center circle-item text-white bg-blue" wx:if="{{item!=-1}}" bindtap="changeQuestionIndex" data-index="{{index}}">{{index}}</view>
           </view>
         </block>
       </view>

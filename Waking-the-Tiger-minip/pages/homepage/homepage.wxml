@@ -16,7 +16,7 @@
     </block>
   </swiper>
 
-  <view class="margin-lr bg-gradual-orange padding shadow-blur text-white" style="height: 20vh; border-radius: 5%; position: relative; left: 0rpx; top: -50rpx">
+  <view class="margin-lr bg-gradual-orange padding text-white" style="height: 20vh; border-radius: 5%; position: relative; left: 0rpx; top: -50rpx" bindtap="navToMarket">
     <view class="text-bold">市场农产品价格</view>
     <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:15vh">
       <swiper-item class="flex text-center align-center">
@@ -49,14 +49,14 @@
   <view class="padding-left flex align-center justify-center">
 
     <view class="flex-sub">
-      <view class="padding bg-gradual-green shadow-blur radius flex" style="border-radius: 30rpx;">
+      <view class="padding bg-gradual-green radius flex" style="border-radius: 30rpx;" bindtap="navToTimer">
         <view>
           <view class="text-lg text-bold">桃园日记</view>
           <view class="text-dl margin-top-xs">记录农作</view>
         </view>
         <image src="../../static/img/书本.png" style="height:80rpx;width:80rpx;margin-left:7vw;margin-top:1vh"></image>
       </view>
-      <view class="margin-top-sm padding bg-gradual-blue shadow-blur radius flex" style="border-radius: 30rpx;">
+      <view class="margin-top-sm padding bg-gradual-blue radius flex" style="border-radius: 30rpx;" bindtap="showActionSheet">
         <view>
           <view class="text-lg text-bold">识别害虫</view>
           <view class="text-dl margin-top-xs">图像处理</view>
@@ -67,8 +67,8 @@
     </view>
 
 
-    <view class="flex-sub padding-lr">
-      <view class="bg-gradual-red shadow-blur radius" style="border-radius: 30rpx;">
+    <view class="flex-sub padding-lr" bindtap="navToMoreFunction">
+      <view class="bg-gradual-red radius" style="border-radius: 30rpx;">
         <view class="margin-top-xl padding-left text-xxl text-bold">更多功能</view>
         <view class="margin-top-sm padding-left text-dl">等你发现</view>
         <image src="../../static/img/功能.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
