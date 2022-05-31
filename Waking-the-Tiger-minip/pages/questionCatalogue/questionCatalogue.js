@@ -13,8 +13,15 @@ Page({
    */
   onLoad(options) {
     var that = this
+    var today = new Date()
+    var quiz = []
+    for(var i in wx.getStorageSync('quiz')){
+      if(today - new Date(wx.getStorageSync('quiz')[i].date)>0){
+        quiz.push(wx.getStorageSync('quiz')[i])
+      }
+    }
     this.setData({
-      quiz: wx.getStorageSync('quiz')
+      quiz: quiz.reverse()
     })
     // wx.cloud.callFunction({
     //   name: "getQuiz",

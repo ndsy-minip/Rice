@@ -267,6 +267,12 @@ Page({
     wx.navigateTo({
       url: '../MBTI_result/MBTI_result?personalityScore=' + JSON.stringify(that.data.personalityScore),
     })
+  },
+  
+  goBack(){
+    wx.navigateBack({
+      delta: 0,
+    })
   }
 
 })

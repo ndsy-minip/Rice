@@ -1,6 +1,13 @@
 <!--pages/module/MBTI/MBTI_quiz/MBTI_quiz.wxml-->
 <questionSelection id="questionSelection" customResult="{{customResult}}" bind:changeQuestionIndex="changeQuestionIndex"></questionSelection>
 
+<view class="padding" style="height:10vh;position: absolute;z-index: 2;top:0">
+  <view style="height:5vh"></view>
+  <view style="width:15vw;height:3vh" bindtap="goBack">
+    <text class="cuIcon-back text-white text-xxl"></text>
+  </view>
+</view>
+
 <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-blue.jpg" style="border-radius: 0rpx 0rpx 25rpx 25rpx;width: 100vw;height:30vh"></image>
 
 <view class="margin-lr padding bg-white shadow shadow-xl" style="height:22vh;position:relative;top:-10vh;border-radius: 30rpx;">
