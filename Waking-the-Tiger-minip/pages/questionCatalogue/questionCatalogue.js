@@ -12,17 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
+
     var that = this
-    var today = new Date()
-    var quiz = []
-    for(var i in wx.getStorageSync('quiz')){
-      if(today - new Date(wx.getStorageSync('quiz')[i].date)>0){
-        quiz.push(wx.getStorageSync('quiz')[i])
-      }
-    }
-    this.setData({
-      quiz: quiz.reverse()
-    })
+
     // wx.cloud.callFunction({
     //   name: "getQuiz",
     //   success(res) {
@@ -32,6 +25,17 @@ Page({
     //     })
     //   }
     // })
+
+    var today = new Date()
+    var quiz = []
+    for (var i in wx.getStorageSync('quiz')) {
+      if (today - new Date(wx.getStorageSync('quiz')[i].date) > 0) {
+        quiz.push(wx.getStorageSync('quiz')[i])
+      }
+    }
+    this.setData({
+      quiz: quiz.reverse()
+    })
   },
 
   /**

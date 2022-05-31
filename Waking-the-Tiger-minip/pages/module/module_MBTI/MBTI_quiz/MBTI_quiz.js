@@ -167,12 +167,13 @@ Page({
    */
   submit: function (e) {
     var that = this
+    this.calScore()
     if (this.data.competition == 100.0) {
       wx.showModal({
         content: "是否确认提交",
         success(res) {
           if (res.confirm) {
-            that.calPersonalityScore()
+            that.navToResultPage(that.calScore())
           }
         }
 
@@ -191,88 +192,30 @@ Page({
 
 
   /**
-   * 计分
-   */
-  calPersonalityScore: function () {
-    var customResult = this.data.customResult
-    var personalityScore = this.data.personalityScore
-    for (var i in customResult) {
-      switch (i % 7) {
-        case 1:
-          if (customResult[i] == 0) {
-            personalityScore['E'] = personalityScore['E'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['I'] = personalityScore['I'] + 1
-          }
-          break;
-        case 2:
-          if (customResult[i] == 0) {
-            personalityScore['S'] = personalityScore['S'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['N'] = personalityScore['N'] + 1
-          }
-          break;
-        case 3:
-          if (customResult[i] == 0) {
-            personalityScore['S'] = personalityScore['S'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['N'] = personalityScore['N'] + 1
-          }
-          break;
-        case 4:
-          if (customResult[i] == 0) {
-            personalityScore['T'] = personalityScore['T'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['F'] = personalityScore['F'] + 1
-          }
-          break;
-        case 5:
-          if (customResult[i] == 0) {
-            personalityScore['T'] = personalityScore['T'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['F'] = personalityScore['F'] + 1
-          }
-          break;
-        case 6:
-          if (customResult[i] == 0) {
-            personalityScore['J'] = personalityScore['J'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['P'] = personalityScore['P'] + 1
-          }
-          break;
-        case 0:
-          if (customResult[i] == 0) {
-            personalityScore['J'] = personalityScore['J'] + 1
-          } if (customResult[i] == 1) {
-            personalityScore['P'] = personalityScore['P'] + 1
-          }
-          break;
-        default:
-          console.log("error")
-      }
-    }
-    personalityScore['E'] = personalityScore['E'] * 2
-    personalityScore['I'] = personalityScore['I'] * 2
-    this.setData({
-      personalityScore
-    })
-    this.navToResultPage()
-  },
-
-  /**
    * 跳转结果页并传值
    */
-  navToResultPage() {
+  navToResultPage(score) {
     var that = this
-    wx.navigateTo({
-      url: '../MBTI_result/MBTI_result?personalityScore=' + JSON.stringify(that.data.personalityScore),
-    })
+
   },
-  
-  goBack(){
+
+  goBack() {
     wx.navigateBack({
       delta: 0,
     })
+  },
+
+  calScore() {
+    var quiz = this.data.quiz
+    var customResult = this.data.customResult
+    var score = 0
+    for (var i = 0; i < quiz.length; i++) {
+      if (quiz[i].answerIndex == customResult[i + 1]) {
+        score += 10
+      }
+    }
+    return score
   }
+
 
 })
