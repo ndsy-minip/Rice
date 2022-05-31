@@ -4,33 +4,8 @@
 
 <view style="height:11vh"></view>
 
-<view class="padding text-xxl text-bold">温暖的瞬间</view>
-
-<view class="padding-left text-grey">来源：新华社</view>
-
-<view class="flex justify-center margin-bottom">
-  <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/Tiger_sleep.png"></image>
-</view>
-
-<video src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/演示视频.mp4" class="padding flex" style="width: 80vw;height:40vw;margin:0 auto"></video>
-
-<view class="padding text-lg" style="line-height: 50rpx;">
-<text>
-  注意：
-在“font”组合值的写法中，只有“font-size”和“font-family”这两个的值是不能省略的，而且是缺一不可，顺序也是要先大小后系列不能变，否则浏览器会不认识该值，对该组合值进行报错。\n
-(3)在font内设置文本行高
-“font”属性组合值的写法，除了以上所提到的，它还有一种比较不常见，却还比较实用的写法，即可直接在“font”属性内设置文本的行高“line-height”，如下：
-
-3.扩展：字体单位px ,em , rem【必须掌握】
-①　px（像素，相对于显示器屏幕分辨率而言）
-②　em（相对当前元素内文本的字体尺寸，会继承父元素大小）
-③　rem （相对HTML根元素，最常用的单位）
-PX
-1.像素px是相对于显示器屏幕分辨率而言的。
-2.PX特点
-1. IE无法调整那些使用px作为单位的字体大小；
-2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；
-3. Firefox能够调整px和em，rem。大部分中国网民使用IE浏览器(或内核)。
-3.当把一个图放大后，看到很多矩形的小方块，那些就是像素。
-</text>
-</view>
+<scroll-view scroll-y="{{true}}" style="width:100%;height:{{sysheight}}px;">
+  <view class="img-size">
+    <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/article/1.jpg" mode="widthFix" class="liucheng-img"></image>
+  </view>
+</scroll-view>

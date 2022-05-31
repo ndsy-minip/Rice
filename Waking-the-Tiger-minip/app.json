@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/modern_agriculture/modern_agriculture",
+    "pages/articleContent/articleContent",
     "pages/questionCatalogue/questionCatalogue",
     "pages/info/info",
     "pages/homepage/homepage",
@@ -10,7 +12,7 @@
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/detailContent/detailContent",
     "pages/test/test",
-    "pages/articleContent/articleContent",
+
     "pages/market/market",
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
@@ -18,7 +20,7 @@
     "pages/disease_catalogue/disease_catalogue",
     "pages/pay/pay",
     "pages/catalogue/catalogue",
-    
+
 
     "pages/profile/profile",
     "pages/pesticide_catalogue/pesticide_catalogue",
@@ -34,7 +36,7 @@
     "pages/notification/notification",
     "pages/addNotification/addNotification",
     "pages/forum_/forum_",
-    "pages/modern_agriculture/modern_agriculture",
+
     "pages/forum_detail/forum_detail",
     "pages/module/module_MBTI/MBTI_instructions/MBTI_instructions",
 
