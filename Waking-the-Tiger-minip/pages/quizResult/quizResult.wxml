@@ -1,0 +1,26 @@
+<!--pages/test1/test1.wxml-->
+<view class="padding" style="height:10vh;position: absolute;z-index: 2;top:0">
+  <view style="height:5vh"></view>
+  <view style="width:15vw;height:3vh" bindtap="goBack">
+    <text class="cuIcon-back text-black text-xxl"></text>
+  </view>
+</view>
+
+<image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/bg-yellow.jpg" style="height: 100vh;width:100vw;z-index: -1;"></image>
+
+<image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/modals.png" class="modals"></image>
+
+<view class="padding" style="position: absolute;top:15vh;">
+  <view class="cu-avatar round lg margin-right" style="background-image: url({{userInfo.avatarUrl}});">
+  </view>
+  <text class="text-xxl text-bold "> {{userInfo.nickName}}</text>
+  <view class="margin-top-xl text-center " style="width: 100vw;">
+    <text>你在本次测试中的得分为 </text>
+    <text class="text-bold text-xxl">{{score}} 分</text>
+  </view>
+</view>
+
+
+<view style="position: absolute;top:80vh;width: 100vw;" class="flex justify-center" bindtap="navToQuiz">
+  <view class="padding bg-gradual-orange text-center text-lg text-bold" style="width: 40vw;">查看更多题目</view>
+</view>

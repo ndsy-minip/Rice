@@ -196,7 +196,9 @@ Page({
    */
   navToResultPage(score) {
     var that = this
-
+    wx.navigateTo({
+      url: '../../../quizResult/quizResult?score=' + score,
+    })
   },
 
   goBack() {

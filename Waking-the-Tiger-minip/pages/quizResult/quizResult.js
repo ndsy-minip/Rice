@@ -13,7 +13,8 @@ Page({
    */
   onLoad(options) {
     this.setData({
-      userInfo : wx.getStorageSync('userInfo')
+      userInfo: wx.getStorageSync('userInfo'),
+      score: options.score
     })
   },
 
@@ -64,5 +65,16 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  navToQuiz() {
+    wx.navigateTo({
+      url: '../questionCatalogue/questionCatalogue',
+    })
+  },
+
+  goBack() {
+    wx.navigateBack({
+      delta: 2,
+    })
   }
 })

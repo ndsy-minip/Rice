@@ -1,15 +1,17 @@
 {
   "pages": [
+    "pages/questionCatalogue/questionCatalogue",
+    "pages/quizResult/quizResult",
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
-    "pages/questionCatalogue/questionCatalogue",
+
     "pages/info/info",
     "pages/homepage/homepage",
     "pages/timer/timer",
-    "pages/test1/test1",
+    "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/index/index",
     "pages/moreInfo/moreInfo",
-    "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
+
     "pages/detailContent/detailContent",
     "pages/test/test",
 
