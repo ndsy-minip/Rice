@@ -16,37 +16,23 @@
     </block>
   </swiper>
 
-  <view class="margin-lr bg-gradual-orange padding text-white" style="height: 20vh; border-radius: 5%; position: relative; left: 0rpx; top: -50rpx" bindtap="navToMarket">
-    <view class="text-bold">市场农产品价格</view>
-    <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:15vh">
-      <swiper-item class="flex text-center align-center">
-        <view class="margin-top-xs flex-sub text-bold" style="font-size: 3vh;">苹果</view>
-        <view class="flex-sub" style="font-size: 2vh;">
-          <text class="text-price text-bold text-xl">220</text>
-          <view class="text-bold margin-top-xs">最高价</view>
-        </view>
-        <view class="flex-sub">
-          <text class="text-price text-bold text-xl">220</text>
-          <view class="text-bold margin-top-xs">最高价</view>
-        </view>
-      </swiper-item>
-      <swiper-item class="flex text-center align-center">
-        <view class="margin-top-xs flex-sub text-bold" style="font-size: 3vh;">梨子</view>
-        <view class="flex-sub" style="font-size: 2vh;">
-          <text class="text-price text-bold text-xl">220</text>
-          <view class="text-bold margin-top-xs">最高价</view>
-        </view>
-        <view class="flex-sub">
-          <text class="text-price text-bold text-xl">220</text>
-          <view class="text-bold margin-top-xs">最高价</view>
-        </view>
-      </swiper-item>
-    </swiper>
+  <view class="padding flex justify-between" style="position:relative;top:-6vh;width:100vw">
+  <view class="text-bold">资讯动态</view>
+    <view class="text-grey text-sm">查看更多<text class="cuIcon-right margin-left-xs"></text></view>
   </view>
 
+  <swiper class="padding-tb square-dot margin-top" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500" style="position: relative;top:-10vh">
+      <block wx:for="{{bannerImgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <swiper-item class="flex justify-center">
+          <view style="width:90%;height:100%;">
+            <image style="background-image: url({{item.imgUrl}});width: 90vw;height:100%;border-radius: 30rpx;"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
 
 
-  <view class="padding-left flex align-center justify-center">
+  <view class="padding-left flex align-center justify-center" style="position: relative;top:-9.5vh">
 
     <view class="flex-sub">
       <view class="padding bg-gradual-green radius flex" style="border-radius: 30rpx;" bindtap="navToTimer">
@@ -67,10 +53,21 @@
     </view>
 
 
-    <view class="flex-sub padding-lr" bindtap="navToMoreFunction">
+    <view class="flex-sub padding-lr" bindtap="navToMarket">
       <view class="bg-gradual-red radius" style="border-radius: 30rpx;">
-        <view class="margin-top-xl padding-left text-xxl text-bold">更多功能</view>
-        <view class="margin-top-sm padding-left text-dl">等你发现</view>
+        <view class="margin-top padding-left text-xl text-bold">市场农产品价格</view>
+        <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:5vh" class="padding-left margin-top-sm">
+          <swiper-item>
+            <view>
+              梨子<text class="text-price margin-lr-sm">20</text>苹果<text class="text-price margin-left">30</text>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view>
+              草莓<text class="text-price margin-lr-sm">20</text>葡萄<text class="text-price margin-left">30</text>
+            </view>
+          </swiper-item>
+        </swiper>
         <image src="../../static/img/功能.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
       </view>
     </view>

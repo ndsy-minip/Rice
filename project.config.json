@@ -1,5 +1,5 @@
 {
-  "miniprogramRoot": "Waking-the-Tiger-minip/",
+  "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
     "urlCheck": false,
@@ -56,7 +56,7 @@
     }
   },
   "compileType": "miniprogram",
-  "srcMiniprogramRoot": "Waking-the-Tiger-minip/",
+  "srcMiniprogramRoot": "miniprogram/",
   "packOptions": {
     "ignore": [],
     "include": []

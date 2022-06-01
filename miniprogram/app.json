@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/questionCatalogue/questionCatalogue",
+    
+    "pages/homepage/homepage",
     "pages/quizResult/quizResult",
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
-
+"pages/questionCatalogue/questionCatalogue",
     "pages/info/info",
-    "pages/homepage/homepage",
+    
     "pages/timer/timer",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/index/index",
