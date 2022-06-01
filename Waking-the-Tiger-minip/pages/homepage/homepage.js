@@ -56,8 +56,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getDiseaseInfo()
-    // this.getInfo()
+    this.getDiseaseInfo()
+    this.getInfo()
+    this.getQuiz()
   },
 
   /**
@@ -179,20 +180,20 @@ Page({
     })
   },
 
-  navToMarket(){
+  navToMarket() {
     wx.navigateTo({
       url: '../market/market',
     })
   },
 
 
-  navToTimer(){
+  navToTimer() {
     wx.navigateTo({
       url: '../timer/timer',
     })
   },
 
-  navToMoreFunction(){
+  navToMoreFunction() {
     wx.navigateTo({
       url: '../more_function/more_function',
     })
@@ -295,6 +296,15 @@ Page({
       url: '../detect_result/detect_result?img_url=' + _this.data.img_url + '&results=' + JSON.stringify(results),
     })
   },
+
+  getQuiz() {
+    wx.cloud.callFunction({
+      name: "getQuiz",
+      success(res) {
+        wx.setStorageSync('quiz', res.result.data)
+      }
+    })
+  }
 
 
 

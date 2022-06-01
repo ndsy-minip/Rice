@@ -16,16 +16,6 @@ Page({
 
     var that = this
 
-    // wx.cloud.callFunction({
-    //   name: "getQuiz",
-    //   success(res) {
-    //     wx.setStorageSync('quiz', res.result.data)
-    //     that.setData({
-    //       quiz: res.result.data
-    //     })
-    //   }
-    // })
-
     var today = new Date()
     var quiz = []
     for (var i in wx.getStorageSync('quiz')) {
