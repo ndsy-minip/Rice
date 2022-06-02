@@ -7,15 +7,11 @@ Page({
   data: {
 
     currentSwiperIndex: 0,
-    bannerImgList: [{
-      imgUrl: "https://img.zcool.cn/community/013d445e1944daa8012165184c6141.jpg@1280w_1l_2o_100sh.jpg",
-      imgTitle: "abcd",
-      imgDescription: "1234"
-    }, {
-      imgUrl: "https://img.zcool.cn/community/019bc559b8f8a2a801207534bd0dc4.jpg@1280w_1l_2o_100sh.jpg",
-      imgTitle: "sdf",
-      imgDescription: "5678"
-    }
+    bannerImgList: [
+      "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/芒种.png",
+      "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/西瓜.png",
+      "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/鲜花.png",
+
     ],
     iconList: [
       {
@@ -56,9 +52,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getDiseaseInfo()
-    // this.getInfo()
-    // this.getQuiz()
+    this.getDiseaseInfo()
+    this.getInfo()
+    this.getQuiz()
+    this.getBanner()
   },
 
   /**
@@ -303,6 +300,24 @@ Page({
       success(res) {
         wx.setStorageSync('quiz', res.result.data)
       }
+    })
+  },
+
+  getBanner() {
+    var that = this
+    wx.cloud.callFunction({
+      name: "getBanner",
+      success(res) {
+        that.setData({
+          bannerList : res.result.data
+        })
+      }
+    })
+  },
+
+  navToArticle(e){
+    wx.navigateTo({
+      url: '../bannerArticle/bannerArticle?article='+JSON.stringify(e.currentTarget.dataset.article),
     })
   }
 

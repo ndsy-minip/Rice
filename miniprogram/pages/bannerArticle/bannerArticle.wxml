@@ -1,0 +1,9 @@
+<!--pages/bannerArticle/bannerArticle.wxml-->
+<cu-custom title="{{article.title}}">
+</cu-custom>
+
+<scroll-view scroll-y="{{true}}" style="width:100%;height:100vh;margin-top:11vh">
+  <view class="img-size">
+    <image src="{{article.image}}" mode="widthFix" class="liucheng-img"></image>
+  </view>
+</scroll-view>

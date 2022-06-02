@@ -2,7 +2,7 @@
 
 
 <view style="height:auto;z-index: -1;">
-  <image src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" style="width:100vw;height:25vh"></image>
+  <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/background-image.jpg" style="width:100vw;height:25vh"></image>
 
   <!-- icon list -->
   <swiper class="margin-lr padding bg-white iconList" display-multiple-items="4" next-margin="80rpx">
@@ -22,10 +22,10 @@
   </view>
 
   <swiper class="padding-tb square-dot margin-top" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500" style="position: relative;top:-10vh">
-      <block wx:for="{{bannerImgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-        <swiper-item class="flex justify-center">
+      <block wx:for="{{bannerList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <swiper-item class="flex justify-center" bindtap="navToArticle" data-article="{{item}}">
           <view style="width:90%;height:100%;">
-            <image style="background-image: url({{item.imgUrl}});width: 90vw;height:100%;border-radius: 30rpx;"></image>
+            <image src="{{item.banner}}" style="width: 90vw;height:100%;border-radius: 30rpx;"></image>
           </view>
         </swiper-item>
       </block>
