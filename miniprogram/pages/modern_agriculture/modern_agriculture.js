@@ -57,14 +57,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
-
   navToDetail(e) {
     wx.navigateTo({
       url: '../articleContent/articleContent?article=' + JSON.stringify(e.currentTarget.dataset.article),

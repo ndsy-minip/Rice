@@ -57,15 +57,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
-
-
   switchTab: function (e) {
     this.setData({
       tabCur: e.currentTarget.dataset.id,

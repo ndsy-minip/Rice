@@ -1,25 +1,25 @@
 {
   "pages": [
-    "pages/homepage/homepage",
-    "pages/bannerDetail/bannerDetail",
-    
-    "pages/test/test",
     "pages/index/index",
+    "pages/bannerDetail/bannerDetail",
+    "pages/homepage/homepage",
+    "pages/test/test",
+
     "pages/bannerArticle/bannerArticle",
     "pages/quizResult/quizResult",
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
     "pages/articleConten/articleConten",
-"pages/questionCatalogue/questionCatalogue",
+    "pages/questionCatalogue/questionCatalogue",
     "pages/info/info",
-    
+
     "pages/timer/timer",
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
-    
+
     "pages/moreInfo/moreInfo",
 
     "pages/detailContent/detailContent",
-    
+
 
     "pages/market/market",
     "pages/more_function/more_function",
@@ -89,7 +89,7 @@
   "sitemapLocation": "sitemap.json",
   "cloud": true,
   "plugins": {
-    "player":{
+    "player": {
       "version": "2.0.0",
       "provider": "wxa75efa648b60994b"
     },

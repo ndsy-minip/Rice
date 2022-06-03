@@ -82,7 +82,7 @@ Page({
     // 设置菜单中的转发按钮触发转发事件时的转发内容
     var shareObj = {
       title: that.data.userInfo.nickName + "的桃园日记",
-      imageUrl: '../../static/img/logo.png',
+      imageUrl:'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/推广图片.png',
       success: function (res) {
         if (res.errMsg == 'shareAppMessage:ok') {
         }

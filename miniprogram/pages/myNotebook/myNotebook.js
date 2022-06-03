@@ -61,12 +61,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function (res) {
-    
-  },
 
   getMyNotebook: function () {
     var _this = this

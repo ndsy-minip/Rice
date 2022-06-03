@@ -98,13 +98,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  },
-
   navToDetail(e) {
     wx.navigateTo({
       url: '../detailContent/detailContent?info=' + encodeURIComponent(JSON.stringify(e.currentTarget.dataset.info)),

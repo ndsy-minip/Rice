@@ -61,12 +61,7 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
-  },
   viewAll: function (e) {
     wx.navigateTo({
       url: '../moreInfo/moreInfo?id='+e.currentTarget.dataset.id,

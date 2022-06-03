@@ -42,7 +42,7 @@ Page({
           "navPath": "../notification/notification"
         },
         {
-          "text": "全国行情",
+          "text": "市场行情",
           "iconPath": "../../static/img/全国行情.png",
           "navPath": "../market/market"
         },
@@ -125,14 +125,6 @@ Page({
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
 
   navToModule(e) {
     var _this = this

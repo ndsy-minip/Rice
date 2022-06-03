@@ -87,12 +87,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   show(e) {
     let index = e.currentTarget.dataset.index;
     let active = this.data.active;

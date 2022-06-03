@@ -70,13 +70,6 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  },
-
   navToQuiz(e) {
     wx.navigateTo({
       url: "../module/module_MBTI/MBTI_quiz/MBTI_quiz?quiz=" + JSON.stringify(e.currentTarget.dataset.quiz),

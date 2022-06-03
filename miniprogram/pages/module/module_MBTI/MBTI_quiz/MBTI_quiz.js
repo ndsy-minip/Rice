@@ -71,13 +71,6 @@ Page({
   },
 
   /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
-  /**
    * 下一个问题
    */
   changeQuiz: function (e) {

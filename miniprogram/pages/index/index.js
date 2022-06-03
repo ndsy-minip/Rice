@@ -7,28 +7,22 @@ Page({
   data: {
     swiperList: [{
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_1.png',
-      title: "作物百科",
-      firstLine: "了解作物生长秘密",
-      sencondLine: ""
+      title: "农药查询",
+      firstLine: "关于农药科普",
+      sencondLine: "我们始终在路上"
     },
     {
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_2.png',
-      title: "农药查询",
-      firstLine: "教会你如何安全使用农药",
-      sencondLine: " "
+      title: "害虫识别",
+      firstLine: "使用前沿计算机视觉技术",
+      sencondLine: "帮助你对症下药"
     },
     {
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_3.png',
-      title: "常见病虫害",
-      firstLine: "如何远离病虫危害",
-      sencondLine: ""
-    },
-    {
-      url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_4.png',
-      title: "互助社区",
-      firstLine: "交流研究农业常识",
-      sencondLine: ""
-    },
+      title: "市场行情",
+      firstLine: "展示所在省市农产品价格",
+      sencondLine: "帮助你了解市场"
+    }
     ]
   },
 
@@ -85,6 +79,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    return {
+      title: '栗米——乡村振兴解决方案',
+      imageUrl: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/推广图片.png',
+      path: '/pages/index/index'
+    }
 
   },
 
@@ -104,11 +103,11 @@ Page({
           url: '../homepage/homepage',
         })
       },
-      fail(err){
+      fail(err) {
         wx.switchTab({
           url: '../homepage/homepage',
         })
-      } 
+      }
     })
   },
 })

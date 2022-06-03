@@ -1,5 +1,5 @@
 <!--pages/market/market.wxml-->
-<cu-custom title="全国行情"></cu-custom>
+<cu-custom title="市场行情"></cu-custom>
 <view style="height:8vh"></view>
 
 <view class="margin-top cu-bar search bg-white flex">
