@@ -1,15 +1,14 @@
-<!--pages/plantTech/plantTech.wxml-->
-<cu-custom title="科学种植技术"></cu-custom>
+<!--pages/modern_agriculture/modern_agriculture.wxml-->
+<cu-custom title="农业现代化"></cu-custom>
 <view style="height:11vh"></view>
-
-
-<view class="margin-top padding flex bg-white">
-  <view style="flex:7">
-    <text class="text-abbreviation text-bold text-xl">走进“生态餐厅”</text>
-
-    <view class="margin-top-sm text-grey text-abbreviation">生态餐厅是综合运用建筑学、园林学、设施园艺学、生态学等相关学科知识进行规划、设计和建设，以设施调控技术、农艺栽培及管理技术来维护餐厅的优美环境，形成以绿色景观植物为主，蔬、果、花、草、药为辅的植物配置格局，结合假山、瀑布、小桥流水、竹木亭阁等园林景观，全方位立体展现绿色、优美、宜人的就餐环境。</view>
+<block wx:for="{{articleList}}">
+  <view class="margin-top padding flex bg-white" bindtap="navToDetail" data-article="{{item}}">
+    <view style="flex:7">
+      <text class="text-abbreviation text-bold text-xl">{{item.title}}</text>
+      <view class="margin-top-xl text-grey">{{item.author}} {{item.release_time}}</view>
+    </view>
+    <view style="flex:3">
+      <image src="{{item.banner}}" style="width: 220rpx;height:160rpx" class="radius margin-top-sm margin-left"></image>
+    </view>
   </view>
-  <view style="flex:3">
-    <image src="http://p2.itc.cn/q_70/images03/20200621/1be80eb42c46451eb6b9ae391b8aa6dd.jpeg" style="width: 220rpx;height:160rpx" class="radius"></image>
-  </view>
-</view>
+</block>

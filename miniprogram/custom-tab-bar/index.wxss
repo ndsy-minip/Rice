@@ -4,7 +4,7 @@
 
 .tab-bar {
   z-index: -1;
-  background-color: #5e7fe8;
+  background-color: #3eb78d;
   display: flex;
   opacity: 0.97;
   border-radius: 100rpx;

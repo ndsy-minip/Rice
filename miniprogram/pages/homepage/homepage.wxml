@@ -1,27 +1,14 @@
 <!--pages/homepage/homepage.wxml-->
 
 
-<view style="height:auto;z-index: -1;">
-  <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/background-image.jpg" style="width:100vw;height:25vh"></image>
+<view style="height:auto;z-index: -1;padding-bottom:20vh">
 
-  <!-- icon list -->
-  <swiper class="margin-lr padding bg-white iconList" display-multiple-items="4" next-margin="80rpx">
-    <block wx:for="{{iconList}}" wx:key="index">
-      <swiper-item bindtap="navToModule" data-nav="{{item.navPath}}">
-        <view class="flex justify-center align-center">
-          <image src="{{item.iconPath}}" style="height:80rpx;width:80rpx;margin:0 auto;"></image>
-        </view>
-        <view class="text-center padding-top-xs text-bold text-sm">{{item.text}}</view>
-      </swiper-item>
-    </block>
-  </swiper>
-
-  <view class="padding flex justify-between" style="position:relative;top:-6vh;width:100vw">
-  <view class="text-bold">资讯动态</view>
-    <view class="text-grey text-sm">查看更多<text class="cuIcon-right margin-left-xs"></text></view>
-  </view>
-
-  <swiper class="padding-tb square-dot margin-top" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500" style="position: relative;top:-10vh">
+  <!-- 上半部分 白底 -->
+  <view class="bg-white padding-bottom">
+    <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/webp.png" style="width:100vw;height:25vh"></image>
+    <view style="position: absolute;top:10vh;left:2vh" class="text-xxl text-bold text-black">HELLO! {{text}}</view>
+    <view style="position: absolute;top:12vh;width:100vw" class="padding flex justify-end text-white text-bold" bindtap="navToMore">查看更多<text class="margin-left-xs cuIcon-right"></text></view>
+    <swiper class="padding-tb square-dot margin-top" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="500" style="position: absolute;top:14vh;width:100vw;height:20vh">
       <block wx:for="{{bannerList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
         <swiper-item class="flex justify-center" bindtap="navToArticle" data-article="{{item}}">
           <view style="width:90%;height:100%;">
@@ -30,47 +17,38 @@
         </swiper-item>
       </block>
     </swiper>
+    <view style="height:12vh"></view>
 
-
-  <view class="padding-left flex align-center justify-center" style="position: relative;top:-9.5vh">
-
-    <view class="flex-sub">
-      <view class="padding bg-gradual-green radius flex" style="border-radius: 30rpx;" bindtap="navToTimer">
-        <view>
-          <view class="text-lg text-bold">桃园日记</view>
-          <view class="text-dl margin-top-xs">记录农作</view>
-        </view>
-        <image src="../../static/img/书本.png" style="height:80rpx;width:80rpx;margin-left:7vw;margin-top:1vh"></image>
-      </view>
-      <view class="margin-top-sm padding bg-gradual-blue radius flex" style="border-radius: 30rpx;" bindtap="showActionSheet">
-        <view>
-          <view class="text-lg text-bold">识别害虫</view>
-          <view class="text-dl margin-top-xs">图像处理</view>
-        </view>
-        <image src="../../static/img/相机.png" style="height:80rpx;width:80rpx;margin-left:7vw;margin-top:1vh"></image>
-      </view>
-
-    </view>
-
-
-    <view class="flex-sub padding-lr" bindtap="navToMarket">
-      <view class="bg-gradual-red radius" style="border-radius: 30rpx;">
-        <view class="margin-top padding-left text-xl text-bold">市场农产品价格</view>
-        <swiper autoplay="{{true}}" vertical="{{true}}" interval="3000" style="height:5vh" class="padding-left margin-top-sm">
-          <swiper-item>
-            <view>
-              梨子<text class="text-price margin-lr-sm">20</text>苹果<text class="text-price margin-left">30</text>
-            </view>
-          </swiper-item>
-          <swiper-item>
-            <view>
-              草莓<text class="text-price margin-lr-sm">20</text>葡萄<text class="text-price margin-left">30</text>
-            </view>
-          </swiper-item>
-        </swiper>
-        <image src="../../static/img/功能.png" style="height:130rpx;width:130rpx;margin-left:25vw;margin-top:1vh"></image>
-      </view>
-    </view>
+    <view class="padding-lr text-lg text-bold text-black">目录</view>
+    <!-- icon list -->
+    <swiper class="padding iconList" display-multiple-items="4" next-margin="100rpx">
+      <block wx:for="{{iconList}}" wx:key="index">
+        <swiper-item bindtap="navToModule" data-nav="{{item.navPath}}">
+          <view class="flex justify-center align-center">
+            <image src="{{item.iconPath}}" style="height:100rpx;width:100rpx;margin:0 auto;"></image>
+          </view>
+          <view class="text-center padding-top-xs text-bold text-sm">{{item.text}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 
+  <!-- 下半部分 -->
+  <view style="position: relative;top:-2vh;border-radius:50rpx;z-index: 2;background-color: #f1f1f1;">
+
+    <view class="padding text-bold text-lg">特色功能</view>
+
+    <!-- <view class="padding-lr flex flex-sub" bindtap="navToMarket">
+      <image></image>
+    </view> -->
+
+    <view class="padding-lr flex align-center justify-center">
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/桃园日记.png" class="flex-sub margin-xs" bindtap="navToTimer" style="height:30vw"></image>
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/害虫识别.png" class="flex-sub margin-xs" bindtap="showActionSheet" style="height:30vw"></image>
+    </view>
+    <view class="padding-lr flex align-center justify-center">
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/备忘提醒.png" class="flex-sub margin-xs" bindtap="navToNotification" style="height:30vw"></image>
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/市场行情.png" class="flex-sub margin-xs" bindtap="navToMarket" style="height:30vw"></image>
+    </view>
+  </view>
 </view>

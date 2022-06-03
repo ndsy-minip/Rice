@@ -13,7 +13,7 @@
     <block wx:for="{{pesticide}}" wx:for-item="item" wx:for-index="index" wx:key="index">
       <view class="padding-top padding-lr" id="{{'main-'+index}}">
         <view class="cu-bar solid-bottom bg-white">
-          <view class="action">{{item[0].type}}</view>
+          <view class="action text-bold">{{item[0].type}}</view>
         </view>
         <view class="cu-list menu-avatar">
           <block wx:for="{{item}}" wx:for-item="_item" wx:for-index="_index" wx:key="_index">

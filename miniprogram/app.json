@@ -1,13 +1,15 @@
 {
   "pages": [
-    
     "pages/homepage/homepage",
+    "pages/bannerDetail/bannerDetail",
+    
     "pages/test/test",
     "pages/index/index",
     "pages/bannerArticle/bannerArticle",
     "pages/quizResult/quizResult",
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
+    "pages/articleConten/articleConten",
 "pages/questionCatalogue/questionCatalogue",
     "pages/info/info",
     

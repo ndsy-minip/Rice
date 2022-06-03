@@ -1,0 +1,10 @@
+<!--pages/bannerDetail/bannerDetail.wxml-->
+<cu-custom title="全部文章"></cu-custom>
+<view style="height:12vh"></view>
+
+<block wx:for="{{banner}}">
+  <view class="margin" bindtap="navToArticle" data-article="{{item}}">
+    <view class="text-bold margin-bottom">{{item.title}}</view>
+    <image src="{{item.banner}}" style="width: 90vw;height:15vh"></image>
+  </view>
+</block>

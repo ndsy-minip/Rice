@@ -1,4 +1,4 @@
-// pages/articleContent/articleContent.js
+// pages/bannerDetail/bannerDetail.js
 Page({
 
   /**
@@ -13,14 +13,7 @@ Page({
    */
   onLoad(options) {
     this.setData({
-      article: JSON.parse(options.article)
-    })
-    wx.getSystemInfo({//获取设备屏幕真实高度
-      success: (result) => {
-        this.setData({
-          sysheight: result.windowHeight
-        })
-      },
+      banner : wx.getStorageSync('banner')
     })
   },
 
@@ -71,5 +64,11 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  navToArticle(e) {
+    wx.navigateTo({
+      url: '../bannerArticle/bannerArticle?article=' + JSON.stringify(e.currentTarget.dataset.article),
+    })
+  },
 })

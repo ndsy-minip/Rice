@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getModernArticle()
   },
 
   /**
@@ -65,9 +65,28 @@ Page({
   },
 
 
-  navToDetail(){
+  navToDetail(e) {
     wx.navigateTo({
-      url: '../articleContent/articleContent',
+      url: '../articleContent/articleContent?article=' + JSON.stringify(e.currentTarget.dataset.article),
+    })
+  },
+
+  getModernArticle() {
+    wx.showLoading({
+      title: '正在加载中',
+    })
+    var that = this
+    wx.cloud.callFunction({
+      "name": "getModernArticle",
+      success(res) {
+        that.setData({
+          articleList: res.result.data
+        })
+        wx.hideLoading({
+          success: (res) => { },
+        })
+      }
+
     })
   }
 })

@@ -1,5 +1,5 @@
 <!--pages/articleContent/articleContent.wxml-->
-<cu-custom title="农业科技现代化">
+<cu-custom title="科学种植技术">
 </cu-custom>
 
 <view style="height:11vh"></view>

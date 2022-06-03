@@ -7,7 +7,6 @@
     <view class="margin-left-lg content text-white text-xl text-bold">
       {{userInfo.nickName?userInfo.nickName:'尚未登陆'}}
     </view>
-    <text class="text-white text-lg text-bold margin-right-sm">编辑</text>
     <text class="cuIcon-right text-white text-bold margin-right"></text>
   </view>
 </view>
@@ -18,9 +17,6 @@
   </view>
   <view class="cu-item arrow">
     <button class="cu-btn content" bindtap="navToNotification"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的备忘提醒</text></button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content"><text class="cuIcon-like text-red"></text><text class="text-grey">我的测验成绩</text></button>
   </view>
 </view>
 

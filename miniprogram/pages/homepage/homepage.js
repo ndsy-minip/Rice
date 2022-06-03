@@ -52,9 +52,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDiseaseInfo()
-    this.getInfo()
-    this.getQuiz()
+    // this.getDiseaseInfo()
+    // this.getInfo()
+    // this.getQuiz()
     this.getBanner()
   },
 
@@ -69,6 +69,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getTimeState()
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
@@ -309,15 +310,49 @@ Page({
       name: "getBanner",
       success(res) {
         that.setData({
-          bannerList : res.result.data
+          bannerList: res.result.data
         })
+        wx.setStorageSync('banner', res.result.data)
       }
     })
   },
 
-  navToArticle(e){
+  navToArticle(e) {
     wx.navigateTo({
-      url: '../bannerArticle/bannerArticle?article='+JSON.stringify(e.currentTarget.dataset.article),
+      url: '../bannerArticle/bannerArticle?article=' + JSON.stringify(e.currentTarget.dataset.article),
+    })
+  },
+
+  navToMore(e) {
+    wx.navigateTo({
+      url: '../bannerDetail/bannerDetail',
+    })
+  },
+
+
+  getTimeState() {
+    // 获取当前时间
+    let timeNow = new Date();
+    // 获取当前小时
+    let hours = timeNow.getHours();
+    let text = ``;
+    if (hours >= 8 && hours <= 12) {
+      text = `早上好`;
+    } else if (hours > 12 && hours <= 14) {
+      text = `中午好`;
+    } else if (hours > 14 && hours <= 18) {
+      text = `下午好`;
+    } else {
+      text = `晚上好`;
+    }
+    this.setData({
+      text: text
+    })
+  },
+
+  navToNotification(){
+    wx.navigateTo({
+      url: '../notification/notification',
     })
   }
 

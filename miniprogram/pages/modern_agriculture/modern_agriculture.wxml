@@ -1,12 +1,14 @@
 <!--pages/modern_agriculture/modern_agriculture.wxml-->
 <cu-custom title="农业现代化"></cu-custom>
 <view style="height:11vh"></view>
-<view class="margin-top padding flex bg-white" bindtap="navToDetail">
-  <view style="flex:7">
-    <text class="text-abbreviation text-bold text-xl">农业企业如何搞现代化，这几条路径值得借鉴</text>
-    <view class="margin-top-xl text-grey">农业行业观察 2022-05-03</view>
+<block wx:for="{{articleList}}">
+  <view class="margin-top padding flex bg-white" bindtap="navToDetail" data-article="{{item}}">
+    <view style="flex:7">
+      <text class="text-abbreviation text-bold text-xl">{{item.title}}</text>
+      <view class="margin-top-xl text-grey">{{item.author}} {{item.release_time}}</view>
+    </view>
+    <view style="flex:3">
+      <image src="{{item.banner}}" style="width: 220rpx;height:160rpx" class="radius margin-top-sm margin-left"></image>
+    </view>
   </view>
-  <view style="flex:3">
-    <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/article/2.jpg" style="width: 220rpx;height:160rpx" class="radius margin-top-sm"></image>
-  </view>
-</view>
+</block>

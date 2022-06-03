@@ -8,8 +8,8 @@
     <view class="cu-item cur text-green">
       <view class="content bg-white shadow-blur">
         <view class="text-lg text-black text-bold">{{item.exam[0].title}}</view>
-        <view class="margin-top-xs flex justify-end" bindtap="navToQuiz" data-quiz="{{item}}">
-          <view class="bg-brown padding-xs">开始答题</view>
+        <view class="margin-top-xs flex justify-end" bindtap="navToQuiz" data-quiz="{{item}}" >
+          <view class="bg-brown padding-xs" style="border-radius: 20rpx;">开始答题</view>
         </view>
       </view>
     </view>
