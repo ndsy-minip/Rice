@@ -5,21 +5,19 @@
 <view style="height:11vh"></view>
 
 <block wx:for="{{myNotifycation}}">
-  <view class="margin-top">
-    <view class="margin padding-left padding-top padding-bottom bg-white" style="border-radius:20rpx;">
-      <view class="flex align-center justify-between">
-        <view class="flex align-center">
-          <view class="cu-tag bg-red light radius" wx:if="{{item.dateType==2}}">农历</view>
-          <view class="margin-left" wx:if="{{item.dateType==2}}">{{item.dateText}}</view>
-          <view class="{{item.dateType==2?'margin-left-xl':''}} cu-tag bg-blue light radius">公历</view>
-          <view class="margin-left">{{item.date}}</view>
-        </view>
-        <view class="margin-right" bindtap="showActionSheet" data-_id="{{item._id}}"><text class="cuIcon-more text-xl"></text></view>
+  <view class="margin padding-left padding-top padding-bottom bg-white" style="border-radius:20rpx;">
+    <view class="flex align-center justify-between">
+      <view class="flex align-center">
+        <view class="cu-tag bg-red light radius cu-tag bg-blue light radius">公历</view>
+        <view class="margin-left-sm">{{item.date}}</view>
+        <view class="{{item.dateType==2?'margin-left-lg':''}} cu-tag bg-red light radius light" wx:if="{{item.dateType==2}}">农历</view>
+        <view class="margin-left-sm" wx:if="{{item.dateType==2}}">{{item.dateText}}</view>
       </view>
-      <view class="margin-top text-black text-lg"><text class="text-bold">事件：</text>{{item.data.thing1.value}}</view>
-      <view class="margin-top text-black text-lg"><text class="text-bold">描述：</text>{{item.data.thing3.value}}</view>
-
+      <view class="margin-right-sm" bindtap="showActionSheet" data-_id="{{item._id}}"><text class="cuIcon-more text-xl"></text></view>
     </view>
+    <view class="margin-top text-black text-lg"><text class="text-bold">事件：</text>{{item.data.thing1.value}}</view>
+    <view class="margin-top text-black text-lg"><text class="text-bold">描述：</text>{{item.data.thing3.value}}</view>
+
   </view>
 </block>
 

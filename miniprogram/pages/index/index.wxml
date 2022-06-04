@@ -3,19 +3,19 @@
   <swiper class="screen-swiper square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" style="height:75vh" indicator-active-color="black" indicator-color="#808080">
     <block wx:for="{{swiperList}}" wx:key="index">
       <swiper-item>
-          <view style="height:100%;width:100%;">
-            <view style="position:absolute;height:60vh;width:100vw;background: linear-gradient(#3eb78d,#fff);z-index: -1;"></view>
-            <view style="height:12vh"></view>
-            <image src="{{item.url}}" style="height:75vw;width:90vw;margin-left:auto; margin-right:auto;"></image>
-            <view class="text-center text-bold margin-top text-black" style="font-size: 28px;">{{item.title}}</view>
-            <view class="margin-top-xl text-center text-grey">{{item.firstLine}}</view>
-            <view class="margin-top-sm text-center text-grey">{{item.sencondLine}}</view>
-          </view>
+        <view style="height:100%;width:100%;">
+          <view style="position:absolute;height:60vh;width:100vw;background: linear-gradient(#3eb78d,#fff);z-index: -1;"></view>
+          <view style="height:12vh"></view>
+          <image src="{{item.url}}" style="height:75vw;width:90vw;margin-left:auto; margin-right:auto;"></image>
+          <view class="text-center text-bold margin-top text-black" style="font-size: 28px;">{{item.title}}</view>
+          <view class="margin-top-xl text-center text-grey">{{item.firstLine}}</view>
+          <view class="margin-top-sm text-center text-grey">{{item.sencondLine}}</view>
+        </view>
       </swiper-item>
     </block>
   </swiper>
 
-  <button bindtap="getUserProfile" style="margin-top:10vh;width: 90vw;height:6vh;padding:1.5vh;background-color:#3eb78d;border-radius: 30rpx;" class="text-white">登录</button>
+  <button bindtap="getUserProfile" style="margin-top:10vh;width: 90vw;height:6vh;padding:1.5vh;background-color:#3eb78d;border-radius: 30rpx;" class="text-white">开始探索 </button>
   <view style="width:100vw" class="padding-top-sm flex justify-center">
     <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/带字logo.png" style="width: 20vw;height:10vw"></image>
   </view>

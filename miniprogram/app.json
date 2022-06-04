@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
+    
+    "pages/tool/tool",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
     "pages/info/info",
     "pages/timer/timer",
-    
+    "pages/index/index",
     "pages/bannerDetail/bannerDetail",
-    
+    "pages/notification/notification",
     "pages/test/test",
     "pages/profile/profile",
     "pages/pesticide_detail/pesticide_detail",
@@ -39,7 +40,7 @@
 
 
     
-    "pages/tool/tool",
+    
 
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
@@ -47,7 +48,7 @@
 
     "pages/disease_detail/disease_detail",
 
-    "pages/notification/notification",
+    
     "pages/addNotification/addNotification",
     "pages/forum_/forum_",
 

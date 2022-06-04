@@ -38,23 +38,15 @@
 
     <view class="padding text-bold text-lg">特色功能</view>
 
-    <view class="margin-lr bg-white padding flex align-center justify-between" style="height:10vh;border-radius: 30rpx;" bindtap="navToNotification">
-      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/提醒.png" style="height:120rpx;width:120rpx"></image>
-      <view>
-      <view class="text-bold text-xxl">备忘提醒</view>
-      <view class="text-gray margin-top-sm">关键日期记录</view>
-      </view>
-    </view>
-
-    <view class="margin-lr bg-white padding flex align-center justify-between margin-top-sm" style="height:10vh;border-radius: 30rpx;" bindtap="navToMarket">
+    <view class="margin-lr bg-white padding-lr flex align-center justify-between" style="border-radius: 30rpx;" bindtap="navToMarket">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/上升趋势.png" style="height:150rpx;width:150rpx"></image>
       <view>
-      <view class="text-bold text-xxl">市场行情</view>
-      <view class="text-gray margin-top-sm">快速获取价格</view>
+      <view class="text-bold text-xxl padding-top-sm">市场行情</view>
+      <view class="text-gray margin-top-sm padding-bottom-sm">快速获取价格</view>
       </view>
     </view>
 
-    <view class="margin-lr bg-white padding flex align-center justify-between margin-top-sm" style="height:10vh;border-radius: 30rpx;" bindtap="showActionSheet">
+    <view class="margin-lr bg-white padding-lr flex align-center justify-between padding-tb-sm margin-top-sm" style="border-radius: 30rpx;" bindtap="showActionSheet">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/搜索.png" style="height:120rpx;width:120rpx"></image>
       <view>
       <view class="text-bold text-xxl">害虫识别</view>
@@ -62,7 +54,16 @@
       </view>
     </view>
 
-    <view class="margin-lr bg-white padding flex align-center justify-between margin-top-sm" style="height:10vh;border-radius: 30rpx;" bindtap="navToTimer">
+    <view class="margin-lr bg-white padding flex align-center justify-between padding-tb-sm margin-top-sm" style="border-radius: 30rpx;" bindtap="navToNotification">
+      <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/提醒.png" style="height:120rpx;width:120rpx"></image>
+      <view>
+      <view class="text-bold text-xxl">备忘提醒</view>
+      <view class="text-gray margin-top-sm">关键日期记录</view>
+      </view>
+    </view>
+
+
+    <view class="margin-lr bg-white padding-lr flex align-center justify-between padding-tb-sm margin-top-sm" style="border-radius: 30rpx;" bindtap="navToTimer">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/编辑记录.png" style="height:120rpx;width:120rpx"></image>
       <view>
       <view class="text-bold text-xxl">桃园日记</view>

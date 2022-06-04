@@ -10,7 +10,7 @@
       <view class="margin-top-xs">{{notebook.weekday}} {{tools.substring(notebook.time,11,16)}}</view>
     </view>
     <view>
-      <button style="padding:0;width: 15vw;" class="cu-btn line-blue sm shadow" open-type="share">转发</button>
+      <button style="padding:0;width: 15vw;" class="cu-btn line-blue sm" open-type="share">转发</button>
     </view>
   </view>
   <view class="margin-top text-lg" style="line-height: 50rpx;"><text class="{{notebook.isAbbreviation?'text-abbreviation':''}}">{{notebook.text}}</text></view>

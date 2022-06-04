@@ -54,8 +54,16 @@ Page({
     wx.cloud.callFunction({
       name: "getRoomId",
       success(res) {
+        var techRoom = []
+        var viewRoom = []
+        techRoom.push(res.result.room_info[0])
+        techRoom.push(res.result.room_info[1])
+        techRoom.push(res.result.room_info[4])
+        viewRoom.push(res.result.room_info[2])
+        viewRoom.push(res.result.room_info[3])
         that.setData({
-          room_info: res.result.room_info
+          techRoom,
+          viewRoom
         })
       }
     })

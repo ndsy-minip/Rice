@@ -27,7 +27,7 @@ App({
       }
     })
 
-    if(!wx.getStorageSync('userInfo')){
+    if(wx.getStorageSync('userInfo')){
       wx.switchTab({
         url: 'pages/homepage/homepage',
         complete(res){
