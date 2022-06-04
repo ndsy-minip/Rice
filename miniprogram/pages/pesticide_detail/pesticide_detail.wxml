@@ -15,12 +15,12 @@
     </swiper-item>
   </swiper>
   <view class="padding text-xl text-bold text-black">基本信息</view>
-  <view class="padding-lr text-black">名称：<text class="margin-left-sm">{{info.name}}</text></view>
-  <view class="margin-top-xs padding-lr text-black margin-right">学名：
+  <view class="padding-lr text-black">名称：<text class="margin-left-xs">{{info.name}}</text></view>
+  <view class="margin-top-xs padding-lr text-black margin-right-xl">学名：
     <template is="wxParse" data="{{wxParseData:scientific_name.nodes}}"></template>
   </view>
-  <view class="margin-top-xs padding-lr text-black" >种类：<text class="margin-left-sm">{{info.type}}</text></view>
-  <view class="margin-top-xs padding-lr text-black" style="line-height:50rpx">其他名称：{{info.other_name==''?'无':info.other_name}}></view>
+  <view class="margin-top-xs padding-lr text-black" >种类：<text class="margin-left-xs">{{info.type}}</text></view>
+  <view class="margin-top-xs padding-lr text-black" style="line-height:50rpx">其他名称：{{info.other_name==''?'无':info.other_name}}</view>
 </view>
 
 <view class="margin-top bg-white padding-bottom">

@@ -1,8 +1,7 @@
 /* pages/camera/camera.wxss */
 .camera {
-  width: 430rpx;
-  height: 430rpx;
-  border-radius: 50%;
+  width: 100vw;
+  height: 90vh;
   position: relative;
 }
 

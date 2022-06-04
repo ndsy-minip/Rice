@@ -6,8 +6,8 @@
 
 <view class='camera' wx:if="{{isAuth}}">
   <camera device-position="back" flash="off" binderror="error" wx:if="{{!src}}">
-    <cover-view class="flex justify-center align-center" style="height:70vh;width:100vw">
-      <cover-image src="../../static/img/test.png" style="width: 90vw;height:90vw"></cover-image>
+    <cover-view style="position: absolute;top:45vh;width: 100vw;" class="text-center text-white text-bold">
+      按下拍照按钮，可识别害虫种类
     </cover-view>
   </camera>
   <!-- <image src="{{src}}" wx:if="{{src}}"></image> -->

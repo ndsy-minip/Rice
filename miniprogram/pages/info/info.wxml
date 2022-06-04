@@ -2,9 +2,8 @@
 <cu-custom title="相关资料"></cu-custom>
 <view style="height:11vh"></view>
 
-<view class="margin padding text-xl text-bold text-white radius flex justify-center align-center radius shadow-blur bg-img" style="background-image: url(https://th.bing.com/th/id/R.db73ff4e296f132d0830e8612cf1c1ba?rik=o3aUGwKa1Jmtdw&riu=http%3a%2f%2fwww.08lr.cn%2fuploads%2fallimg%2f170427%2f1-1F42G52049.jpg&ehk=8r3k614gxuvRqSphA21B46d%2bzFpwByrN8PQsQJVg390%3d&risl=&pid=ImgRaw&r=0);">
-  <view class="cu-avatar round lg margin-right" style="background-image: url(https://images.uiiiuiii.com/wp-content/uploads/2020/09/i-illust-nm0908-2-15.jpg);"></view>
-
+<view class="margin padding text-xl text-bold text-white radius flex justify-center align-center radius shadow-blur bg-img" style="background-image: url(https://636c-cloud1-3gp8ynahdb4ea1a5-1310409999.tcb.qcloud.la/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99.jpg?sign=12c7c44769dfcb3ae7c9e131cce28f39&t=1654320596);">
+  <image class="round margin-right" src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/相关资料主图.png" style="height:80rpx;width:80rpx"></image>
   田家几日闲，耕种从此起
 </view>
 

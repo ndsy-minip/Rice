@@ -8,7 +8,7 @@
   </view>
   <view class="padding margin-xl timer-card" hover-class="timer-card-hover">
     <view class="flex justify-center text-white">
-      开始冥想
+      开始忙碌
     </view>
     <view class="padding flex justify-center text-white" style="font-size: 10vh;font-family: BebasNeue-Regular;font-weight: bold;">
       <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindchange="setCountdown" wx:if="{{!isStart}}">

@@ -1,21 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/bannerDetail/bannerDetail",
     "pages/homepage/homepage",
+    "pages/myNotebook/myNotebook",
+    "pages/info/info",
+    "pages/timer/timer",
+    
+    "pages/bannerDetail/bannerDetail",
+    
     "pages/test/test",
-
+    "pages/profile/profile",
+    "pages/pesticide_detail/pesticide_detail",
     "pages/bannerArticle/bannerArticle",
     "pages/quizResult/quizResult",
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
     "pages/articleConten/articleConten",
     "pages/questionCatalogue/questionCatalogue",
-    "pages/info/info",
-
-    "pages/timer/timer",
+    "pages/pay/pay",
+    "pages/pesticide_catalogue/pesticide_catalogue",
+    
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
-
+    "pages/camera/camera",
     "pages/moreInfo/moreInfo",
 
     "pages/detailContent/detailContent",
@@ -26,21 +32,21 @@
     "pages/aboutAs/aboutAs",
 
     "pages/disease_catalogue/disease_catalogue",
-    "pages/pay/pay",
+    
     "pages/catalogue/catalogue",
 
 
-    "pages/profile/profile",
-    "pages/pesticide_catalogue/pesticide_catalogue",
-    "pages/myNotebook/myNotebook",
+
+
+    
     "pages/tool/tool",
 
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
     "pages/myNotebookDetail/myNotebookDetail",
-    "pages/camera/camera",
+
     "pages/disease_detail/disease_detail",
-    "pages/pesticide_detail/pesticide_detail",
+
     "pages/notification/notification",
     "pages/addNotification/addNotification",
     "pages/forum_/forum_",

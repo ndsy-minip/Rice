@@ -41,14 +41,52 @@
     <!-- <view class="padding-lr flex flex-sub" bindtap="navToMarket">
       <image></image>
     </view> -->
+    <view class="padding-lr flex align-center justify-center">
+      <view class="margin-top padding flex-sub margin-xs" style="height:25vw;background-color: #c7a19a;border-radius:30rpx;overflow: visible;" bindtap="showActionSheet">
+        <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/搜索.png" style="height: 120rpx; width: 120rpx; position: relative; left: -65rpx; top: -65rpx"></image>
+
+        <text style="position: relative; left: -40rpx; top: -90rpx;" class="text-lg text-bold">害虫识别</text>
+
+        <view style="position: relative; left: 20rpx; top: -48rpx" class="text-sm">图像识别技术<text class="margin-left-xs cuIcon-right text-bold"></text></view>
+
+      </view>
+      <view class="margin-top padding flex-sub margin-sm" style="height:25vw;background-color: #fdc5a6;border-radius:30rpx;overflow: visible;" bindtap="navToTimer">
+        <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/编辑记录.png" style="height: 120rpx; width: 120rpx; position: relative; left: -65rpx; top: -65rpx"></image>
+
+        <text style="position: relative; left: -40rpx; top: -90rpx;" class="text-lg text-bold">桃园日记</text>
+
+        <view style="position: relative; left: 20rpx; top: -48rpx" class="text-sm">记录农忙收获<text class="margin-left-xs cuIcon-right text-bold"></text></view>
+
+      </view>
+    </view>
 
     <view class="padding-lr flex align-center justify-center">
+      <view class="margin-top padding flex-sub margin-xs" style="height:25vw;background-color: #e5c6a0;border-radius:30rpx;overflow: visible;" bindtap="navToMarket">
+        <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/上升趋势.png" style="height: 120rpx; width: 120rpx; position: relative; left: -65rpx; top: -65rpx"></image>
+
+        <text style="position: relative; left: -40rpx; top: -90rpx;" class="text-lg text-bold">市场行情</text>
+
+        <view style="position: relative; left: 20rpx; top: -48rpx" class="text-sm">快速获取价格<text class="margin-left-xs cuIcon-right text-bold"></text></view>
+
+      </view>
+      <view class="margin-top padding flex-sub margin-sm" style="height:25vw;background-color: #fbab58;border-radius:30rpx;overflow: visible;" bindtap="navToNotification">
+        <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/提醒.png" style="height: 120rpx; width: 120rpx; position: relative; left: -65rpx; top: -65rpx"></image>
+
+        <text style="position: relative; left: -40rpx; top: -90rpx;" class="text-lg text-bold">备忘提醒</text>
+
+        <view style="position: relative; left: 20rpx; top: -48rpx" class="text-sm">关键日期记录<text class="margin-left-xs cuIcon-right text-bold"></text></view>
+
+      </view>
+    </view>
+
+
+    <!-- <view class="padding-lr flex align-center justify-center">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/桃园日记.png" class="flex-sub margin-xs" bindtap="navToTimer" style="height:30vw"></image>
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/害虫识别.png" class="flex-sub margin-xs" bindtap="showActionSheet" style="height:30vw"></image>
     </view>
     <view class="padding-lr flex align-center justify-center">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/备忘提醒.png" class="flex-sub margin-xs" bindtap="navToNotification" style="height:30vw"></image>
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/市场行情.png" class="flex-sub margin-xs" bindtap="navToMarket" style="height:30vw"></image>
-    </view>
+    </view> -->
   </view>
 </view>

@@ -7,7 +7,7 @@
   </block>
 </view>
 
-<view class="bg-white flex" style="height:15vh">
+<view class="bg-white flex" style="height:auto">
   <view class="padding flex-twice" style="height: 100%;">
     <view class="text-xl text-bold">Hi! 欢迎来到直播板块!</view>
     <view class="text-grey margin-top">在这里，我们分享知识，共同进步，尽情享受吧！</view>

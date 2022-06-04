@@ -194,7 +194,7 @@ Page({
   */
   showMotto() {
     wx.showModal({
-      title: '静思',
+      title: '忙碌',
       content: '纵一苇之所如，凌万顷之茫然',
       showCancel: false
     })
@@ -225,8 +225,8 @@ Page({
   showWhyMeditation() {
     wx.showModal({
       showCancel: false,
-      title: "为什么我们要冥想",
-      content: "开始冥想，时常练习，你就能渐渐走出情绪困境，成为一个凡事心气平和、稳若泰山的人"
+      title: "《归园田居》之三",
+      content: "种豆南山下，草盛豆苗稀。\n晨兴理荒秽，带月荷锄归。\n道狭草木长，夕露沾我衣。\n衣沾不足惜，但使愿无违。"
     })
   },
 
