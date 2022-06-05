@@ -2,50 +2,56 @@
 <cu-custom title="市场行情"></cu-custom>
 <view style="height:8vh"></view>
 
+
+
+
 <view class="margin-top cu-bar search bg-white flex">
   <view class="margin-left text-bold"><text class="cuIcon-location margin-right-xs text-orange"></text>{{province}}</view>
   <view class="search-form round">
     <text class="cuIcon-search"></text>
-    <input placeholder="请输入产品名称进行搜索" />
+    <input placeholder="请输入产品名称进行搜索" bindinput="keyInput" />
   </view>
 </view>
 
 
+<block wx:for="{{province_}}" wx:if="{{value==''}}">
+  <view class="padding">
+    <text class="text-xl text-bold">{{index}}价格</text>
+    <text class="text-gray">（元/公斤）</text>
+  </view>
 
-<view class="padding">
-  <text class="text-xl text-bold">蔬菜价格</text>
-  <text class="text-gray">（元/公斤）</text>
-</view>
+  <view class="margin-lr padding flex" style="background-color: rgb(199, 199, 199);">
+    <view class="flex-sub text-center text-bold">产品</view>
+    <view class="flex-sub text-center text-bold">价格</view>
+    <view class="flex-sub text-center text-bold">最后获取时间</view>
+  </view>
+  <block wx:for="{{item}}" wx:for-item="item_">
+    <view class="margin-lr padding flex">
+      <view class="flex-sub text-center">{{item_.name}}</view>
+      <view class="flex-sub text-price text-center">{{item_.price}}</view>
+      <view class="flex-sub text-center">{{item_.promulgate_date}}</view>
+    </view>
+  </block>
+</block>
 
-<view class="margin-lr padding flex" style="background-color: rgb(199, 199, 199);">
-  <view class="flex-sub">产品</view>
-  <view class="flex-sub">最高价</view>
-  <view class="flex-sub">最低价</view>
-</view>
-<view class="margin-lr padding flex">
-  <view class="flex-sub">小白菜</view>
-  <view class="flex-sub text-price">20</view>
-  <view class="flex-sub text-price">30</view>
-</view>
+<block wx:for="{{result}}" wx:if="{{value!=''}}">
+  <view class="padding">
+    <text class="text-xl text-bold">{{index}}价格</text>
+    <text class="text-gray">（元/公斤）</text>
+  </view>
+  <view class="margin-lr padding flex" style="background-color: rgb(199, 199, 199);">
+    <view class="flex-sub text-center text-bold">市场</view>
+    <view class="flex-sub text-center text-bold">价格</view>
+    <view class="flex-sub text-center text-bold">最后获取时间</view>
+  </view>
+  <block wx:for="{{item}}" wx:for-item="item_">
+    <view class="margin-lr padding flex align-center">
+      <view class="flex-sub text-center">{{item_.area}}</view>
+      <view class="flex-sub text-price text-center">{{item_.price}}</view>
+      <view class="flex-sub text-center">{{item_.promulgate_date}}</view>
+    </view>
+  </block>
+</block>
 
 
-<view class="padding">
-  <text class="text-xl text-bold">水果价格</text>
-  <text class="text-gray">（元/公斤）</text>
-</view>
-
-<view class="margin-lr padding flex" style="background-color: rgb(199, 199, 199);">
-  <view class="flex-sub">产品</view>
-  <view class="flex-sub">最高价</view>
-  <view class="flex-sub">最低价</view>
-</view>
-<view class="margin-lr padding flex">
-  <view class="flex-sub">苹果</view>
-  <view class="flex-sub text-price">20</view>
-  <view class="flex-sub text-price">30</view>
-</view>
-<view class="margin-lr padding flex">
-  <view class="flex-sub">李子</view>
-  <view class="flex-sub text-price">20</view>
-  <view class="flex-sub text-price">30</view>
-</view>
+<view class="padding"></view>

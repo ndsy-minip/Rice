@@ -5,7 +5,7 @@
 <swiper circular="{{true}}" style="width: 100vw;height:90vh" vertical="true" bindchange="scrolltop">
   <block wx:for="{{shorts}}">
     <swiper-item>
-      <player-component vid="{{item}}" muted="{{index!=current?true:false}}" controls="{{false}}" enable-play-gesture="true" id="tvp-id" playerId="tvp"></player-component>
+      <player-component vid="{{item}}" muted="{{index!=current?true:false}}" controls="{{false}}"></player-component>
     </swiper-item>
   </block>
 </swiper>

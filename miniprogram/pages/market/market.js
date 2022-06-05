@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    province: "北京市"
+    province: "北京市",
+    value: "",
+    result: ""
   },
 
   /**
@@ -90,12 +92,42 @@ Page({
         "province": _this.data.province
       },
       success(res) {
-        console.log(res)
+        for (let i in res.data.list) {
+          for (let j in res.data.list[i]) {
+            res.data.list[i][j].promulgate_date = res.data.list[i][j].promulgate_date.split(" ",1)
+          }
+        }
+        for (let i in res.data.province) {
+          for (let j in res.data.province[i]) {
+            res.data.province[i][j].promulgate_date = res.data.province[i][j].promulgate_date.split(" ",1)
+          }
+        }
+        _this.setData({
+          list: res.data.list,
+          province_: res.data.province
+        })
         wx.hideLoading({
-          success: (res) => {},
+          success: (res) => { },
         })
       }
     })
+  },
+
+  keyInput(e) {
+    var value = e.detail.value
+
+    var list = this.data.list
+    var result = {}
+    for (var i in list) {
+      if (i.indexOf(value) != -1) {
+        result[i] = list[i]
+      }
+    }
+    this.setData({
+      result,
+      value
+    })
+
   }
 
 
