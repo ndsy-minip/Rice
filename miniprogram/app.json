@@ -1,6 +1,7 @@
 {
   "pages": [
-    
+    "pages/test/test",
+    "pages/market/market",
     "pages/tool/tool",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
@@ -9,7 +10,7 @@
     "pages/index/index",
     "pages/bannerDetail/bannerDetail",
     "pages/notification/notification",
-    "pages/test/test",
+    
     "pages/profile/profile",
     "pages/pesticide_detail/pesticide_detail",
     "pages/bannerArticle/bannerArticle",
@@ -28,7 +29,7 @@
     "pages/detailContent/detailContent",
 
 
-    "pages/market/market",
+    
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
 

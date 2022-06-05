@@ -2,12 +2,10 @@
 
 <navBar-custom title="短视频"></navBar-custom>
 
-
-<swiper circular="{{true}}" style="width: 100vw;height:88vh" vertical="true" bindchange="scrolltop">
-  <swiper-item>
-    <player-component vid="w334096bk0f" muted="{{index!=current?true:false}}" controls="{{false}}" enable-play-gesture="true"></player-component>
-  </swiper-item>
-  <swiper-item>
-    <player-component vid="x3340hgn2bi" muted="{{index!=current?true:false}}" controls="{{false}}" enable-play-gesture="true"></player-component>
-  </swiper-item>
+<swiper circular="{{true}}" style="width: 100vw;height:90vh" vertical="true" bindchange="scrolltop">
+  <block wx:for="{{shorts}}">
+    <swiper-item>
+      <player-component vid="{{item}}" muted="{{index!=current?true:false}}" controls="{{false}}" enable-play-gesture="true" id="tvp-id" playerId="tvp"></player-component>
+    </swiper-item>
+  </block>
 </swiper>

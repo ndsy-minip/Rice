@@ -1,4 +1,5 @@
 // pages/test/test.js
+
 Page({
 
   /**
@@ -13,7 +14,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
@@ -23,6 +23,7 @@ Page({
     this.setData({
       userInfo: wx.getStorageSync('userInfo')
     })
+    this.getVid()
   },
 
   /**
@@ -80,6 +81,18 @@ Page({
     var random = Array(7).fill(1).map(v => Math.floor(Math.random() * (30 - 0)) + 1)
     this.setData({
       random
+    })
+  },
+
+  getVid() {
+    var that = this
+    wx.cloud.callFunction({
+      name: "getVid",
+      success(res) {
+        that.setData({
+          shorts: res.result
+        })
+      }
     })
   }
 

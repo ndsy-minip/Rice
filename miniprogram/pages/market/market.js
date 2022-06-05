@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    city: "北京市"
+    province: "北京市"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getNowCity()
+    this.getNowCity()
   },
 
   /**
@@ -71,73 +71,31 @@ Page({
             "location": res.latitude + "," + res.longitude,
           },
           success(res) {
+            console.log(JSON.parse(res.result))
             _this.setData({
-              city: JSON.parse(res.result).result.address_component.city
+              province: JSON.parse(res.result).result.address_component.province
             })
-            wx.hideLoading({
-              success: (res) => { },
-            })
+            _this.getMarket()
           }
         })
       }
     })
   },
 
-
-  openMap() {
+  getMarket: function () {
     var _this = this
-    wx.chooseLocation({
+    wx.request({
+      url: 'http://ndjcsf.cn:2222/market',
+      data: {
+        "province": _this.data.province
+      },
       success(res) {
-        _this.getCityName(res)
+        console.log(res)
+        wx.hideLoading({
+          success: (res) => {},
+        })
       }
     })
-  },
-
-
-  getCityName(res) {
-    var that = this
-    var regex = /^(北京市|天津市|重庆市|上海市|香港特别行政区|澳门特别行政区)/;
-    var REGION_PROVINCE = [];
-    var addressBean = {
-      REGION_PROVINCE: null,
-      REGION_COUNTRY: null,
-      REGION_CITY: null,
-      ADDRESS: null
-    };
-    function regexAddressBean(address, addressBean) {
-      regex = /^(.*?[市州]|.*?地区|.*?特别行政区)(.*?[市区县])(.*?)$/g;
-      var addxress = regex.exec(address);
-      addressBean.REGION_CITY = addxress[1];
-      addressBean.REGION_COUNTRY = addxress[2];
-      addressBean.ADDRESS = addxress[3] + "(" + res.name + ")";
-    }
-    if (!(REGION_PROVINCE = regex.exec(res.address))) {
-      regex = /^(.*?(省|自治区))(.*?)$/;
-      REGION_PROVINCE = regex.exec(res.address);
-      addressBean.REGION_PROVINCE = REGION_PROVINCE[1];
-      regexAddressBean(REGION_PROVINCE[3], addressBean);
-    } else {
-      addressBean.REGION_PROVINCE = REGION_PROVINCE[1];
-      regexAddressBean(res.address, addressBean);
-    }
-    that.setData({
-      ADDRESS_1_STR:
-        addressBean.REGION_PROVINCE + " "
-        + addressBean.REGION_CITY + ""
-        + addressBean.REGION_COUNTRY
-    });
-    that.setData(addressBean);
-    var REGION_CITY = this.data.REGION_CITY
-    if (REGION_CITY.indexOf("市") == -1) {
-      this.setData({
-        city: REGION_CITY + "市"
-      })
-    } else {
-      this.setData({
-        city: REGION_CITY
-      })
-    }
-
   }
 
 

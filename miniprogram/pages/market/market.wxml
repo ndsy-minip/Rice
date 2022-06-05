@@ -3,7 +3,7 @@
 <view style="height:8vh"></view>
 
 <view class="margin-top cu-bar search bg-white flex">
-  <view class="margin-left text-bold" bindtap="openMap"><text class="cuIcon-location margin-right-xs text-orange"></text>{{city}}</view>
+  <view class="margin-left text-bold"><text class="cuIcon-location margin-right-xs text-orange"></text>{{province}}</view>
   <view class="search-form round">
     <text class="cuIcon-search"></text>
     <input placeholder="请输入产品名称进行搜索" />
