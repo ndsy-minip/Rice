@@ -9,17 +9,17 @@
 
 
 <view class="padding flex justify-between align-center" style="padding-bottom: 0;">
-  <view class="text-xl text-black">书籍</view>
+  <view class="text-xl text-black text-bold">书籍</view>
   <view class="text-grey" bindtap="viewAll" data-id="0">查看全部 <text class="cuIcon-right"></text></view>
 </view>
 <swiperCard swiperList="{{books}}"></swiperCard>
 <view class="padding flex justify-between align-center solids-top" style="padding-bottom: 0;">
-  <view class="text-black text-xl">电影</view>
+  <view class="text-black text-xl text-bold">电影</view>
   <view class="text-grey" bindtap="viewAll" data-id="1">查看全部 <text class="cuIcon-right"></text></view>
 </view>
 <swiperCard swiperList="{{movies}}"></swiperCard>
 <view class="padding flex justify-between align-center solids-top" style="padding-bottom: 0;">
-  <view class="text-xl">论文</view>
+  <view class="text-xl text-bold">论文</view>
   <view class="text-grey" bindtap="viewAll" data-id="2">查看全部 <text class="cuIcon-right"></text></view>
 </view>
 <swiperCard swiperList="{{papers}}"></swiperCard>

@@ -1,14 +1,15 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/market/market",
     "pages/test/test",
-    
+    "pages/info/info",
     "pages/tool/tool",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
-    "pages/info/info",
+    
     "pages/timer/timer",
-    "pages/index/index",
+    
     "pages/bannerDetail/bannerDetail",
     "pages/notification/notification",
     

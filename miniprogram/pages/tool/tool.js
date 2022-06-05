@@ -7,40 +7,6 @@ Page({
   data: {
     titleList: ["热播中", "种植教学", "乡村风景",],
     tabCur: 1,
-    tools: [[
-      {
-        "img": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/william-shakespeare.png",
-        "path": "../module/module_MBTI/MBTI_instructions/MBTI_instructions",
-        "title": "测评",
-        "bgColor": "#ab8fca"
-      }, {
-        "img": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_books.png",
-        "path": "",
-        "title": "直播",
-        "bgColor": "#866cb9"
-      }, {
-        "img": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_aircraft.png",
-        "path": "",
-        "title": "职业宝典",
-        "bgColor": "#8f6eae"
-      }, {
-        "img": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustrations_pi.png",
-        "path": "../timer/timer",
-        "title": "冥想",
-        "bgColor": "#8980bc"
-      }
-    ],
-    [{
-      "img": "",
-      "path": "",
-      "title": "冥想",
-      "bgColor": "#c0a2c7"
-    }, {
-      "img": "",
-      "path": "",
-      "title": "冥想",
-      "bgColor": "#896d8d"
-    }]]
   },
 
   /**
@@ -56,11 +22,12 @@ Page({
       success(res) {
         var techRoom = []
         var viewRoom = []
-        techRoom.push(res.result.room_info[0])
+        console.log(res.result)
         techRoom.push(res.result.room_info[1])
-        techRoom.push(res.result.room_info[4])
-        viewRoom.push(res.result.room_info[2])
-        viewRoom.push(res.result.room_info[3])
+        techRoom.push(res.result.room_info[2])
+        techRoom.push(res.result.room_info[3])
+        viewRoom.push(res.result.room_info[0])
+        viewRoom.push(res.result.room_info[4])
         that.setData({
           techRoom,
           viewRoom

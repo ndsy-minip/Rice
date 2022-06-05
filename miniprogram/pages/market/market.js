@@ -87,7 +87,7 @@ Page({
   getMarket: function () {
     var _this = this
     wx.request({
-      url: 'http://ndjcsf.cn:2222/market',
+      url: 'https://ndjcsf.cn:2222/market',
       data: {
         "province": _this.data.province
       },

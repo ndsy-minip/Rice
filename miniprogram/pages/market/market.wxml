@@ -54,4 +54,6 @@
 </block>
 
 
+<view class="padding text-sm text-center text-gray">所有数据来源于 全国农产品商务信息公共服务平台</view>
+<view class="padding-lr text-sm text-center text-gray">http://nc.mofcom.gov.cn/</view>
 <view class="padding"></view>
