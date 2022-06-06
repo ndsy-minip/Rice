@@ -15,32 +15,32 @@ Page({
     ],
     iconList: [
       {
-        "iconPath": "../../static/img/病虫害.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/病虫害.png",
         "navPath": "../disease_catalogue/disease_catalogue",
         "text": "常见病虫害"
       },
       {
-        "iconPath": "../../static/img/常见农药.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/常见农药.png",
         "navPath": "../pesticide_catalogue/pesticide_catalogue",
         "text": "常见农药"
       },
       {
-        "iconPath": "../../static/img/互助社区.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/互助社区.png",
         "navPath": "../test/test",
         "text": "短视频"
       },
       {
-        "iconPath": "../../static/img/模块测验.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/模块测验.png",
         "navPath": "../questionCatalogue/questionCatalogue",
         "text": "模块测验"
       },
       {
         "text": "相关资料",
-        "iconPath": "../../static/img/书籍资料.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/书籍资料.png",
         "navPath": "../info/info"
       },
       {
-        "iconPath": "../../static/img/更多.png",
+        "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/更多.png",
         "navPath": "../more_function/more_function",
         "text": "更多"
       }
@@ -52,9 +52,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getDiseaseInfo()
-    // this.getInfo()
-    // this.getQuiz()
+    this.getDiseaseInfo()
+    this.getInfo()
+    this.getQuiz()
     this.getBanner()
   },
 
@@ -340,9 +340,9 @@ Page({
     // 获取当前小时
     let hours = timeNow.getHours();
     let text = ``;
-    if (hours >= 8 && hours <= 12) {
+    if (hours >= 8 && hours < 12) {
       text = `早上好`;
-    } else if (hours > 12 && hours <= 14) {
+    } else if (hours => 12 && hours <= 14) {
       text = `中午好`;
     } else if (hours > 14 && hours <= 18) {
       text = `下午好`;

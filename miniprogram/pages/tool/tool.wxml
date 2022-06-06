@@ -31,6 +31,6 @@
 </view>
 
 <view class="flex flex-wrap margin-top flex justify-center" wx:if="{{tabCur==0}}">
-  <image src="../../static/img/暂无数据.png"></image>
+  <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img暂无数据.png"></image>
   <view class="margin-top-sm text-xl text-bold">暂无播放中的直播</view>
 </view>

@@ -9,68 +9,68 @@ Page({
       "种植指南": [
         {
           "text": "常见农药",
-          "iconPath": "../../static/img/常见农药.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/常见农药.png",
           "navPath": "../pesticide_catalogue/pesticide_catalogue"
         },
         {
           "text": "常见病虫害",
-          "iconPath": "../../static/img/病虫害.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/病虫害.png",
           "navPath": "../disease_catalogue/disease_catalogue"
         }
       ],
       "社区与直播": [
         {
           "text": "短视频社区",
-          "iconPath": "../../static/img/互助社区.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/互助社区.png",
           "navPath": "../test/test"
         },
         {
           "text": "知识直播",
-          "iconPath": "../../static/img/知识直播.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/知识直播.png",
           "navPath": "../tool/tool"
         }
       ],
       "工具模块": [
         {
           "text": "模块测验",
-          "iconPath": "../../static/img/模块测验.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/模块测验.png",
           "navPath": "../questionCatalogue/questionCatalogue",
         },
         {
           "text": "备忘提醒",
-          "iconPath": "../../static/img/备忘提醒.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/备忘提醒.png",
           "navPath": "../notification/notification"
         },
         {
           "text": "市场行情",
-          "iconPath": "../../static/img/全国行情.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/全国行情.png",
           "navPath": "../market/market"
         },
         {
           "text": "害虫识别",
-          "iconPath": "../../static/img/图像识别.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/图像识别.png",
           "navPath": ""
         },
         {
           "text": "桃园日记",
-          "iconPath": "../../static/img/桃园日记.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/桃园日记.png",
           "navPath": "../timer/timer"
         }
       ],
       "了解更多": [
         {
           "text": "科学种植技术",
-          "iconPath": "../../static/img/科学种植技术.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/科学种植技术.png",
           "navPath": "../plantTech/plantTech"
         },
         {
           "text": "农业现代化",
-          "iconPath": "../../static/img/农业现代化.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/农业现代化.png",
           "navPath": "../modern_agriculture/modern_agriculture"
         },
         {
           "text": "相关资料",
-          "iconPath": "../../static/img/书籍资料.png",
+          "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/书籍资料.png",
           "navPath": "../info/info"
         },
       ]
