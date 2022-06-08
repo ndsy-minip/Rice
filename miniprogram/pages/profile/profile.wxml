@@ -16,7 +16,7 @@
     <button class="cu-btn content" bindtap="navToMyNotebook"><text class="cuIcon-btn text-blue"></text><text class="text-grey">我的桃园日记</text></button>
   </view>
   <view class="cu-item arrow">
-    <button class="cu-btn content" bindtap="navToNotification"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的备忘提醒</text></button>
+    <button class="cu-btn content" bindtap="navToNotification"><text class="cuIcon-countdown text-green"></text><text class="text-grey">我的提醒管家</text></button>
   </view>
 </view>
 

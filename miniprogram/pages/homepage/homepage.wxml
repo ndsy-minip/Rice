@@ -57,7 +57,7 @@
     <view class="margin-lr bg-white padding flex align-center justify-between padding-tb-sm margin-top-sm" style="border-radius: 30rpx;" bindtap="navToNotification">
       <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/提醒.png" style="height:120rpx;width:120rpx"></image>
       <view>
-      <view class="text-bold text-xxl">备忘提醒</view>
+      <view class="text-bold text-xxl">提醒管家</view>
       <view class="text-gray margin-top-sm">关键日期记录</view>
       </view>
     </view>

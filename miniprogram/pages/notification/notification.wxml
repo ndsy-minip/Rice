@@ -1,6 +1,6 @@
 <!--pages/notification/notification.wxml-->
 
-<cu-custom title="备忘提醒"></cu-custom>
+<cu-custom title="提醒管家"></cu-custom>
 
 <view style="height:11vh"></view>
 

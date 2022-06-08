@@ -1,4 +1,6 @@
 <!--pages/index.wxml-->
+
+<image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/带字logo.png" style="width: 20vw;height:10vw;position: absolute;top:7vh;left:5vw;z-index: 6;"></image>
 <view class="bg-white" style="height:100vh">
   <swiper class="screen-swiper square-dot" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500" style="height:75vh" indicator-active-color="black" indicator-color="#808080">
     <block wx:for="{{swiperList}}" wx:key="index">
@@ -16,7 +18,4 @@
   </swiper>
 
   <button bindtap="getUserProfile" style="margin-top:10vh;width: 90vw;height:6vh;padding:1.5vh;background-color:#3eb78d;border-radius: 30rpx;" class="text-white">开始探索 </button>
-  <view style="width:100vw" class="padding-top-sm flex justify-center">
-    <image src="cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/带字logo.png" style="width: 20vw;height:10vw"></image>
-  </view>
 </view>

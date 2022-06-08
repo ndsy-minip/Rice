@@ -3,5 +3,12 @@
     "openapi": [
       "templateMessage.send"
     ]
-  }
+  },
+  "triggers": [
+    {
+      "name": "sendNotificationTimer",
+      "type": "timer",
+      "config": "*/10  *  *  *  *  *  *"
+    }
+  ]
 }

@@ -7,8 +7,8 @@ Page({
   data: {
     swiperList: [{
       url: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/illustrations/illustration_1.png',
-      title: "农药查询",
-      firstLine: "关于农药科普",
+      title: "信息整合",
+      firstLine: "关于农业知识收集",
       sencondLine: "我们始终在路上"
     },
     {
@@ -85,6 +85,14 @@ Page({
       path: '/pages/index/index'
     }
 
+  },
+
+  
+  onShareTimeline: function () {
+    return {
+      title: '栗米——乡村振兴解决方案',
+      imageUrl: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/推广图片.png',
+    }
   },
 
 

@@ -11,13 +11,13 @@ exports.main = async (event, context) => {
     "templateId": "M6pds0pSRZ0_QpDlzJrZJKcY8BYhhW141zoAeOay-Pc",
     "data": {
       "thing1": {
-        "value": "thing1_test"
+        "value": "收割"
       },
       "date2": {
-        "value": "2022-04-28"
+        "value": "2022-06-06"
       },
       "thing3": {
-        "value": "thing3_test"
+        "value": "西瓜地收割"
       }
     }
   })

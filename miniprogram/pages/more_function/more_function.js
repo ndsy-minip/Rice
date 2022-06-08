@@ -37,7 +37,7 @@ Page({
           "navPath": "../questionCatalogue/questionCatalogue",
         },
         {
-          "text": "备忘提醒",
+          "text": "提醒管家",
           "iconPath": "cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/img/备忘提醒.png",
           "navPath": "../notification/notification"
         },
