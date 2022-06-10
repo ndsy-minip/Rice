@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/index/index",
     "pages/market/market",
     "pages/test/test",
@@ -7,12 +8,12 @@
     "pages/tool/tool",
     "pages/homepage/homepage",
     "pages/myNotebook/myNotebook",
-    
+    "pages/questionCatalogue/questionCatalogue",
     "pages/timer/timer",
-    
+
     "pages/bannerDetail/bannerDetail",
     "pages/notification/notification",
-    
+
     "pages/profile/profile",
     "pages/pesticide_detail/pesticide_detail",
     "pages/bannerArticle/bannerArticle",
@@ -20,10 +21,10 @@
     "pages/modern_agriculture/modern_agriculture",
     "pages/articleContent/articleContent",
     "pages/articleConten/articleConten",
-    "pages/questionCatalogue/questionCatalogue",
+
     "pages/pay/pay",
     "pages/pesticide_catalogue/pesticide_catalogue",
-    
+
     "pages/module/module_MBTI/MBTI_quiz/MBTI_quiz",
     "pages/camera/camera",
     "pages/moreInfo/moreInfo",
@@ -31,19 +32,19 @@
     "pages/detailContent/detailContent",
 
 
-    
+
     "pages/more_function/more_function",
     "pages/aboutAs/aboutAs",
 
     "pages/disease_catalogue/disease_catalogue",
-    
+
     "pages/catalogue/catalogue",
 
 
 
 
-    
-    
+
+
 
     "pages/detect_result/detect_result",
     "pages/plantTech/plantTech",
@@ -51,7 +52,7 @@
 
     "pages/disease_detail/disease_detail",
 
-    
+
     "pages/addNotification/addNotification",
     "pages/forum_/forum_",
 

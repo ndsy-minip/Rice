@@ -342,7 +342,7 @@ Page({
     let text = ``;
     if (hours >= 8 && hours < 12) {
       text = `早上好`;
-    } else if (hours => 12 && hours <= 14) {
+    } else if (hours >= 12 && hours <= 14) {
       text = `中午好`;
     } else if (hours > 14 && hours <= 18) {
       text = `下午好`;

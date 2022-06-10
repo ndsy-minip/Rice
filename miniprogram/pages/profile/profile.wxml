@@ -2,7 +2,7 @@
 <view class="cover-bg" mode="aspectFill"></view>
 
 <view class="cu-list menu-avatar margin-top">
-  <view class="cu-item padding" style="margin-top: 12vh;">
+  <view class="cu-item padding" style="margin-top: 12vh;" bindtap="logOut">
     <view class="cu-avatar round xl" style="background-image: url({{userInfo.avatarUrl}});border-style:solid;border-color:white;border-width: 5rpx;" bindtap="getUserProfile"></view>
     <view class="margin-left-lg content text-white text-xl text-bold">
       {{userInfo.nickName?userInfo.nickName:'尚未登陆'}}

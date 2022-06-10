@@ -68,7 +68,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '栗米——乡村振兴解决方案',
-      imageUrl:'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/推广图片.png',
+      imageUrl: 'cloud://cloud1-3gp8ynahdb4ea1a5.636c-cloud1-3gp8ynahdb4ea1a5-1310409999/推广图片.png',
       path: '/pages/index/index'
     }
   },
@@ -109,6 +109,22 @@ Page({
         },
       })
     }
+
+  },
+
+  logOut() {
+    wx.showModal({
+      content:"是否退出登录",
+      success(res) {
+        if (res.confirm) {
+          wx.setStorageSync('userInfo', '')
+          wx.navigateTo({
+            url: '../index/index',
+          })
+        }
+      }
+    })
+
 
   }
 
