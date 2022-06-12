@@ -70,6 +70,7 @@ Page({
     wx.cloud.callFunction({
       name: "getNotebook",
       success(res) {
+        console.log(res)
         for (var i in res.result.data) {
           if (res.result.data[i].text.length > 55) {
             res.result.data[i].isAbbreviation = true

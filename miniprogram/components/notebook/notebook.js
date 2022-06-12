@@ -12,6 +12,7 @@ Component({
    */
   data: {
     hideModal: true, //模态框的状态  true-隐藏  false-显示
+    note: ''
   },
 
   /**
@@ -74,25 +75,33 @@ Component({
 
     submitNote: function () {
       var _this = this
-      wx.showLoading({
-        title: '正在记录中',
-      })
-      wx.cloud.callFunction({
-        name: "newNotebook",
-        data: {
-          text: _this.data.note
-        },
-        success(e) {
-          console.log(e)
-          _this.setData({
-            note: ''
-          })
-          _this.hideModal()
-          wx.showToast({
-            title: '记录成功',
-          })
-        }
-      })
+      if (this.data.note != '') {
+        wx.showLoading({
+          title: '正在记录中',
+        })
+        wx.cloud.callFunction({
+          name: "newNotebook",
+          data: {
+            text: _this.data.note
+          },
+          success(e) {
+            console.log(e)
+            _this.setData({
+              note: ''
+            })
+            _this.hideModal()
+            wx.showToast({
+              title: '记录成功',
+            })
+          }
+        })
+      } else {
+        wx.showModal({
+          content: "请输入内容",
+          showCancel: false
+        })
+      }
+
     }
   }
 })
